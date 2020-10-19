@@ -1,0 +1,559 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jaldi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@300&display=swap'); /* Font: Commissioner - for '.container-3-heading */
+
+body {
+    margin: 0;
+}
+
+.html-image {
+    opacity: 0.7;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    list-style-type: none; /* Eliminates the bullet points inside ul */
+    display: grid;
+    grid-template-columns: 213px 213px 213px 213px 213px 213px; /* Automatically creates 1 row with 7 columns: 16.66% 16.66% 16.66% 16.66% 16.66% 16.66% */
+    position: relative;
+    right: 40px;
+    margin-bottom: 0;
+    margin-top: 0;
+    background-color: white;
+    position: fixed;
+    z-index: 1;
+}
+
+li {
+    background-color: white;
+    position: relative;
+    left: 40px;
+    border-right: .5px solid black; 
+    text-align: center; 
+    height: 40px; 
+    padding: 0px 50px; 
+    padding-top: 20px;
+    transition: background-color .5s;  
+}
+
+.home {
+    /* padding-left: 40px;     */
+}
+
+li:hover {
+    background-color: #C83727; 
+}
+
+.li-text:hover { /* Changes the colour of the text in the top menu to white when mouse is hovered over it */
+    color: white;
+} 
+
+.photo-text { 
+    /*NOTE: When creating a white border for this element, the border of the main photo (.a) was being skewed*/
+    width: 60%;
+    height: 0em; 
+    text-align: center;
+    position: relative;
+    left: 17em;
+    bottom: 32em;
+}
+
+.border-text { /* Adjusts the height of the border of the HTML Stock photo */
+    height: 548px;
+}
+
+.photo-title { /* The Bar Gansa title on the main photo */
+    border: 3px solid white; /* The white box inside the main photo */
+    width: 105%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    height: 400px;
+    font-size: 80px;
+    font-family: "PT Sans";
+    letter-spacing: 15px;
+    color: #C83727; 
+    position: relative;
+    bottom: 60px;
+}
+
+.photo-p1 {
+    text-align: center;
+    width: 105%;
+    position: relative;
+    bottom: 390px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.love { /* Changes the word 'love' in p1 */
+    color: #C83727; 
+    ;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.passion { /* container for the word 'passion' in p1 */
+    color: #C83727; 
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.photo-p2 {
+    font-size: 23px;
+    font-weight: bold;
+    position: relative;
+    bottom: 350px;
+    margin-bottom: 50px;
+}
+
+.book-now {
+    text-decoration: none;
+    font-family: "Sansita Swashed";
+    background-color: #C83727; 
+    color: white; 
+    padding: 10px 38px; 
+    position: relative;
+    bottom: 320px;
+}
+
+/*-----Form-----*/
+form {
+    width: 66%;
+    height: 125px;
+    background-color: #C83727;
+    padding-bottom: 38px;
+    position: relative;
+    left: 255px;
+    bottom: 30px;
+    font-size: 0; /* Removes the white-spaces between the boxes */
+}
+
+.form-title {
+    font-size: 18px; /* The 'font-size in '.form' made the form title non-existant */
+    font-weight: bold;
+    color: white;
+    font-family: Jaldi;
+    padding-left: 15px;
+    z-index: 5;
+    position: relative;
+    top: 15px;
+}
+
+.dropbox { /* Property for all the 3 boxes */
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    left: 15px; 
+    top: 5px; 
+    width: 190px; 
+    height: 50px; 
+}
+
+.person {
+    padding-left: 10px;
+    border: 1px solid white; 
+    border-right: 1px solid grey;
+    font-size: 15px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.calender {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 15px;
+    border: 1px solid white;
+    border-right: 1px solid grey;
+    height: 48px;
+    position: relative;
+    bottom: 18px;
+}
+
+.time {
+    padding-left: 10px;
+    font-size: 15px;
+    border: 1px solid white;
+}
+
+.find-a-table {
+    font-size: 20px;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    border: .2px solid white;
+    padding: 12.5px 60px;
+    position: relative;
+    left: 15.4px;
+    top: 6px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+/*-----Covid-19 Instruction-----*/
+
+.container-3 {
+    background-color: #e03c2a; 
+    font-size: 30px; 
+    font-family: Arial, Helvetica, sans-serif;
+    color: white; 
+    padding-bottom: 10px;
+    margin-top: 150px;
+    
+}
+
+.container-3-heading { /* 'Covid-19 Notice' and 'Safety is our Priority' headings */
+    width: 30%;
+    text-align: center;
+    font-family: Commissioner;
+    position: relative;
+    left: 450px;
+}
+
+.covid-notice {
+    padding-top: 20px;
+    margin-bottom: 0;
+}
+
+.safety {
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+hr {
+    background-color: white;
+    width: 42px;
+    height: 2px;
+}
+
+.container-3-p { /* The Covid-19 1-10 paragraphs */
+    width: 78%;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    left: 10em;
+}
+
+/*-----Grid Classes-----*/
+
+/* Grid 1 */
+
+.grid-1 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+    .a { /* ABOUT US */
+        grid-area: 1 / 2 / 2 / 3;
+        font-size: 50px;
+        font-weight: bold;
+        letter-spacing: 10px;
+        padding-top: 50px;
+        color: #E21C21;
+        text-align: center;
+        font-family: "PT Sans";
+    }
+
+    .b { /*-About Us paragraph-*/
+        grid-area: 1 / 2 / 2 / 3; 
+        font-size: 18px; 
+        text-align: center; 
+        font-family: Arial, Helvetica, sans-serif; 
+        height: 70%; 
+        width: 57%; 
+        position: relative; 
+        top: 8em; 
+        left: 140px; 
+    }
+
+    .c { /* Read More */
+        text-decoration: underline;
+        grid-area: 1 / 2 / 2 / 3;
+        color: black;
+        width: 90px;
+        height: 20px;
+        font-size: 18px;
+        font-family: Arial, Helvetica, sans-serif;
+        position: relative;
+        top: 27em;
+        left: 15.5em;
+    }
+
+/* Grid 2 */
+.grid-2 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-top: -20px;
+}
+
+    .d { /*Image 2*/
+        grid-area: 2 / 2 / 3 / 3;
+    }
+
+    .e { /* 'Bar Gansa' title */
+        grid-area: 2 / 1 / 3 / 2;
+        height: 6%;
+        width: 87%;
+        text-align: center;
+        font-size: 40px;
+        font-family: "PT Sans";
+        letter-spacing: 9px;
+        color: #C83727; 
+        position: relative;
+        left: 80px;
+        margin-bottom: 0;
+    }
+
+    .f { /* Grid 2 paragraph */
+        margin-top: 0;
+        grid-area: 2 / 1 / 3 / 2;
+        text-align: center;
+        font-size: 18px;
+        line-height: 1.5em;
+        font-family: Arial, Helvetica, sans-serif;
+        height: 73%; /*65%*/
+        width: 73%; /*57*/
+        position: relative;
+        left: 6em;
+        top: 5em;
+    }
+
+/* Grid 3 */
+.grid-3 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-bottom: 0;
+}
+
+    .g { /* Image 3 */
+        grid-area: 3 / 1 / 4 / 2;
+        position: relative;
+        bottom: 37px;
+        left: 59px;
+    }
+
+    .h { /* 'Brunch' title */
+        grid-area: 3 / 2 / 4 / 3;
+        height: 7.5%;
+        width: 43%;
+        position: relative;
+        left: 3em;
+        bottom: 50px;
+        font-size: 50px;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif; 
+        letter-spacing: 9px; 
+        color: #C83727; 
+    }
+
+    .i { /* Grid 3 paragraph*/
+        grid-area: 3 / 2 / 4 / 3;
+        font-size: 18px;
+        text-align: center;
+        height: 80%;
+        width: 70%;
+        position: relative;
+        left: 50px;
+        top: 70px;
+    }
+
+    .j { /* Book now */
+        grid-area: 3 / 2 / 4 / 3;
+        color: #DC3727;
+        text-align: center;
+        font-size: 18px;
+        text-decoration: none;
+        border: 1px solid red;
+        height: 20px;
+        width: 80px;
+        position: relative;
+        left: 11em;
+        top: 25em;
+        padding: 10px 30px;
+        transition: background-color .5s;
+    }
+
+    .j:hover {
+        background-color: #C83727; 
+        color: white;
+    }
+
+/*Grid 4*/
+.grid-4 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-bottom: 0;
+    position: relative;
+    bottom: 2.48em;
+}
+
+    .k { /* Image for grid 4 */
+        grid-area: 4 / 2 / 5 / 3;
+        position: relative;
+        bottom: 2.3em;
+    }
+
+    .l { /* 'Flamenco Sundays' title */
+        grid-area: 4 / 1 / 5 / 2;
+        font-size: 50px;
+        font-family: Arial, Helvetica, sans-serif;
+        letter-spacing: 9px; 
+        color: #E21C21;
+        width: 57%;
+        height: 110px;
+        text-align: center;
+        position: relative;
+        left: 3.5em;
+        bottom: .5em;
+    }
+
+    .m { /* Grid 4 paragraph 1 */
+        grid-area: 4 / 1 / 5 / 2;
+        font-size: 18px;
+        font-family: Arial, Helvetica, sans-serif;
+        height: 30px;
+        width: 65%;
+        position: relative;
+        left: 8em;
+        top: 8em;
+    }
+
+    .n { /*Grid 4 paragraph 2*/
+        grid-area: 4 / 1 / 5 / 2;
+        margin-left: 0;
+        font-size: 18px;
+        font-family: Arial, Helvetica, sans-serif;
+        height: 125px;
+        width: 60%;
+        position: relative;
+        top: 11em;
+        left: 100px;
+    }
+
+    .o { /* Book now */
+        grid-area: 4 / 1 / 5 / 2;
+        text-decoration: none;
+        text-align: center;
+        color: #DC3727;
+        font-family: Arial, Helvetica, sans-serif;
+        border: 1px solid red;
+        height: 20px;
+        width: 80px;
+        padding: 10px 30px;
+        position: relative;
+        left: 15em;
+        top: 23em;
+        transition: background-color .5s;
+    }
+
+    .o:hover {
+        background-color: #C83727; 
+        color: white;
+    }
+
+    .hr-2 {
+        background-color: #C83727;
+        width: 100%;
+        height: 50px;
+        position: relative;
+        bottom: 3em;
+    }
+
+    .contact-us { /* Container for 'Contact Us' and the address */
+        text-align: center;
+    }
+
+    .contact { /* Container for only 'Contact Us' */
+        color: #C83727;
+        letter-spacing: 9px;
+        font-size: 35px; 
+        font-family: Arial, Helvetica, sans-serif;
+        position: relative;
+        bottom: 1.5em;
+    }
+
+    .address {
+        position: relative;
+        bottom: 70px;
+        font-size: 23px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 100;
+    }
+
+    .opening-hours {
+        font-size: 23px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 100;
+        width:27%;
+        position: relative;
+        left: 300px;
+        bottom: 100px;
+    }
+
+    .contact-details {
+        text-decoration: underline;
+        font-size: 23px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 100;
+        text-align: right;
+        width: 20%;
+        position: relative;
+        left: 33em;
+        bottom: 8em;
+    }
+
+.map {
+    width: 90%;
+    height: 40em;
+    position: relative;
+    bottom: 11em;
+    left: 4em;
+}
+
+/*-----Footer-----*/
+
+.footer-form {
+    background-color: white; /* As <form> is already set to a background colour, the footer form is set to white */
+}
+
+.email { /* Container for the <input> field */
+    border: 0;
+    border-bottom: 1px solid black;
+    width: 25%;
+    height: 25px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    padding-left: 20px;
+    padding-top: 11px;
+    position: relative;
+    bottom: 100px;
+    left: 10px;
+}
+
+.subscribe-now {
+    position: relative;
+    left: 29.5em;
+    bottom: 5.8em;
+    font-size: 18px;
+    border: 1px solid black;
+    padding: 7px 25px;
+}
+
+.social-media-container {
+    width: 8%;
+    position: relative;
+    bottom: 12em;
+    left: 48em;
+}
+
+.facebook { /* Container used to align the twitter and facebook icons */
+    position: relative;
+    bottom: 5px;
+}
+
+* { /* Allow for smooth scrolling for all the elements that have an relative link */
+    scroll-behavior: smooth;
+}
