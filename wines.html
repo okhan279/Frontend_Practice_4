@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;500&display=swap');
+
+        body {
+            background-color: #C83727;
+            margin: 0;
+        }
+
+        main {
+            background-color: white;
+            width: 85%;
+            height: 212em;
+            /*The height can not be changed via %*/
+            position: relative;
+            left: 100px;
+            top: 120px;
+        }
+
+        p {
+            font-family: 'Oswald:wght@200', sans-serif;
+            color: #414141;
+            font-size: 23px;
+            font-weight: 600;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            color: #DC3727;
+            font-family: 'Oswald', sans-serif;
+            font-weight: 400;
+            padding-top: 50px;
+            border: 1px solid white;
+            text-align: center;
+        }
+
+        span {
+            color: #414141;
+            font-size: 20px;
+            font-weight: 100;
+            width: 100%;
+            text-align: center;
+            font-family: "Oswald", sans-serif;
+            letter-spacing: 1px;
+        }
+
+        h3 {
+            color: #DC3727;
+            background-color: white;
+            font-family: 'Oswald', sans-serif;
+            font-weight: bold;
+            font-size: 30px;
+            border: 1px solid black;
+            width: 20%;
+            text-align: center;
+            position: relative;
+            left: 13.6em;
+            padding: 17px 21px;
+            z-index: 1;
+        }
+
+        hr {
+            width: 45%;
+            position: relative;
+            bottom: 61px;
+            right: 6px;
+        }
+
+        /*-----Top Menu-----*/
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        ul {
+            list-style-type: none;
+            /* Eliminates the bullet points inside ul */
+            display: grid;
+            grid-template-columns: 213px 213px 213px 213px 213px 213px;
+            /* Automatically creates 1 row with 7 columns: 16.66% 16.66% 16.66% 16.66% 16.66% 16.66% */
+            position: relative;
+            right: 40px;
+            margin-bottom: 0;
+            margin-top: 30px;
+            background-color: white;
+            position: fixed;
+            z-index: 1;
+        }
+
+        li {
+            background-color: white;
+            position: relative;
+            left: 40px;
+            border-right: .5px solid black;
+            text-align: center;
+            height: 40px;
+            padding: 0px 50px;
+            padding-top: 20px;
+            transition: background-color .5s;
+        }
+
+        li:hover {
+            background-color: #C83727;
+        }
+
+        .li-text:hover {
+            /* Changes the colour of the text in the top menu to white when mouse is hovered over it */
+            color: white;
+        }
+
+        .title {
+            position: relative;
+            top: 150px;
+            background-color: #FFFFFF;
+            width: 85%;
+            position: relative;
+            left: 100px;
+            padding: 50px 0;
+            margin-top: -30px;
+        }
+
+        .wines {
+            font-size: 50px;
+            font-weight: bold;
+            position: relative;
+            bottom: 40px;
+        }
+
+        .wines-p {
+            font-size: 30px;
+            color: #414141;
+            font-family: "Lobster", "cursive";
+            position: relative;
+            bottom: 40px;
+        }
+
+        /*-----Container 1-----*/
+        .container-1 {
+            position: relative;
+            bottom: 50px;
+        }
+
+        .container-1-grid {
+            display: grid;
+            grid-template-rows: 150px 150px 150px 150px 150px 150px;
+        }
+
+        /*-----Container 2-----*/
+        .container-2 {
+            position: relative;
+            bottom: 170px;
+        }
+
+        .container-2-grid {
+            display: grid;
+            grid-template-rows: 150px 150px 150px 150px 150px 150px 150px;
+
+        }
+
+        /*-----Container 3-----*/
+        .container-3 {
+            position: relative;
+            bottom: 280px;
+        }
+
+        .container-3-grid {
+            display: grid;
+            grid-template-rows: 150px 150px;
+        }
+
+        /*-----Container 4-----*/
+        .container-4 {
+            position: relative;
+            bottom: 250px;
+        }
+
+        .container-4-h3 {
+            width: 30%;
+            position: relative;
+            left: 350px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .container-4-grid {
+            display: grid;
+            grid-template-rows: 110px 110px 110px 110px 110px 110px 110px;
+        }
+
+        /*-----Footer-----*/
+        footer {
+            position: relative;
+            top: 130px;
+            background-color: #FFFFFF;
+            padding-bottom: 200px;
+            width: 30%;
+            padding-right: 900px;
+        }
+
+        .email {
+            /* Container for the <input> field */
+            border: 0;
+            border-bottom: 1px solid black;
+            width: 75%;
+            height: 25px;
+            font-size: 16px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 100;
+            padding-left: 20px;
+            padding-top: 11px;
+            position: relative;
+            bottom: 134px;
+            left: 295px;
+        }
+
+        .subscribe-now {
+            position: relative;
+            left: 34em;
+            bottom: 5.8em;
+            font-size: 18px;
+            border: 1px solid black;
+            padding: 7px 25px;
+        }
+
+        .footer-form {
+            position: relative;
+            top: 200px;
+            right: 50px;
+        }
+
+        .social-media-container {
+            position: relative;
+            left: 50em;
+            bottom: 1em;
+        }
+
+        * {
+            /* Allow for smooth scrolling for all the elements that have an relative link */
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a class="li-text home" href="./index.html">HOME</a></li>
+                <li><a class="li-text" href="http://127.0.0.1:5500/index.html#reservation">RESERVATION</a></li>
+                <li><a class="li-text" href="http://127.0.0.1:5500/menu.html">MENU</a></li>
+                <li><a class="li-text" href="#">WINES</a></li>
+                <li><a class="li-text" href="http://127.0.0.1:5500/about_us.html">ABOUT US</a></li>
+                <li><a class="li-text" href="http://127.0.0.1:5500/index.html#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+        <div class="title">
+            <h1 class=wines>Wines</h1>
+            <p class="wines-p" style="width: 100%;">Especially selected for you...Enjoy!</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="container-1">
+            <h3>White Wines</h3>
+            <hr>
+            <div class="container-1-grid">
+                <p>Ayrum Verdejo Blanco, Valdepeñas <br>
+                    <span>Castilla La Mancha. Verdejo grape. Floral notes with melon and citrus fruit.</span></p>
+
+                <p>Viña Sol, Parrellada - Barnacha Blanca, Penedès, Torres <br>
+                    <span>Grenacha grape. Crisp with lemon and wild floral aromas. Clean, delicate fruit acidity.</span>
+                </p>
+
+                <p>Don Jacobo Rioja Blanco, Viura-Sauvignon Blanc, Bodegas Corral <br>
+                    <span>Rioja region. Viura grape. Bottled young to preserve maximum aromas and crispness.</span></p>
+
+                <p>Viña Esmeralda, Moscatel - Gewurztraminer, Catalunya Torres <br>
+                    <span>Catalonia. Muscat/moscatel grape. Exotic perfumed nose with beautiful tropical floral
+                        hints.</span></p>
+
+                <p>Lolo Albariño Rías Baixas <br>
+                    <span>Galicia. Albariño grape. Notes of green apple and lemon peel. Fresh with zippy fruit.</span>
+                </p>
+            </div>
+        </div>
+
+        <div class="container-2">
+            <h3>Red Wines</h3>
+            <hr>
+            <div class=container-2-grid>
+                <p>Talavera Tempranillo - Merlot, Tinto Cariñena <br>
+                    <span>Aragon region. Tempranillo/merlot grapes. Notes of fruits of the forest mixed with sweet
+                        spice.</span></p>
+
+                <p>Panuelo Tempranillo - Carbernet Sauvignon <br>
+                    <span>Tempranillo/cabernet sauvignon grapes. Ripe and dark fruit flavours.</span></p>
+
+                <p>Casa Albali Tempranillo - Shiraz, Valdepeñas <br>
+                    <span>Castilla La Mancha region. Tempranillo/syrah/shiraz grapes. Plenty of ripe cherry and plum
+                        fruit
+                        flavours.</span></p>
+
+                <p>Marqués De Morano Rioja Joven <br>
+                    <span>Rioja region. Tempranillo grape. Young Rioja made using tempranillo grapes. Ripe fresh fruit
+                        flavours.</span></p>
+
+                <p>Sangre de Toro, Garnacha Tinta-Cariñena, Catalunya, Torres <br>
+                    <span>Catalonia. Grenache/carignan grapes. Aged for 6 months in American and French oak casks. Rich
+                        and
+                        smooth, still Spanish.</span></p>
+
+                <p>Altos Ibéricos, Tempranillo Rioja Crianza, Torres <br>
+                    <span>Rioja region. 1005 tempranillo. Aged for 12 months. Notes of ripened black fruits and aromas
+                        including
+                        cocoa and nutmeg.</span></p>
+            </div>
+        </div>
+
+        <div class="container-3">
+            <h3>Rose Wines</h3>
+            <hr>
+            <div class="container-3-grid">
+                <p>Ayrum Tempranillo Rosado, Valdepeñas <br>
+                    <span>La Mancha region. Grenache/tempranillo grapes. Soft and fruity, hints of strawberry jam and
+                        citrus
+                        fruits.</span></p>
+
+                <p>Casa Albali Garnacha Rosé, Valdepeñas <br>
+                    <span>Grenache grape. Generously flavoured. Ripe raspberry and red plum aromas.</span></p>
+            </div>
+        </div>
+
+        <div class="container-4">
+            <h3 class="container-4-h3">Cava, Prosecco and Champagnes</h3>
+            <hr style="position: relative; bottom: 85px;">
+            <div class="container-4-grid">
+                <p>Rondel Brut, Cava</p>
+                <p>Anna De Codorniu Brut Rosé, Cava</p>
+                <p>Prosecco</p>
+                <p>Moet en Chandon Brut NV 20 cl</p>
+                <p>Moet en Chandon Brut NV 70 cl</p>
+                <p>Moet en Chandon Rosé 70 cl</p>
+                <p>Veuve Clicquot</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-form">
+            <label class="subscribe-now" for="subscribe">Subscribe Now</label>
+            <input id="subscribe" class="email" type="text" name="email-address" placeholder="Email Address">
+        </div>
+
+        <p style="position: relative; bottom: 0.5em; left: 55em; font-size: 14px; font-weight: 400; width: 36%">&copy;
+            2018 by Bar Gansa</p>
+
+        <div class="social-media-container">
+            <img class="facebook" src="Images/facebook_href.webp" alt="Bar Gansa Facebook"
+                style="width: 39px; height: 41px;">
+            <img src="Images/snapchat_href.webp" alt="Bar Gansa Snapchat" style="width: 39px; height: 41px;">
+        </div>
+    </footer>
+</body>
+
+</html>

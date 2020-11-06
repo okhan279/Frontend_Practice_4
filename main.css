@@ -9,12 +9,15 @@ body {
 
 .html-image {
     opacity: 0.7;
+    margin-top: -20px;
 }
 
 a {
     text-decoration: none;
     color: black;
 }
+
+/*---Top Menu---*/
 
 ul {
     list-style-type: none; /* Eliminates the bullet points inside ul */
@@ -41,10 +44,6 @@ li {
     transition: background-color .5s;  
 }
 
-.home {
-    /* padding-left: 40px;     */
-}
-
 li:hover {
     background-color: #C83727; 
 }
@@ -53,46 +52,57 @@ li:hover {
     color: white;
 } 
 
+/*---HTML STOCK PHOTO---*/
+
 .photo-text { 
     /*NOTE: When creating a white border for this element, the border of the main photo (.a) was being skewed*/
+    border: 3px solid #FFFFFF;
     width: 60%;
-    height: 0em; 
+    height: 75%;
     text-align: center;
     position: relative;
     left: 17em;
-    bottom: 32em;
+    bottom: 31em;
+    transition: all 0.4s ease 0s; /*Transitions the property of the border and its child content.*/
+}
+
+.photo-text:hover { /* Increases size of the border and all the text within it by a scale of 1.1 */
+    transform: scale(1.1);
+
 }
 
 .border-text { /* Adjusts the height of the border of the HTML Stock photo */
     height: 548px;
+    position: relative;
+    top: 5em;
 }
 
-.photo-title { /* The Bar Gansa title on the main photo */
-    border: 3px solid white; /* The white box inside the main photo */
-    width: 105%;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    height: 400px;
-    font-size: 80px;
-    font-family: "PT Sans";
-    letter-spacing: 15px;
-    color: #C83727; 
+.bar-gansa-photo {
     position: relative;
-    bottom: 60px;
+    top: 20px;
+    left: 90px;
+    transition: all 0.4s ease 0s;
 }
 
 .photo-p1 {
     text-align: center;
-    width: 105%;
-    position: relative;
-    bottom: 390px;
+    width: 50%;
+    position: absolute;
+    bottom: 180px;
+    right: 200px;
     font-weight: bold;
     font-size: 20px;
+    transition: all 0.4s ease 0s;
 }
+
+/* .bar-gansa-photo:hover, .photo-p1:hover, .book-now:hover { */
+    .photo-p1:hover {
+
+    }
+    
 
 .love { /* Changes the word 'love' in p1 */
     color: #C83727; 
-    ;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -116,7 +126,9 @@ li:hover {
     color: white; 
     padding: 10px 38px; 
     position: relative;
-    bottom: 320px;
+    top: 200px;
+    right: 270px;
+    transition: all 0.4s ease 0s;
 }
 
 /*-----Form-----*/
@@ -127,7 +139,7 @@ form {
     padding-bottom: 38px;
     position: relative;
     left: 255px;
-    bottom: 30px;
+    top: 30px;
     font-size: 0; /* Removes the white-spaces between the boxes */
 }
 
@@ -200,7 +212,7 @@ form {
     font-family: Arial, Helvetica, sans-serif;
     color: white; 
     padding-bottom: 10px;
-    margin-top: 150px;
+    margin-top: 190px;
     
 }
 
@@ -557,3 +569,19 @@ hr {
 * { /* Allow for smooth scrolling for all the elements that have an relative link */
     scroll-behavior: smooth;
 }
+
+
+
+/*.photo-title { /* The Bar Gansa title on the main photo */
+    /*border: 3px solid white; /* The white box inside the main photo */
+    /* width: 105%; 
+    padding-top: 40px; 
+    padding-bottom: 40px; 
+    height: 400px; 
+    font-size: 80px; 
+    font-family: "PT Sans";  
+    letter-spacing: 15px; 
+    color: #C83727; 
+    position: relative; 
+    bottom: 60px; 
+}  */
