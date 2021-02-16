@@ -1,231 +1,1243 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Menu | Bar Gansa | Tapas | Live Music | Flamenco | Camden Town
+    </title>
+    <link rel="stylesheet" href="./menu.css" />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./menu.css">
-</head>
-
-<body>
+  <body>
     <header>
-        <nav>
-            <ul>
-                <li><a class="li-text home" href="./index.html">HOME</a></li>
-                <li><a class="li-text" href="http://127.0.0.1:5500/index.html#reservation">RESERVATION</a></li>
-                <li><a class="li-text" href="#">MENU</a></li>
-                <li><a class="li-text" href="http://127.0.0.1:5500/wines.html">WINES</a></li>
-                <li><a class="li-text" href="http://127.0.0.1:5500/about_us.html">ABOUT US</a></li>
-                <li><a class="li-text" href="http://127.0.0.1:5500/index.html#contact">CONTACT</a></li>
-            </ul>
-        </nav>
-        <h1 class="menu">Menu</h1>
-        <p class="header-p" style="width: 60%;">Please find our selection of the finest Spanish cusine</p>
-        <a href="./index.html"><p class="right-text">BAR GANSA</p></a>
+      <div class="ham-background">
+        <img
+          class="show-mobile ham hide-desktop"
+          id="ham"
+          src="Images/ham.svg"
+          alt="dropdown button"
+        />
+      </div>
+
+      <span class="hide-mobile hide-desktop exit-btn" id="exit">x</span>
+
+      <nav class="hide-mobile">
+        <ul>
+          <li><a class="li-text home" href="./index.html">HOME</a></li>
+          <li>
+            <a
+              class="li-text reservation"
+              href="http://127.0.0.1:5500/index.html#reservation"
+              >RESERVATION</a
+            >
+          </li>
+          <li><a class="li-text" id="menu" href="#">MENU</a></li>
+          <li>
+            <a class="li-text" href="http://127.0.0.1:5500/wines.html">WINES</a>
+          </li>
+          <li>
+            <a
+              class="li-text about-us"
+              href="http://127.0.0.1:5500/about_us.html"
+              >ABOUT US</a
+            >
+          </li>
+          <li>
+            <a
+              class="li-text contact"
+              href="http://127.0.0.1:5500/index.html#contact"
+              >CONTACT</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <div class="top-menu">
+        <h1 class="header-menu">Menu</h1>
+        <p class="header-p">
+          Please find our selection of the finest Spanish cusine
+        </p>
+        <a href="./index.html">
+          <p class="right-text hide-mobile hide-ipad">BAR GANSA</p>
+        </a>
+        <!-- BAR GANSA ELEMENT FOR IPAD -->
+        <a href="./index.html"
+          ><p class="ipad-right-text hide-mobile hide-desktop">BAR GANSA</p></a
+        >
+        <!-- END OF BAR GANSA ELEMENT FOR IPAD -->
+      </div>
     </header>
 
     <main>
-        <div class="container-1">
-            <h1 style="width: 12%;">Para Picar</h1>
-            <hr>
-            <div class="container-1-grid">
-                <p class="box a">Gorda Olives<span>...............................................£3.50</span> <br>
-                    <span style="font-size: 19px; position: relative; top: 10px;">Marinated mixed olives</span></p>
+      <div class="container-1">
+        <h1 class="container-1-h1">Para Picar</h1>
+        <hr class="container-1-hr" />
+        <div class="container-1-grid">
+          <p class="box a show-desktop hide-mobile hide-ipad">
+            Gorda Olives<span
+              >................................................£3.50
+            </span>
+            <br />
+            <span class="span-position span-font-size"
+              >Marinated mixed olives</span
+            >
+          </p>
 
-                <p class="box b" style="position: relative; left: 70px;">Bread &
-                    Olives<span>.........................................£5.50</span></p>
+          <!-- MOBILE VERSION FOR 'Gorda Olives' -->
+          <p class="box a hide-desktop show-mobile hide-ipad">
+            Gorda Olives<span class="price-font-size"
+              >..................£3.50
+            </span>
+            <br />
+            <span class="span-position span-font-size"
+              >Marinated mixed olives</span
+            >
+          </p>
+          <!-- END OF MOBILE VERSION FOR 'Gorda Olives' -->
 
-                <p class="box c" style="position: relative; bottom: 50px;">Pan Con
-                    Tomate<span>........................................£4.50</span> <br>
-                    <span style="font-size: 19px; position: relative; top: 10px;">Grilled bread topped with crushed
-                        garlic & <br> chopped tomatoes</span></p>
+          <!-- IPAD VERSION FOR 'Gorda Olives' -->
+          <p class="box a hide-desktop hide-mobile show-ipad">
+            Gorda Olives<span class="price-font-size"
+              >..................£3.50
+            </span>
+            <br />
+            <span class="span-position span-font-size"
+              >Marinated mixed olives</span
+            >
+          </p>
+          <!-- END OF IPAD VERSION FOR 'Gorda Olives' -->
 
-                <p class="box d" style="position: relative; bottom: 50px; left: 70px;">
-                    Bread<span>.............................................................£4.50</span> <br>
-                    <span style="font-size: 19px; position: relative; top: 10px;">Olive oil & balsamic</span></p>
+          <p class="box b show-desktop hide-mobile hide-ipad">
+            Bread & Olives<span
+              >.............................................£5.50
+            </span>
+          </p>
 
-                <p class="box e" style="position: relative; bottom: 60px;">
-                    Marcona Almonds<span>....................................£5.50</span></p>
-            </div>
+          <!-- MOBILE VERSION FOR 'Bread & Olives' -->
+          <p class="box b hide-desktop show-mobile hide-ipad">
+            Bread & Olives<span class="price-font-size"
+              >..............£5.50
+            </span>
+          </p>
+          <!-- END OF MOBILE VERSION FOR 'Bread & Olives' -->
+
+          <!-- IPAD VERSION FOR 'Bread & Olives' -->
+          <p class="box b hide-desktop hide-mobile show-ipad">
+            Bread & Olives<span class="price-font-size">...........£5.50 </span>
+          </p>
+          <!-- END OF IPAD VERSION FOR 'Bread & Olives' -->
+
+          <p class="box c show-desktop hide-mobile hide-ipad">
+            Pan Con Tomate<span
+              >........................................£4.50
+            </span>
+            <br />
+            <span class="span-position"
+              >Grilled bread topped with crushed garlic & <br />
+              chopped tomatoes</span
+            >
+          </p>
+
+          <!-- MOBILE VERSION FOR 'Pan Con Tomate' -->
+          <p class="box c hide-desktop show-mobile hide-ipad">
+            Pan Con Tomate<span class="price-font-size">...........£4.50 </span>
+            <br />
+            <span class="span-font-size"
+              >Grilled bread topped with crushed garlic & chopped tomatoes</span
+            >
+          </p>
+          <!-- END OF MOBILE VERSION FOR 'Pan Con Tomate' -->
+
+          <!-- IPAD VERSION FOR 'Pan Con Tomate' -->
+          <p class="box c hide-desktop hide-mobile show-ipad">
+            Pan Con Tomate<span class="price-font-size">...........£4.50 </span>
+            <br />
+            <span class="span-c span-font-size"
+              >Grilled bread topped with crushed garlic & chopped tomatoes</span
+            >
+          </p>
+          <!-- END OF IPAD VERSION FOR 'Pan Con Tomate' -->
+
+          <p class="box d show-desktop hide-mobile hide-ipad">
+            Bread<span
+              >.............................................................£4.50
+            </span>
+            <br />
+            <span class="span-position">Olive oil & balsamic</span>
+          </p>
+
+          <!-- MOBILE VERSION FOR 'Bread' -->
+          <p class="box d hide-desktop show-mobile hide-ipad">
+            Bread<span class="price-font-size"
+              >..............................£4.50
+            </span>
+            <br />
+            <span class="box-d-span">Olive oil & balsamic</span>
+          </p>
+          <!-- END OF MOBILE VERSION FOR 'Bread' -->
+
+          <!-- IPAD VERSION FOR 'Bread' -->
+          <p class="box d hide-desktop hide-mobile show-ipad">
+            Bread<span class="price-font-size"
+              >..............................£4.50
+            </span>
+            <br />
+            <span class="box-d-span span-font-size">Olive oil & balsamic</span>
+          </p>
+          <!-- END OF IPAD VERSION FOR 'Bread' -->
+
+          <p class="box e show-desktop hide-mobile hide-ipad">
+            Marcona Almonds<span
+              >....................................£5.50
+            </span>
+          </p>
+
+          <!-- MOBILE VERSION FOR 'Marcona Almonds' -->
+          <p class="box e hide-desktop show-mobile hide-ipad">
+            Marcona Almonds<span class="price-font-size">.......£5.50 </span>
+          </p>
+          <!-- END OF MOBILE VERIONS FOR 'Marcona Almonds' -->
+
+          <!-- IPAD VERSION FOR 'Maracona Almonds' -->
+          <p class="box e hide-desktop hide-mobile show-ipad">
+            Marcona Almonds<span class="price-font-size">.......£5.50 </span>
+          </p>
+          <!-- END OF IPAD VERSION FOR 'Maracona Almonds' -->
         </div>
- 
-        <div class="container-2">
-            <h1 style="margin-top: -200px; width: 22%;">Our Tapas Selection</h1>
-            <hr>
-            <div class="container-2-grid">
-                <p class="box f">Gambas Ajillo<span> ............................................£7.50</span> <br>
-                    <span style="font-size: 19px; position: relative; top: 10px;">3 grilled king prawns with chilli
-                        oil</span></p>
+      </div>
 
-                <p class="box g">Piquillo stuffed with brandada<span> .....£6.50</span> <br>
-                    <span style="font-size: 19px; position: relative; top: 10px;">peppers stuffed with brandada</span>
-                </p>
+      <div class="container-2">
+        <h1 class="container-2-h1">Our Tapas Selection</h1>
+        <hr class="container-2-hr" />
+        <div class="container-2-grid">
+          <p class="box f show-desktop hide-mobile hide-ipad">
+            Gambas Ajillo<span class="price-font-size">
+              .............................................£7.50
+            </span>
+            <br />
+            <span class="span-position span-font-size"
+              >3 grilled king prawns with chilli oil
+            </span>
+          </p>
 
-                <p class="box h">Txistorra Parrilla<span>............................................£6</span> <br>
-                    <span style="font-size: 19px; position: relative; top: 10px;">grilled txistorra sausage</span></p>
+          <!-- MOBILE VERSION FOR 'Gambas Ajillo' -->
+          <p class="box f hide-desktop show-mobile hide-ipad">
+            Gambas Ajillo<span class="price-font-size">
+              ..............£7.50
+            </span>
+            <br />
+            <span class="span-position span-font-size"
+              >3 grilled king prawns with chilli oil
+            </span>
+          </p>
+          <!-- END OF MOBILE VERSION FOR 'Gambas Ajillo' -->
 
-                <p class="box i">Tortilla Espanola<span>...................................£5.50</span> <br>
-                    <span style="font-size: 19px; position: relative; top: 10px;">Classic spanish omelette</span></p>
+          <!-- IPAD VERSION FOR 'Gambas Ajillo' -->
+          <p class="box f hide-desktop hide-mobile show-ipad">
+            Gambas Ajillo<span class="price-font-size">
+              ...............£7.50
+            </span>
+            <br />
+            <span class="span-f span-position span-font-size"
+              >3 grilled king prawns with chilli oil
+            </span>
+          </p>
+          <!-- END OF IPAD VERSION FOR 'Gambas Ajillo' -->
 
-                <p class="box j">Croquetas de Jamón
-                    Serrano<span>............£5.50</span> <br>
-                    <span style="font-size: 19px; position: relative; top: 10px;">Serrano ham croquettes, aioli</span>
-                </p>
+          <p class="box g show-desktop hide-mobile hide-ipad">
+            Piquillo stuffed with brandada<span class="box-g-span-1">
+              .....£6.50</span
+            >
+            <br />
+            <span class="span-position">peppers stuffed with brandada</span>
+          </p>
 
-                <p class="box k">Huevos Rotos Con
-                    Chorizo<span>............£5.50</span> <br>
-                    <span style="font-size: 19px; position: relative; top: 10px;">Scrambled eggs with chorizo</span></p>
+          <!-- MOBILE VERSION FOR 'Piquillo Stuffed with brandada' -->
+          <p class="box g hide-desktop show-mobile hide-ipad">
+            Piquillo stuffed <br />
+            with brandada<span class="box-g-span-1 price-font-size"
+              >..............£6.50</span
+            >
+            <br />
+            <span class="span-font-size"
+              >peppers stuffed with <br />
+              brandada</span
+            >
+          </p>
+          <!-- END OF MOBILE VERSION FOR 'Piquillo Stuffed with brandada' -->
 
-                <p class="box l">Patatas Bravas<span>...........................................£5.50</span> <br>
-                    <span style="font-size: 19px; position: relative; top: 10px;">Cubed fried potatoes with salsa
-                        rosa</span></p>
+          <!-- IPAD VERSION FOR 'Piquillo Stuffed with brandada' -->
+          <p class="box g hide-desktop hide-mobile show-ipad">
+            Piquillo stuffed <br />
+            with brandada<span class="box-g-span-1 price-font-size"
+              >...........£6.50</span
+            >
+            <br />
+            <span class="span-font-size"
+              >peppers stuffed with <br />
+              brandada</span
+            >
+          </p>
+          <!-- END OF IPAD VERSION FOR 'Piquillo Stuffed with brandada' -->
 
-                <p class="box m">Carrileras De Bacalao Con Alioli De <br> Ajo
-                    Negro<span>..................................................£5.90</span>
-                    <br>
-                    <span style="font-size: 19px; position: relative; top: 10px;">Cod cheeks with black garlic,
-                        aioli</span></p>
+          <p class="box h hide-mobile show-desktop hide-ipad">
+            Txistorra Parrilla<span
+              >............................................£6</span
+            >
+            <br />
+            <span class="span-position">grilled txistorra sausage</span>
+          </p>
 
-                <p class="box n">Berenjena Con Queso De
-                    Cabra<span>...........£6</span> <br>
-                    <span style="font-size: 19px; position: relative; top: 10px;">Aubergine with goats cheese, cane
-                        honey</span></p>
+          <!-- MOBILE VERSION FOR 'Txistorra Parrilla' -->
+          <p class="box h hide-desktop show-mobile hide-ipad">
+            Txistorra Parrilla<span class="price-font-size"
+              >...............£6</span
+            >
+            <br />
+            <span class="span-font-size">grilled txistorra sausage</span>
+          </p>
+          <!-- END OF MOBILE VERSION FOR 'Txistorra Parrilla' -->
 
-                <p class="box o">Bocaditos De Morcilla<span>........................£5.50</span>
-                    <br>
-                    <span style="font-size: 19px; position: relative; top: 10px;">Spanish Black Pudding Parcels</span>
-                </p>
+          <!-- MOBILE VERSION FOR 'Txistorra Parrilla' -->
+          <p class="box h hide-desktop hide-mobile show-ipad">
+            Txistorra Parrilla<span class="price-font-size"
+              >...............£6</span
+            >
+            <br />
+            <span class="span-font-size">grilled txistorra sausage</span>
+          </p>
+          <!-- END OF MOBILE VERSION FOR 'Txistorra Parrilla' -->
 
-                <p class="box p">Pisto<span>................................................................£5.75</span> <br>
-                    <span style="font-size: 19px; position: relative; top: 10px;">Roasted Mediterranean vegetables
-                        topped with <br> fried egg</span></p>
+          <p class="box i hide-mobile show-desktop hide-ipad">
+            Tortilla Espanola<span
+              >...................................£5.50</span
+            >
+            <br />
+            <span class="span-position">Classic spanish omelette</span>
+          </p>
 
-                <p class="box q">Ensalda Mixta<span>..............................................£5</span> <br>
-                    <span style="font-size: 19px; position: relative; top: 10px;">Mixed green salad with tomatoes,
-                        cucumbers, <br> olives and onions</span></p>
+          <!-- MOBILE VERSOIN FOR 'Tortilla Espanola' -->
+          <p class="box i hide-desktop show-mobile hide-ipad">
+            Tortilla Espanola<span class="price-font-size"
+              >..........£5.50</span
+            >
+            <br />
+            <span class="span-font-size">Classic spanish omelette</span>
+          </p>
+          <!--  END OF MOBILE VERSION FOR 'Tortilla Espanola' -->
 
-                <p class="box r" style="position: relative; top: 10px;">Ensalda
-                    Tomate<span>.............................................£6</span> <br>
-                    <span style="font-size: 19px; position: relative; top: 10px;">Tomatoes, goats cheese, PX and
-                        caramelised <br> onion</span></p>
-            </div>
+          <!-- IPAD VERSION FOR 'Tortilla Espanola' -->
+          <p class="box i hide-desktop hide-mobile show-ipad">
+            Tortilla Espanola<span class="price-font-size">......£5.50</span>
+            <br />
+            <span class="span-font-size">Classic spanish omelette</span>
+          </p>
+          <!-- END OF IPAD VERSION FOR 'Tortilla Espanola' -->
+
+          <p class="box j show-desktop hide-mobile hide-ipad">
+            Croquetas de Jamón Serrano<span>............£5.50</span> <br />
+            <span class="span-position">Serrano ham croquettes, aioli</span>
+          </p>
+
+          <!-- MOBILE VERSION FOR 'Croquetas de Jamón Serrano' -->
+          <p class="box j hide-desktop show-mobile hide-ipad">
+            Croquetas de <br />
+            Jamón Serrano<span class="price-font-size">.............£5.50</span>
+            <br />
+            <span class="span-font-size">Serrano ham croquettes, aioli</span>
+          </p>
+          <!-- END OF MOBILE VERSION FOR 'Croquetas de Jamón Serrano' -->
+
+          <!-- IPAD VERSION FOR 'Croquetas de Jamón Serrano' -->
+          <p class="box j hide-desktop hide-mobile show-ipad">
+            Croquetas de <br />
+            Jamón Serrano<span class="price-font-size">.............£5.50</span>
+            <br />
+            <span class="span-font-size">Serrano ham croquettes, aioli</span>
+          </p>
+          <!-- END OF IPAD VERSION FOR 'Croquetas de Jamón Serrano' -->
+
+          <p class="box k show-desktop hide-mobile hide-ipad">
+            Huevos Rotos Con Chorizo<span>............£5.50</span> <br />
+            <span class="span-position">Scrambled eggs with chorizo</span>
+          </p>
+
+          <!-- MOBILE VERSION FOR 'Huevos Rotos Con Chorizo' -->
+          <p class="box k hide-desktop show-mobile hide-ipad">
+            Huevos Rotos Con Chorizo<span class="price-font-size"
+              >...........................£5.50</span
+            >
+            <br />
+            <span class="span-font-size">Scrambled eggs with chorizo</span>
+          </p>
+          <!-- END OF MOBILE VERSION FOR 'Huevos Rotos Con Chorizo' -->
+
+          <!-- IPAD VERSION FOR 'Huevos Rotos Con Chorizo' -->
+          <p class="box k hide-desktop hide-mobile show-ipad">
+            Huevos Rotos Con Chorizo<span class="price-font-size"
+              >........................£5.50</span
+            >
+            <br />
+            <span class="span-font-size">Scrambled eggs with chorizo</span>
+          </p>
+          <!-- END OF IPAD VERSION FOR 'Huevos Rotos Con Chorizo' -->
+
+          <p class="box l show-desktop hide-mobile hide-ipad">
+            Patatas Bravas<span
+              >...........................................£5.50</span
+            >
+            <br />
+            <span class="span-position"
+              >Cubed fried potatoes with salsa rosa</span
+            >
+          </p>
+
+          <!-- MOBILE VERSION FOR 'Patatas Bravas' -->
+          <p class="box l hide-desktop show-mobile hide-ipad">
+            Patatas Bravas<span class="price-font-size"
+              >..............£5.50</span
+            >
+            <br />
+            <span class="span-font-size"
+              >Cubed fried potatoes with salsa rosa</span
+            >
+          </p>
+          <!-- END OF MOBILE VERSION FOR 'Patatas Bravas' -->
+
+          <!-- IPAD VERSION FOR 'Patatas Bravas' -->
+          <p class="box l hide-desktop hide-mobile show-ipad">
+            Patatas Bravas<span class="price-font-size"
+              >..............£5.50</span
+            >
+            <br />
+            <span class="span-l span-font-size"
+              >Cubed fried potatoes with salsa rosa</span
+            >
+          </p>
+          <!-- END OF IPAD VERSION FOR 'Patatas Bravas' -->
+
+          <p class="box m show-desktop hide-mobile hide-ipad">
+            Carrileras De Bacalao Con Alioli De <br />
+            Ajo Negro<span
+              >..................................................£5.90</span
+            >
+            <br />
+            <span class="span-position"
+              >Cod cheeks with black garlic, aioli</span
+            >
+          </p>
+
+          <!-- MOBILE VERSION OF 'Carrileras De Bacalao Con Alioli De Ago Negro' -->
+          <p class="box m hide-desktop show-mobile hide-ipad">
+            Carrileras De <br />
+            Bacalao Con Alioli <br />
+            De Ajo Negro<span class="price-font-size"
+              >.................£5.90</span
+            >
+            <br />
+            <span class="span-font-size"
+              >Cod cheeks with black garlic, aioli</span
+            >
+          </p>
+          <!-- END OF MOBILE VERSION OF 'Carrileras De Bacalao Con Alioli De Ago Negro' -->
+
+          <!-- IPAD VERSION FOR 'Carrileras De Bacalao Con Alioli De Ago Negro' -->
+          <p class="box m hide-desktop hide-mobile show-ipad">
+            Carrileras De <br />
+            Bacalao Con Alioli <br />
+            De Ajo Negro<span class="price-font-size">.............£5.90</span>
+            <br />
+            <span class="span-m span-font-size"
+              >Cod cheeks with black garlic, aioli</span
+            >
+          </p>
+          <!-- END OF IPAD VERSION FOR 'Carrileras De Bacalao Con Alioli De Ago Negro' -->
+
+          <p class="box n show-desktop hide-mobile hide-ipad">
+            Berenjena Con Queso De Cabra<span>...........£6</span>
+            <span class="span-position"
+              >Aubergine with goats cheese, cane honey</span
+            >
+          </p>
+
+          <!-- MOBILE VERSION OF 'Berenjena Con Queso De Cabra' -->
+          <p class="box n hide-desktop show-mobile hide-ipad">
+            Berenjena Con <br />
+            Queso De Cabra<span class="price-font-size"
+              >................£6</span
+            >
+            <br />
+            <span class="span-font-size"
+              >Aubergine with goats <br />
+              cheese, cane honey</span
+            >
+          </p>
+          <!-- END OF MOBILE VERSION OF 'Berenjena Con Queso De Cabra' -->
+
+          <!-- IPAD VERSION FOR 'Berenjena Con Queso De Cabra' -->
+          <p class="box n hide-desktop hide-mobile show-ipad">
+            Berenjena Con <br />
+            Queso De Cabra<span class="price-font-size"
+              >................£6</span
+            >
+            <br />
+            <span class="span-font-size"
+              >Aubergine with goats <br />
+              cheese, cane honey</span
+            >
+            <!-- END OF IPAD VERSION FOR 'Berenjena Con Queso De Cabra' -->
+          </p>
+
+          <p class="box o show-desktop hide-mobile hide-ipad">
+            Bocaditos De Morcilla<span>........................£5.50</span>
+            <br />
+            <span class="span-position">Spanish Black Pudding Parcels</span>
+          </p>
+
+          <!-- MOBILE VERSION FOR 'Bocaditos De Morcilla' -->
+          <p class="box o hide-desktop show-mobile hide-ipad">
+            Bocaditos De Morcilla<span class="price-font-size"
+              >...........................£5.50</span
+            >
+            <br />
+            <span class="span-font-size">Spanish Black Pudding Parcels</span>
+          </p>
+          <!-- END OF MOBILE VERSION OF 'Bocaditos De Morcilla' -->
+
+          <!-- IPAD VERSION FOR 'Bocaditos De Morcilla' -->
+          <p class="box o hide-desktop hide-mobile show-ipad">
+            Bocaditos De Morcilla<span class="price-font-size"
+              >........................£5.50</span
+            >
+            <br />
+            <span class="span-font-size">Spanish Black Pudding Parcels</span>
+          </p>
+          <!-- END OF IPAD VERSION FOR 'Bocaditos De Morcilla' -->
+
+          <p class="box p show-desktop hide-mobile hide-ipad">
+            Pisto<span
+              >................................................................£5.75</span
+            >
+            <br />
+            <span class="span-position"
+              >Roasted Mediterranean vegetables topped with <br />
+              fried egg</span
+            >
+          </p>
+
+          <!-- MOBILE VERSION FOR 'Pisto' -->
+          <p class="box p hide-desktop show-mobile hide-ipad">
+            Pisto<span class="price-font-size"
+              >................................£5.75</span
+            >
+            <br />
+            <span class="span-font-size"
+              >Roasted Mediterranean <br />
+              vegetables topped with fried egg</span
+            >
+          </p>
+          <!-- END OF MOBILE VERSION FOR 'Pisto' -->
+
+          <!-- IPAD VERSION FOR 'Pisto' -->
+          <p class="box p hide-desktop hide-mobile show-ipad">
+            Pisto<span class="price-font-size"
+              >..................................£5.75</span
+            >
+            <br />
+            <span class="span-p span-font-size"
+              >Roasted Mediterranean <br />
+              vegetables topped with fried egg</span
+            >
+          </p>
+          <!-- END OF IPAD VERSION FOR 'Pisto' -->
+
+          <p class="box q show-desktop hide-mobile hide-ipad">
+            Ensalda Mixta<span
+              >..............................................£5</span
+            >
+            <br />
+            <span class="span-position"
+              >Mixed green salad with tomatoes, cucumbers, olives and
+              onions</span
+            >
+          </p>
+
+          <!-- MOBILE VERSION FOR 'Ensalda Mixta' -->
+          <p class="box q hide-desktop show-mobile hide-ipad">
+            Ensalda Mixta<span class="price-font-size"
+              >....................£5</span
+            >
+            <br />
+            <span class="span-font-size"
+              >Mixed green salad with tomatoes, cucumbers, olives and
+              onions</span
+            >
+          </p>
+          <!-- END OF MOBILE VERSION FOR 'Ensalda Mixta' -->
+
+          <!-- IPAD VERSION FOR 'Ensalda Mixta' -->
+          <p class="box q hide-desktop hide-mobile show-ipad">
+            Ensalda Mixta<span class="price-font-size"
+              >.................£5</span
+            >
+            <br />
+            <span class="span-q span-font-size"
+              >Mixed green salad with tomatoes, cucumbers, olives and
+              onions</span
+            >
+          </p>
+          <!-- END OF IPAD VERSION FOR 'Ensalda Mixta' -->
+
+          <p class="box r show-desktop hide-mobile hide-ipad">
+            Ensalda Tomate<span
+              >.............................................£6</span
+            >
+            <br />
+            <span class="span-position"
+              >Tomatoes, goats cheese, PX and caramelised <br />
+              onion</span
+            >
+          </p>
+
+          <!-- MOBILE VERSION FOR 'Ensalda Tomate' -->
+          <p class="box r hide-desktop show-mobile hide-ipad">
+            Ensalda Tomate<span class="price-font-size"
+              >................£6</span
+            >
+            <br />
+            <span class="span-font-size"
+              >Tomatoes, goats cheese, PX and caramelised <br />
+              onion</span
+            >
+          </p>
+          <!-- END OF MOBILE VERSION FOR 'Ensalda Tomate' -->
+
+          <!-- IPAD VERSION FOR 'Ensalda Tomate' -->
+          <p class="box r hide-desktop hide-mobile show-ipad">
+            Ensalda Tomate<span class="price-font-size"
+              >................£6</span
+            >
+            <br />
+            <span class="span-font-size"
+              >Tomatoes, goats cheese, PX and caramelised onion</span
+            >
+          </p>
+          <!-- END OF IPAD VERSION FOR 'Ensalda Tomate' -->
         </div>
+      </div>
 
-        <div class="container-3">
-            <h1 style="margin-top: -40px; width: 13%;">Tapas for 2</h1>
-            <hr>
-            <div class="container-3-grid">
-                <p class="box s">RISOTTO DE SETAS CON
-                    BACALAO<span>....................................................£9.50</span>
-                    <br> <span style="font-size: 19px; position: relative; top: 10px;"> Mushroom
-                        Risotto with pan fried Cod</span></p>
+      <div class="container-3">
+        <h1 class="container-3-h1">Tapas for 2</h1>
+        <hr class="container-3-hr" />
+        <div class="container-3-grid">
+          <p class="box s show-desktop hide-mobile hide-ipad">
+            RISOTTO DE SETAS CON BACALAO<span
+              >....................................................£9.50</span
+            >
+            <br />
+            <span class="span-position">
+              Mushroom Risotto with pan fried Cod</span
+            >
+          </p>
 
-                <p class="box t">Chipiron Relleno<span>.................................£11.50</span> <br>
-                    <span style="font-size: 19px; position: relative; top: 10px;">Stuffed squid with
-                        chorizo and manchego <br> cheese, PX reduction</span></p>
+          <!-- MOBILE VERSION FOR 'Risotto De Setas Con Bacalao' -->
+          <p class="box s hide-desktop show-mobile hide-ipad">
+            RISOTTO DE <br />
+            SETAS CON <br />
+            BACALAO<span class="price-font-size"
+              >......................£9.50</span
+            >
+            <br />
+            <span class="span-position span-font-size">
+              Mushroom Risotto with pan fried Cod</span
+            >
+          </p>
+          <!-- END OF MOBILE VERSION FOR 'Risotto De Setas Con Bacalao' -->
 
-                <p class="box u">Carrilleras De ternera<span>...............................£11</span> <br>
-                    <span style="font-size: 19px; position: relative; top: 10px;">Slow cooked ox cheeks
-                        with truffle cauliflower <br> puree</span></p>
+          <!-- IPAD VERSION FOR 'Risotto De Setas Con Bacalao' -->
+          <p class="box s hide-desktop hide-mobile show-ipad">
+            RISOTTO DE SETAS <br />
+            CON BACALAO<span class="price-font-size">............£9.50</span>
+            <br />
+            <span class="span-s span-position span-font-size">
+              Mushroom Risotto with pan fried Cod</span
+            >
+          </p>
+          <!-- END OF IPAD VERSION FOR 'Risotto De Setas Con Bacalao' -->
 
-                <p class="box v">Pulpo A La Gallega<span>...............................£9.50</span>
-                    <br>
-                    <span style="font-size: 19px; position: relative; top: 10px;">Galician
-                        Octopus</span></p>
+          <p class="box t show-desktop hide-mobile hide-ipad">
+            Chipiron Relleno<span>.................................£11.50</span>
+            <br />
+            <span class="span-position"
+              >Stuffed squid with chorizo and manchego <br />
+              cheese, PX reduction</span
+            >
+          </p>
 
-                <p class="box w">ALCACHOFAS CONFITADAS CON <br> PUR DE PIMIENTO DE LA <br>
-                    VERA<span>............................................................£10.50</span> <br>
-                    <span style="font-size: 19px; position: relative; top: 10px;">Artichoke confit with pepper puree de
-                        la vera</span></p>
+          <!-- MOBILE VERSION FOR 'Chipiron Relleno' -->
+          <p class="box t hide-desktop show-mobile hide-ipad">
+            Chipiron Relleno<span class="price-font-size">........£11.50</span>
+            <br />
+            <span class="box-t-span span-font-size"
+              >Stuffed squid with chorizo and manchego cheese, PX
+              reduction</span
+            >
+          </p>
+          <!-- END OF MOBILE VERSION FOR 'Chipiron Relleno' -->
 
-                <p class="box x">POLLO AL AJILLO CON EL
-                    BOLLO<span>........................................................£9.50</span>
-                    <br>
-                    <span style="font-size: 19px; position: relative; top: 10px;">Chicken in garlic and white wine,
-                        toasted brioche</span></p>
-            </div>
+          <!-- IPAD VERSION FOR 'Chipiron Relleno' -->
+          <p class="box t hide-desktop hide-mobile show-ipad">
+            Chipiron Relleno<span class="price-font-size">....£11.50</span>
+            <br />
+            <span class="span-t span-font-size"
+              >Stuffed squid with chorizo and manchego cheese, PX
+              reduction</span
+            >
+          </p>
+          <!-- END OF IPAD VERSION FOR 'Chipiron Relleno'  -->
+
+          <p class="box u show-desktop hide-mobile hide-ipad">
+            Carrilleras De ternera<span
+              >...............................£11</span
+            >
+            <br />
+            <span class="span-position"
+              >Slow cooked ox cheeks with truffle cauliflower <br />
+              puree</span
+            >
+          </p>
+
+          <!-- MOBILE VERSION FOR 'Carrilleras De Ternera' -->
+          <p class="box u hide-desktop show-mobile hide-ipad">
+            Carrilleras De ternera<span class="price-font-size"
+              >...............................£11</span
+            >
+            <br />
+            <span class="span-font-size"
+              >Slow cooked ox cheeks with truffle cauliflower <br />
+              puree</span
+            >
+          </p>
+          <!-- END OF MOBILE VERSION FOR 'Carrilleras De Ternera' -->
+
+          <!-- IPAD VERSION FOR 'Carrilleras De Ternera' -->
+          <p class="box u hide-desktop hide-mobile show-ipad">
+            Carrilleras De ternera<span class="price-font-size"
+              >.................................£11</span
+            >
+            <br />
+            <span class="span-u span-font-size"
+              >Slow cooked ox cheeks with truffle cauliflower puree</span
+            >
+          </p>
+          <!-- END OF IPAD VERSION FOR 'Carrilleras De Ternera' -->
+
+          <p class="box v show-desktop hide-mobile hide-ipad">
+            Pulpo A La Gallega<span>...............................£9.50</span>
+            <br />
+            <span class="span-position">Galician Octopus</span>
+          </p>
+
+          <!-- MOBILE VERSION FOR 'Pulpo A La Gallega' -->
+          <p class="box v hide-desktop show-mobile hide-ipad">
+            Pulpo A La Gallega<span class="price-font-size"
+              >...........................£9.50</span
+            >
+            <br />
+            <span class="span-font-size">Galician Octopus</span>
+          </p>
+          <!-- END OF MOBILE VERSION FOR 'Pulpo A La Gallega' -->
+
+          <!-- IPAD VERSION FOR 'Pulpo A La Gallege' -->
+          <p class="box v hide-desktop hide-mobile show-ipad">
+            Pulpo A La Gallega<span class="price-font-size">...£9.50</span>
+            <br />
+            <span class="span-font-size">Galician Octopus</span>
+          </p>
+          <!-- END OF IPAD VERSION FOR 'Pulpo A La Gallege' -->
+
+          <p class="box w show-desktop hide-mobile hide-ipad">
+            ALCACHOFAS CONFITADAS CON <br />
+            PUR DE PIMIENTO DE LA <br />
+            VERA<span
+              >............................................................£10.50</span
+            >
+            <br />
+            <span class="span-position"
+              >Artichoke confit with pepper puree de la vera</span
+            >
+          </p>
+
+          <!-- MOBILE VERSION FOR 'ALCACHOFAS CONFITADAS CON PUR DE PIMIENTO DE LA VERA' -->
+          <p class="box w hide-desktop show-mobile hide-ipad">
+            ALCACHOFAS <br />
+            CONFITADAS <br />
+            CON PUR DE <br />
+            PIMIENTO DE LA <br />
+            VERA<span class="price-font-size"
+              >............................£10.50</span
+            >
+            <br />
+            <span class="span-font-size"
+              >Artichoke confit with pepper puree de la vera</span
+            >
+          </p>
+          <!-- END OF MOBILE VERSION FOR 'ALCACHOFAS CONFITADAS CON PUR DE PIMIENTO DE LA VERA' -->
+
+          <!-- IPAD VERSION FOR 'ALCACHOFAS CONFITADAS CON PUR DE PIMIENTO DE LA VERA' -->
+          <p class="box w hide-desktop hide-mobile show-ipad">
+            ALCACHOFAS CONFITADAS CON <br />
+            PUR DE PIMIENTO <br />
+            DE LA VERA<span class="price-font-size"
+              >.................£10.50</span
+            >
+            <br />
+            <span class="span-w span-font-size"
+              >Artichoke confit with pepper puree de la vera</span
+            >
+          </p>
+          <!-- END OF IPAD VERSION FOR 'ALCACHOFAS CONFITADAS CON PUR DE PIMIENTO DE LA VERA' -->
+
+          <p class="box x show-desktop hide-mobile hide-ipad">
+            POLLO AL AJILLO CON EL BOLLO<span
+              >........................................................£9.50</span
+            >
+            <br />
+            <span class="span-position"
+              >Chicken in garlic and white wine, toasted brioche</span
+            >
+          </p>
+
+          <!-- MOBILE VERSION FOR 'POLLO AL AJILLO CON EL BOLLO' -->
+          <p class="box x hide-desktop show-mobile hide-ipad">
+            POLLO AL AJILLO <br />
+            CON EL BOLLO<span class="price-font-size">...........£9.50</span>
+            <br />
+            <span class="span-font-size"
+              >Chicken in garlic and white <br />
+              wine, toasted brioche</span
+            >
+          </p>
+          <!-- END OF MOBILE VERSION FOR 'POLLO AL AJILLO CON EL BOLLO' -->
+
+          <!-- IPAD VERSION FOR 'POLLO AL AJILLO CON EL BOLLO' -->
+          <p class="box x hide-desktop hide-mobile show-ipad">
+            POLLO AL AJILLO <br />
+            CON EL BOLLO<span class="price-font-size">..........£9.50</span>
+            <br />
+            <span class="span-font-size"
+              >Chicken in garlic and white <br />
+              wine, toasted brioche</span
+            >
+          </p>
+          <!-- END OF IPAD VERSION FOR 'POLLO AL AJILLO CON EL BOLLO' -->
         </div>
+      </div>
 
-        <div class="container-4" style="margin-top: -21px; height: 40em;">
-            <h1 style="padding-top: 70px; width: 10%;">Paella</h1>
-            <hr>
-            <span class="container-4-p">Our Paellas are classic - made to a traditional recipe using only the freshest
-                of ingredients with no additives. Takes 25 minutes from order.</span>
-            <div class="container-4-grid">
-                <p class="box y" style="position: relative; top: 60px;">De arroz
-                    negro<span>.............................................£28</span> <br>
-                    <span style="font-size: 19px; position: relative; top: 10px;">Squid ink with chopped
-                        squid
-                        and tiger prawns, <br> lime aioli</span></p>
+      <div class="container-4">
+        <h1 class="container-4-h1">Paella</h1>
+        <hr class="container-4-hr" />
+        <span class="container-4-p hide-ipad">
+          Our Paellas are classic - made to a traditional recipe using only the
+          freshest of ingredients with no additives. Takes 25 minutes from
+          order.
+        </span>
 
-                <p class="box z" style="position: relative; top: 60px;">
-                    Valenciana<span>..................................................£25</span> <br>
-                    <span style="font-size: 19px; position: relative; top: 10px;">Chicken & Seafood</span></p>
+        <div class="container-4-grid">
+          <p class="box y show-desktop hide-mobile hide-ipad">
+            De arroz negro<span
+              >.............................................£28</span
+            >
+            <br />
+            <span class="span-position"
+              >Squid ink with chopped squid and tiger prawns, <br />
+              lime aioli</span
+            >
+          </p>
 
-                <p class="box a1">De Carne<span>..........................................................£25</span>
-                    <br>
-                    <span style="font-size: 19px; position: relative; top: 10px;">Pork shoulder with mushrooms
-                        and
-                        romesco</span></p>
+          <!-- MOBILE VERSION FOR 'De arroz negro' -->
+          <p class="box y hide-desktop show-mobile hide-ipad">
+            De arroz negro<span class="price-font-size"
+              >.................£28</span
+            >
+            <br />
+            <span class="span-y span-font-size"
+              >Squid ink with chopped squid and tiger prawns, lime aioli</span
+            >
+          </p>
+          <!-- END OF MOBILE VERSION FOR 'De arroz negro' -->
 
-                <p class="box a2">Vegetal<span>..........................................................£24</span> <br>
-                    <span style="font-size: 19px; position: relative; top: 10px;">salmorreta, mushrooms,
-                        artichokes
-                        and green <br> pea cream</span></p>
-            </div>
+          <!-- IPAD VERSION FOR 'De arroz negro' -->
+          <p class="box y hide-desktop hide-mobile show-ipad">
+            De arroz negro<span class="price-font-size"
+              >.................£28</span
+            >
+            <br />
+            <span class="span-y span-font-size"
+              >Squid ink with chopped squid and tiger prawns, lime aioli</span
+            >
+          </p>
+          <!-- END OF IPAD VERSION FOR 'De arroz negro' -->
+
+          <p class="box z show-desktop hide-mobile hide-ipad">
+            Valenciana<span
+              >..................................................£25</span
+            >
+            <br />
+            <span class="span-position">Chicken & Seafood</span>
+          </p>
+
+          <!-- MOBILE VERSION FOR 'Valenciana' -->
+          <p class="box z hide-desktop show-mobile hide-ipad">
+            Valenciana<span class="price-font-size"
+              >........................£25</span
+            >
+            <br />
+            <span class="span-font-size">Chicken & Seafood</span>
+          </p>
+          <!-- END OF MOBILE VERSION FOR 'Valenciana' -->
+
+          <!-- IPAD VERSION FOR 'Valenciana' -->
+          <p class="box z hide-desktop hide-mobile show-ipad">
+            Valenciana<span class="price-font-size"
+              >.......................£25</span
+            >
+            <br />
+            <span class="span-font-size">Chicken & Seafood</span>
+          </p>
+          <!-- END OF IPAD VERSION FOR 'Valenciana' -->
+
+          <p class="box a1 show-desktop hide-mobile hide-ipad">
+            De Carne<span
+              >..........................................................£25</span
+            >
+            <br />
+            <span class="span-position"
+              >Pork shoulder with mushrooms and romesco</span
+            >
+          </p>
+
+          <!-- MOBILE VERSION FOR 'De Carne' -->
+          <p class="box a1 hide-desktop show-mobile hide-ipad">
+            De Carne<span class="price-font-size"
+              >...........................£25</span
+            >
+            <br />
+            <span class="span-font-size"
+              >Pork shoulder with mushrooms and <br />
+              romesco</span
+            >
+          </p>
+          <!-- END OF MOBILE VERSION FOR 'De Carne' -->
+
+          <!-- IPAD VERSION FOR 'De Carne' -->
+          <p class="box a1 hide-desktop hide-mobile show-ipad">
+            De Carne<span class="price-font-size"
+              >............................£25</span
+            >
+            <br />
+            <span class="span-a1 span-font-size"
+              >Pork shoulder with <br />
+              mushrooms and romesco</span
+            >
+          </p>
+          <!-- END OF IPAD VERSION FOR 'De Carne' -->
+
+          <p class="box a2 show-desktop hide-mobile hide-ipad">
+            Vegetal<span
+              >..........................................................£24</span
+            >
+            <br />
+            <span class="span-position"
+              >salmorreta, mushrooms, artichokes and green <br />
+              pea cream</span
+            >
+          </p>
+
+          <!-- MOBILE VERSION FOR 'Vegetal' -->
+          <p class="box a2 hide-desktop show-mobile hide-ipad">
+            Vegetal<span class="price-font-size"
+              >..............................£24</span
+            >
+            <br />
+            <span class="span-font-size"
+              >salmorreta, mushrooms, artichokes and green <br />
+              pea cream</span
+            >
+          </p>
+          <!-- END OF MOBILE VERSION FOR 'Vegetal' -->
+
+          <!-- IPAD VERSION FOR 'Vegetal' -->
+          <p class="box a2 hide-desktop hide-mobile show-ipad">
+            Vegetal<span class="price-font-size"
+              >..............................£24</span
+            >
+            <br />
+            <span class="span-a2 span-font-size"
+              >salmorreta, mushrooms, artichokes and green pea cream</span
+            >
+          </p>
+          <!-- END OF IPAD VERSION FOR 'Vegetal' -->
         </div>
+      </div>
 
-        <div class="container-5">
-            <h1 style="margin-top: -70px; width: 16%;">Sharing Tablas</h1>
-            <hr>
-            <div class="container-5-grid">
+      <div class="container-5">
+        <h1 class="container-5-h1">Sharing Tablas</h1>
+        <hr class="container-5-hr" />
+        <div class="container-5-grid">
+          <p class="box a3 show-desktop hide-mobile hide-ipad">
+            Queso<span
+              >...........................................................£14.50</span
+            >
+            <br />
+            <span class="span-position"
+              >Picos de Europa (blue cheese), Manchego el <br />
+              consorcio, Idiazabal elconsorio (smoked <br />
+              cheese) and Tetilla, bread and quince</span
+            >
+          </p>
 
-                <p class="box a3">Queso<span>...........................................................£14.50</span> <br>
-                    <span style="font-size: 19px; position: relative; top: 10px;">Picos de Europa (blue cheese),
-                        Manchego el <br> consorcio, Idiazabal elconsorio (smoked <br> cheese) and
-                        Tetilla, bread and quince</span></p>
+          <!-- MOBILE VERSION FOR 'Queso' -->
+          <p class="box a3 hide-desktop show-mobile hide-ipad">
+            Queso<span class="price-font-size"
+              >...........................£14.50</span
+            >
+            <br />
+            <span class="span-a3 span-font-size"
+              >Picos de Europa (blue cheese), Manchego el consorcio, Idiazabal
+              elconsorio (smoked cheese) and Tetilla, bread and quince</span
+            >
+          </p>
+          <!-- END OF MOBILE VERSION FOR 'Queso' -->
 
-                <p class="box a4">Charcuterie<span>............................................£14.90</span> <br>
-                    <span style="font-size: 19px; position: relative; top: 10px;">Jamon duroc, spicy Guijuelo chorizo,
-                        Vic's <br> salchichon, bread, olives</span></p>
-            </div>
+          <!-- IPAD VERSION FOR 'Queso' -->
+          <p class="box a3 hide-desktop hide-mobile show-ipad">
+            Queso<span class="price-font-size"
+              >............................£14.50</span
+            >
+            <br />
+            <span class="span-a3 span-font-size"
+              >Picos de Europa (blue cheese), Manchego el consorcio, Idiazabal
+              elconsorio (smoked cheese) <br />
+              and Tetilla, bread and quince</span
+            >
+          </p>
+          <!-- END OF IPAD VERSION FOR 'Queso' -->
+
+          <p class="box a4 show-desktop hide-mobile hide-ipad">
+            Charcuterie<span
+              >............................................£14.90</span
+            >
+            <br />
+            <span class="span-position"
+              >Jamon duroc, spicy Guijuelo chorizo, Vic's <br />
+              salchichon, bread, olives</span
+            >
+          </p>
+
+          <!-- MOBILE VERSION FOR 'Charcuterie' -->
+          <p class="box a4 hide-desktop show-mobile hide-ipad">
+            Charcuterie<span class="price-font-size"
+              >.................£14.90</span
+            >
+            <br />
+            <span class="span-a4 span-font-size"
+              >Jamon duroc, spicy Guijuelo chorizo, Vic's salchichon, bread,
+              olives</span
+            >
+          </p>
+          <!-- END OF MOBILE VERSION FOR 'Charcuterie' -->
+
+          <!-- IPAD VERSION FOR 'Charcuterie' -->
+          <p class="box a4 hide-desktop hide-mobile show-ipad">
+            Charcuterie<span class="price-font-size"
+              >................£14.90</span
+            >
+            <br />
+            <span class="span-a4 span-font-size"
+              >Jamon duroc, spicy Guijuelo chorizo, Vic's salchichon, bread,
+              olives</span
+            >
+          </p>
+          <!-- END OF IPAD VERSION FOR 'Charcuterie' -->
         </div>
+      </div>
 
-        <div class="container-6" style="padding-bottom: 50px;">
-            <h1 style="position: relative; margin-top: 0; width: 10%;">Desserts</h1>
-            <hr>
-            <div class="container-6-grid">
-                <p class="box a5">Torijja<span>...................................................................£6</span> <br>
-                    <span>Classic spanish desert. Baked briche tower <br> soaked in milk and drizzled with honey and
-                        <br>
-                        cinamon.</span></p>
+      <div class="container-6">
+        <h1 class="container-6-h1">Desserts</h1>
+        <hr class="container-6-hr" />
+        <div class="container-6-grid">
+          <p class="box a5 show-desktop hide-mobile hide-ipad">
+            Torijja<span
+              >...................................................................£6</span
+            >
+            <br />
+            <span
+              >Classic spanish desert. Baked briche tower <br />
+              soaked in milk and drizzled with honey and
+              <br />
+              cinamon.</span
+            >
+          </p>
 
-                <p class="box a6">Bizcocho de Chocolate<span>..........................£6</span>
-                    <br>
-                    <span>Spanish chocolate brownie with vanilla <br> chocolate sauce</span></p>
+          <!-- MOBILE VERSION FOR 'Torijja' -->
+          <p class="box a5 hide-desktop show-mobile hide-ipad">
+            Torijja<span class="price-font-size"
+              >...................................£6</span
+            >
+            <br />
+            <span class="span-a5 span-font-size"
+              >Classic spanish desert. Baked briche tower soaked in milk and
+              drizzled with honey and cinamon.</span
+            >
+          </p>
+          <!-- END OF MOBILE VERSION FOR 'Torijja' -->
 
-                <p class="box a7">Cuaja Con Membrillo<span>...................................£5</span> <br>
-                    <span>Vanilla cream pudding with quince jam</span></p>
-            </div>
+          <!-- IPAD VERSION FOR 'Torijja' -->
+          <p class="box a5 hide-desktop hide-mobile show-ipad">
+            Torijja<span class="price-font-size"
+              >....................................£6</span
+            >
+            <br />
+            <span class="span-a5 span-font-size"
+              >Classic spanish desert. Baked briche tower soaked in milk and
+              drizzled with honey and cinamon.</span
+            >
+          </p>
+          <!-- END OF IPAD VERSION FOR 'Torijja' -->
+
+          <p class="box a6 show-desktop hide-mobile hide-ipad">
+            Bizcocho de Chocolate<span>..........................£6</span>
+            <br />
+            <span
+              >Spanish chocolate brownie with vanilla <br />
+              chocolate sauce</span
+            >
+          </p>
+
+          <!-- MOBILE VERSION FOR 'Bizcocho de Chocolate' -->
+          <p class="box a6 hide-desktop show-mobile hide-ipad">
+            Bizcocho de Chocolate<span class="price-font-size"
+              >............................£6</span
+            >
+            <br />
+            <span class="span-font-size"
+              >Spanish chocolate brownie with vanilla chocolate sauce</span
+            >
+          </p>
+          <!-- END OF MOBILE VERSION FOR 'Bizcocho de Chocolate' -->
+
+          <!-- IPAD VERSION FOR 'Bizcocho de Chocolate'' -->
+          <p class="box a6 hide-desktop hide-mobile show-ipad">
+            Bizcocho de Chocolate<span class="price-font-size"
+              >........................£6</span
+            >
+            <br />
+            <span class="span-a6 span-font-size"
+              >Spanish chocolate brownie with vanilla chocolate sauce</span
+            >
+          </p>
+          <!-- END OF IPAD VERSION FOR 'Bizcocho de Chocolate'' -->
+
+          <p class="box a7 show-desktop hide-mobile hide-ipad">
+            Cuaja Con Membrillo<span
+              >...................................£5</span
+            >
+            <br />
+            <span>Vanilla cream pudding with quince jam</span>
+          </p>
+
+          <!-- MOBILE VERSION FOR 'Cuaja Con Membrillo' -->
+          <p class="box a7 hide-desktop show-mobile hide-ipad">
+            Cuaja Con Membrillo<span class="price-font-size">........£5</span>
+            <br />
+            <span class="span-font-size"
+              >Vanilla cream pudding with quince jam</span
+            >
+          </p>
+          <!-- END OF MOBILE VERSION FOR 'Cuaja Con Membrillo' -->
+
+          <!-- IPAD VERSION FOR 'Cuaja Con Membrillo' -->
+          <p class="box a7 hide-desktop hide-mobile show-ipad">
+            Cuaja Con Membrillo<span class="price-font-size">......£5</span>
+            <br />
+            <span class="span-a7 span-font-size"
+              >Vanilla cream pudding with quince jam</span
+            >
+          </p>
+          <!-- END OF IPAD VERSION FOR 'Cuaja Con Membrillo' -->
         </div>
+      </div>
     </main>
 
-    <footer style="margin-top: 10px;">
-        <div class="footer-form">
-            <label class="subscribe-now" for="subscribe">Subscribe Now</label>
-            <input id="subscribe" class="email" type="text" name="email-address" placeholder="Email Address">
-        </div>
+    <footer>
+      <div class="footer-form">
+        <label class="subscribe-now" for="subscribe"
+          ><a class="subscribe-font-size" href="#">Subscribe Now</a></label
+        >
+        <input
+          id="subscribe"
+          class="email"
+          type="text"
+          name="email-address"
+          placeholder="Email Address"
+        />
+      </div>
 
-        <p style="position: relative; top: 1.5em; left: 55em; font-size: 14px; font-weight: 400; width: 27%;">&copy; 2018 by Bar
-            Gansa</p>
+      <p class="register-mark">&copy; 2018 by Bar Gansa</p>
 
-        <div class="social-media-container">
-            <img class="facebook" src="Images/facebook_href.webp" alt="Bar Gansa Facebook"
-                style="width: 39px; height: 41px;">
-            <img src="Images/snapchat_href.webp" alt="Bar Gansa Snapchat" style="width: 39px; height: 41px;">
-        </div>
+      <div class="social-media-container">
+        <a href="#"
+          ><img
+            class="facebook facebook-snapchat"
+            src="Images/facebook_href.webp"
+            alt="Bar Gansa Facebook"
+        /></a>
+        <a href="#"
+          ><img
+            class="snapchat facebook-snapchat"
+            src="Images/snapchat_href.webp"
+            alt="Bar Gansa Snapchat"
+        /></a>
+      </div>
     </footer>
-</body>
 
+    <script>
+      const ham = document.getElementById("ham");
+      const nav = document.querySelector("nav");
+      const exit = document.getElementById("exit");
+      const menu = document.getElementById("menu");
+      // const input = document.querySelector(".email");
+
+      // input.addEventListener("click", function () {
+      //   input.style.backgroundImage =
+      //     "none"; /* Removes the envelop icon in the footer when the <input> taga is clicked on */
+      // });
+
+      ham.addEventListener("click", function (e) {
+        nav.classList.toggle("hide-mobile"); /* Removes 'hide-mobile' from  */
+
+        exit.classList.add(
+          "show-mobile"
+        ); /* Adds the 'X' for the exit class when the menu is clicked  */
+
+        ham.style.display =
+          "none"; /* Removes the 'ham' image when clicked on */
+
+        menu.classList.add("hide-mobile");
+      });
+
+      exit.addEventListener("click", function (e) {
+        nav.classList.add(
+          "hide-mobile"
+        ); /* Hides the menu when 'X' is clicked on */
+        exit.classList.remove(
+          "show-mobile"
+        ); /* Removes the 'X' when clicked on. If this isn't added then the 'X' will be displayed on the web page */
+        ham.style.display =
+          "initial"; /* Returns the 'ham' image for the main menu. */
+      });
+    </script>
+  </body>
 </html>

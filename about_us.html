@@ -1,134 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      About Us | Bar Gansa | Tapas | Live Music | Flamenco | Camden Town
+    </title>
+    <link rel="stylesheet" href="./about_us.css" />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./main.css">
-
-    <style>
-        ul {
-            margin-top: -16px;
-        }
-
-        .image-1 {
-            position: relative;
-            left: 29.5em;
-            margin-top: 100px;
-        }
-
-        figcaption {
-            color: #2B0D04;
-            font-size: 23px;
-            font-family: Arial, Helvetica, sans-serif;
-            text-align: center;
-            width: 65%;
-            position: relative;
-            left: 230px;
-            margin-top: 15px;
-        }
-
-        p {
-            font-size: 23px;
-            font-family: Arial, Helvetica, sans-serif;
-            text-align: justify;
-            width: 78%;
-            position: relative;
-            left: 170px;
-        }
-
-        .paragraph-1 {
-            margin-top: 80px;
-        }
-
-        .about_us_pic {
-            border: 1px solid red;
-            position: relative;
-            left: 130px;
-        }
-
-        footer {
-            position: relative;
-            top: 200px;
-            left: 50px;
-        }
-    </style>
-
-</head>
-
-<body>
+  <body>
     <header>
-        <nav>
-            <ul>
-                <li><a class="li-text home" href="./index.html">HOME</a></li>
-                <li><a class="li-text" href="http://127.0.0.1:5500/index.html#reservation">RESERVATION</a></li>
-                <li><a class="li-text" href="http://127.0.0.1:5500/menu.html">MENU</a></li>
-                <li><a class="li-text" href="http://127.0.0.1:5500/wines.html">WINES</a></li>
-                <li><a class="li-text" href="#">ABOUT US</a></li>
-                <li><a class="li-text" href="http://127.0.0.1:5500/index.html#contact">CONTACT</a></li>
-            </ul>
-        </nav>
+      <div class="ham-background">
+        <img
+          class="show-mobile menu ham hide-desktop"
+          id="menu"
+          src="Images/ham.svg"
+          alt="dropdown button"
+        />
+      </div>
 
-        <figure>
-            <img class="image-1" src="Images/pic_1.png" alt="Bar Gansa Restaurant" style="width: 332px; height: 332px;">
-            <figcaption><em>With a wide range of experience behind him, Chef Nacho Rivera brings his expert techniques
-                    and
-                    Spanish flair to the newly refurbished Tapas hotspot.</em></figcaption>
-        </figure>
+      <a><span class="hide-mobile hide-desktop exit-btn" id="exit">x</span></a>
+      <nav class="hide-mobile">
+        <ul class="show-mobile">
+          <li>
+            <a class="li-text home" href="./index.html">HOME</a>
+          </li>
+          <li>
+            <a
+              class="li-text reservation"
+              href="http://127.0.0.1:5500/index.html#reservation"
+              >RESERVATION</a
+            >
+          </li>
+          <li>
+            <a class="li-text menu" href="http://127.0.0.1:5500/menu.html">MENU</a>
+          </li>
+          <li>
+            <a class="li-text wines" href="http://127.0.0.1:5500/wines.html">WINES</a>
+          </li>
+          <li>
+            <a class="li-text hide-mobile about-us" id="about-us" href="#">ABOUT<span class="us">US</span></a>
+          </li>
+          <li>
+            <a class="li-text contact" href="http://127.0.0.1:5500/index.html#contact"
+              >CONTACT</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <figure>
+        <img
+          class="image-1"
+          src="Images/pic_1.png"
+          alt="Bar Gansa Restaurant"
+        />
+        <figcaption>
+          <em
+            >With a wide range of experience behind him, Chef Nacho Rivera
+            brings his expert techniques and Spanish flair to the newly
+            refurbished Tapas hotspot.</em
+          >
+        </figcaption>
+      </figure>
     </header>
 
     <main>
-        <p class="paragraph-1">Following a striking redesign, Bar Gansa proudly welcomes Nacho Rivera as its new Head
-            Chef. Rivera’s love
-            for cooking started in his hometown in Southern Spain, inspired by the region’s traditional cooking and
-            fresh
-            produce. Having worked as a chef in his hometown for ten years, Rivera made the move to London two years
-            ago.</p>
+      <p class="paragraph-1">
+        Following a striking redesign, Bar Gansa proudly welcomes Nacho Rivera
+        as its new Head Chef. Rivera’s love for cooking started in his hometown
+        in Southern Spain, inspired by the region’s traditional cooking and
+        fresh produce. Having worked as a chef in his hometown for ten years,
+        Rivera made the move to London two years ago.
+      </p>
 
-        <p>Here he gained experience working at Donostia and Barrafina, before starting his chapter at Bar Gansa.
-            Rivera chose the move to Bar Gansa as he was drawn to the authentic Spanish atmosphere and was eager to
-            bring
-            a fresh approach to the kitchen.</p>
+      <p>
+        Here he gained experience working at Donostia and Barrafina, before
+        starting his chapter at Bar Gansa. Rivera chose the move to Bar Gansa as
+        he was drawn to the authentic Spanish atmosphere and was eager to bring
+        a fresh approach to the kitchen.
+      </p>
 
-        <figure>
-            <img class="about_us_pic" src="Images/about_us_pic_1.webp" alt="About Us Bar Gansa 1"
-                style="width: 494px; height: 280px;">
-            <img class="about_us_pic" src="Images/about_us_pic_2.webp" alt="About Us Bar Gansa 2"
-                style="width: 494px; height: 280px;">
-        </figure>
+      <figure class="fig-grid">
+        <img
+          class="about_us_pic"
+          src="Images/about_us_pic_1.webp"
+          alt="About Us Bar Gansa 1"
+        />
+        <img
+          class="about_us_pic about-us-pic-2"
+          src="Images/about_us_pic_2.webp"
+          alt="About Us Bar Gansa 2"
+        />
+      </figure>
 
-        <p>Rivera has transformed the menu at Bar Gansa with his personal cooking style, which brings influences from
-            his Spanish heritage with a modern twist. New menu items include Carrileras De Bacalao Con Alioli De Ajo
-            Negro,
-            a Tapas dish of cod cheeks with black garlic and aioli. Paella De Carne, a twist on the classic Paella,
-            boasts pork shoulder, mushrooms and romesco. Chef Nacho’s personal favourite is Chipiron Relleno, a
-            delicious stuffed
-            squid with chorizo, Manchego cheese and PX reduction.</p>
+      <p>
+        Rivera has transformed the menu at Bar Gansa with his personal cooking
+        style, which brings influences from his Spanish heritage with a modern
+        twist. New menu items include Carrileras De Bacalao Con Alioli De Ajo
+        Negro, a Tapas dish of cod cheeks with black garlic and aioli. Paella De
+        Carne, a twist on the classic Paella, boasts pork shoulder, mushrooms
+        and romesco. Chef Nacho’s personal favourite is Chipiron Relleno, a
+        delicious stuffed squid with chorizo, Manchego cheese and PX reduction.
+      </p>
 
-        <p>The new menu pays homage to traditional Spanish cuisine, while the restaurant’s refreshing makeover
-            transports
-            patrons into Spain with its quirky design, featuring orange seating and brightly patterned décor.</p>
+      <p>
+        The new menu pays homage to traditional Spanish cuisine, while the
+        restaurant’s refreshing makeover transports patrons into Spain with its
+        quirky design, featuring orange seating and brightly patterned décor.
+      </p>
 
-        <p>On weekends, the Sangria flows with a lively bottomless brunch, including three tapas of your choice and
-            ninety minutes
-            of bottomless beer or sangria. To add to the vibrant Spanish atmosphere, electrifying flamenco displays are
-            hosted
-            by the Escuela de Balle every Sunday from 8pm.</p>
+      <p>
+        On weekends, the Sangria flows with a lively bottomless brunch,
+        including three tapas of your choice and ninety minutes of bottomless
+        beer or sangria. To add to the vibrant Spanish atmosphere, electrifying
+        flamenco displays are hosted by the Escuela de Balle every Sunday from
+        8pm.
+      </p>
     </main>
 
     <footer>
-        <label class="subscribe-now" for="subscribe">Subscribe Now</label>
-        <input id="subscribe" class="email" type="text" name="email-address" placeholder="Email Address">
+      <label class="subscribe-now" for="subscribe"
+        ><a href="#">Subscribe Now</a></label
+      >
+      <input
+        id="subscribe"
+        class="email"
+        type="text"
+        name="email-address"
+        placeholder="Email Address"
+      />
 
-        <p style="position: relative; bottom: 12.5em; left: 53em; font-size: 14px;">&copy; 2018 by Bar Gansa</p>
-        <div class="social-media-container">
-            <img class="facebook" src="Images/facebook_href.webp" alt="Bar Gansa Facebook"
-                style="width: 39px; height: 39px; position: relative; top: 12px;">
-            <img src="Images/snapchat_href.webp" alt="Bar Gansa Snapchat"
-                style="width: 39px; height: 41px; position: relative; top: 12.5px;">
-        </div>
+      <p class="register-mark">&copy; 2018 by Bar Gansa</p>
+      <div class="social-media-container">
+        <a href="#"
+          ><img
+            class="facebook-snapchat facebook"
+            src="Images/facebook_href.webp"
+            alt="Bar Gansa Facebook"
+        /></a>
+
+        <a href="#"
+          ><img
+            class="facebook-snapchat"
+            src="Images/snapchat_href.webp"
+            alt="Bar Gansa Snapchat"
+        /></a>
+      </div>
     </footer>
-</body>
 
+    <script>
+      const menu = document.getElementById("menu");
+      const nav = document.querySelector("nav");
+      const exit = document.getElementById("exit");
+      const about_us = document.getElementById("about-us");
+
+      menu.addEventListener("click", function (e) {
+        nav.classList.toggle("hide-mobile"); /* Removes 'hide-mobile' from  */
+
+        exit.classList.add(
+          "show-mobile"
+        ); /* Adds the 'X' for the exit class when the menu is clicked  */
+
+        menu.style.display =
+          "none"; /* Removes the 'ham' image when clicked on */
+      });
+
+      exit.addEventListener("click", function (e) {
+        nav.classList.add(
+          "hide-mobile"
+        ); /* Hides the menu when 'X' is clicked on */
+        exit.classList.remove(
+          "show-mobile"
+        ); /* Removes the 'X' when clicked on. If this isn't added then the 'X' will be displayed on the web page */
+        menu.style.display =
+          "initial"; /* Returns the 'ham' image for the main menu. */
+      });
+    </script>
+  </body>
 </html>

@@ -1,587 +1,1440 @@
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Jaldi&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@300&display=swap'); /* Font: Commissioner - for '.container-3-heading */
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jaldi&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@300&display=swap"); /* Font: Commissioner - for '.container-3-heading */
+@import url("https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap"); /* Used as a font for the 'exit-button' class in the mobile version */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"); /* Used in the '.email' class */
 
-body {
-    margin: 0;
+
+/* 1293 x 990 */
+/* @media only screen and (min-width: 768px) { */
+  body {
+  margin: 0;
 }
 
+/* Main image of the page */
 .html-image {
-    opacity: 0.7;
-    margin-top: -20px;
+  opacity: 0.7;
+  margin-top: -20px;
+  width: 100%;
 }
 
 a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 
 /*---Top Menu---*/
 
+/* Hides the 'ham' picture for the dropdown menu */
+.hide-desktop {
+  display: none;
+}
+
 ul {
-    list-style-type: none; /* Eliminates the bullet points inside ul */
-    display: grid;
-    grid-template-columns: 213px 213px 213px 213px 213px 213px; /* Automatically creates 1 row with 7 columns: 16.66% 16.66% 16.66% 16.66% 16.66% 16.66% */
-    position: relative;
-    right: 40px;
-    margin-bottom: 0;
-    margin-top: 0;
-    background-color: white;
-    position: fixed;
-    z-index: 1;
+  list-style-type: none; /* Eliminates the bullet points inside ul */
+  display: grid;
+  grid-template-columns: 214px 213px 213px 213px 213px 214px; /* Automatically creates 1 row with 7 columns */
+  position: relative;
+  right: 40px;
+  margin-top: 0;
+  background-color: white;
+  position: fixed;
+  z-index: 1;
 }
 
 li {
-    background-color: white;
-    position: relative;
-    left: 40px;
-    border-right: .5px solid black; 
-    text-align: center; 
-    height: 40px; 
-    padding: 0px 50px; 
-    padding-top: 20px;
-    transition: background-color .5s;  
+  background-color: white; /* Fills the background of the 'Contact' tab */
+  position: relative;
+  left: 40px;
+  border-right: 1px solid black;
+  text-align: center;
+  height: 40px;
+  padding: 20px 50px 0 50px;
+  transition: background-color 0.5s;
 }
+
+/* CONTAINER TO EXTEND BORDER OF TEXT IN MENU */
+/* li a { */
+  /* border: 1px solid red; */
+  /* padding: 21px 84px 22px 82px;
+  position: relative;
+  right: 50px;
+} */
+
+.home {
+  padding: 21px 85px 22px 82px;
+  position: relative;
+  right: 50px;
+}
+
+.reservation {
+  padding: 21px 52px 22px 55px;
+  margin-left: -50px;
+}
+
+.menu {
+  padding: 21px 85px 22px 82px;
+  margin-left: -3.2em;
+}
+
+.wines {
+  padding: 21px 85px 22px 82px;
+  margin-left: -3.2em;
+}
+
+.us {
+  margin-left: 4.5px;
+}
+
+.about-us-top-menu {
+  margin-left: -3.2em;
+  padding: 21px 67px 22px 67px;
+}
+
+.contact-li {
+  padding: 21px 70px 22px 70px;
+  margin-left: -3.2em;
+}
+/* END CONTAINER TO EXTEND BORDER OF TEXT IN MENU */
 
 li:hover {
-    background-color: #C83727; 
+  background-color: #c83727;
 }
 
-.li-text:hover { /* Changes the colour of the text in the top menu to white when mouse is hovered over it */
-    color: white;
-} 
+/* Changes the colour of the text in the top menu to white when mouse is hovered over it */
+.li-text:hover {
+  color: white;
+}
+
+.contact-li {
+  border-right: none;
+}
 
 /*---HTML STOCK PHOTO---*/
-
-.photo-text { 
-    /*NOTE: When creating a white border for this element, the border of the main photo (.a) was being skewed*/
-    border: 3px solid #FFFFFF;
-    width: 60%;
-    height: 75%;
-    text-align: center;
-    position: relative;
-    left: 17em;
-    bottom: 31em;
-    transition: all 0.4s ease 0s; /*Transitions the property of the border and its child content.*/
+.photo-text {
+  /*NOTE: When creating a white border for this element, the border of the main photo (.a) was being skewed*/
+  border: 3px solid #ffffff;
+  width: 60%;
+  height: 75%;
+  text-align: center;
+  position: relative;
+  left: 17em;
+  bottom: 31em;
+  transition: all 0.4s ease 0s; /*Transitions the property of the border and its child content.*/
 }
 
-.photo-text:hover { /* Increases size of the border and all the text within it by a scale of 1.1 */
-    transform: scale(1.1);
-
+/* Increases size of the border and all the text within it by a scale of 1.1 */
+.photo-text:hover {
+  transform: scale(1.1);
 }
 
-.border-text { /* Adjusts the height of the border of the HTML Stock photo */
-    height: 548px;
-    position: relative;
-    top: 5em;
+/* Adjusts the height of the border of the HTML Stock photo */
+.border-text {
+  height: 548px;
+  position: relative;
+  top: 5em;
 }
 
 .bar-gansa-photo {
-    position: relative;
-    top: 20px;
-    left: 90px;
-    transition: all 0.4s ease 0s;
+  width: 514px;
+  height: 150px;
+  position: relative;
+  top: 20px;
+  left: 90px;
+  transition: all 0.4s ease 0s;
 }
-
+/* Tapas made with love, served with passion */
 .photo-p1 {
-    text-align: center;
-    width: 50%;
-    position: absolute;
-    bottom: 180px;
-    right: 200px;
-    font-weight: bold;
-    font-size: 20px;
-    transition: all 0.4s ease 0s;
+  text-align: center;
+  width: 50%;
+  position: absolute;
+  bottom: 180px;
+  right: 200px;
+  font-weight: bold;
+  font-size: 20px;
+  transition: all 0.4s ease 0s;
 }
 
-/* .bar-gansa-photo:hover, .photo-p1:hover, .book-now:hover { */
-    .photo-p1:hover {
-
-    }
-    
-
-.love { /* Changes the word 'love' in p1 */
-    color: #C83727; 
-    font-family: Arial, Helvetica, sans-serif;
+/* Changes the word 'love'*/
+.love {
+  color: #c83727;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.passion { /* container for the word 'passion' in p1 */
-    color: #C83727; 
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.photo-p2 {
-    font-size: 23px;
-    font-weight: bold;
-    position: relative;
-    bottom: 350px;
-    margin-bottom: 50px;
+/* container for the word 'passion'*/
+.passion {
+  color: #c83727;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .book-now {
-    text-decoration: none;
-    font-family: "Sansita Swashed";
-    background-color: #C83727; 
-    color: white; 
-    padding: 10px 38px; 
-    position: relative;
-    top: 200px;
-    right: 270px;
-    transition: all 0.4s ease 0s;
+  text-decoration: none;
+  font-family: "Sansita Swashed";
+  background-color: #c83727;
+  color: white;
+  padding: 10px 38px;
+  position: relative;
+  top: 200px;
+  right: 270px;
+  transition: all 0.4s ease 0s;
 }
 
-/*-----Form-----*/
+/*---------------Form---------------*/
 form {
-    width: 66%;
-    height: 125px;
-    background-color: #C83727;
-    padding-bottom: 38px;
-    position: relative;
-    left: 255px;
-    top: 30px;
-    font-size: 0; /* Removes the white-spaces between the boxes */
+  width: 66%; /* 66% */
+  height: 125px;
+  background-color: #c83727;
+  padding-bottom: 38px;
+  position: relative;
+  left: 235px;
+  top: 23px;
+  font-size: 0; /* Removes the white-spaces between the boxes */
 }
 
+/* Make a reservation */
 .form-title {
-    font-size: 18px; /* The 'font-size in '.form' made the form title non-existant */
-    font-weight: bold;
-    color: white;
-    font-family: Jaldi;
-    padding-left: 15px;
-    z-index: 5;
-    position: relative;
-    top: 15px;
+  font-size: 18px; /* The 'font-size' in '.form' made the form title non-existant */
+  font-weight: bold;
+  color: white;
+  font-family: "Jaldi";
+  padding-left: 15px;
+  z-index: 5;
+  position: relative;
+  top: 15px;
 }
 
-.dropbox { /* Property for all the 3 boxes */
-    font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
-    position: relative;
-    left: 15px; 
-    top: 5px; 
-    width: 190px; 
-    height: 50px; 
+/* Property for all the 3 boxes */
+.dropbox {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  left: 15px;
+  top: 5px;
+  width: 190px;
+  height: 50px;
 }
 
+/* Dropbox for booking the number of people */
 .person {
-    padding-left: 10px;
-    border: 1px solid white; 
-    border-right: 1px solid grey;
-    font-size: 15px;
-    border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px;
+  padding-left: 10px;
+  border: 1px solid white;
+  border-right: 1px solid grey;
+  font-size: 15px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
 }
 
+/* Dropbox for the calender to booking a date */
 .calender {
-    padding-left: 10px;
-    padding-right: 10px;
-    font-size: 15px;
-    border: 1px solid white;
-    border-right: 1px solid grey;
-    height: 48px;
-    position: relative;
-    bottom: 18px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 15px;
+  border: 1px solid white;
+  border-right: 1px solid grey;
+  height: 46px;
+  position: relative;
+  bottom: 18px;
 }
 
+/* Dropbox for booking a time */
 .time {
-    padding-left: 10px;
-    font-size: 15px;
-    border: 1px solid white;
+  padding-left: 10px;
+  font-size: 15px;
+  border: 1px solid white;
 }
 
 .find-a-table {
-    font-size: 20px;
-    text-decoration: none;
-    background-color: black;
-    color: white;
-    border: .2px solid white;
-    padding: 12.5px 60px;
-    position: relative;
-    left: 15.4px;
-    top: 6px;
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
+  font-size: 20px;
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  border-left: none;
+  padding: 14px 60px; /* 12.5px 60px */
+  position: relative;
+  left: 14px;
+  top: 5px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
 }
+/*---END OF FORM---*/
 
 /*-----Covid-19 Instruction-----*/
-
 .container-3 {
-    background-color: #e03c2a; 
-    font-size: 30px; 
-    font-family: Arial, Helvetica, sans-serif;
-    color: white; 
-    padding-bottom: 10px;
-    margin-top: 190px;
-    
+  background-color: #e03c2a;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  padding-bottom: 10px;
+  margin-top: 190px;
+  width: 100%;
 }
 
-.container-3-heading { /* 'Covid-19 Notice' and 'Safety is our Priority' headings */
-    width: 30%;
-    text-align: center;
-    font-family: Commissioner;
-    position: relative;
-    left: 450px;
+/* 'Covid-19 Notice' and 'Safety is our Priority' headings */
+.container-3-heading {
+  width: 30%;
+  text-align: center;
+  font-family: Commissioner;
+  position: relative;
+  left: 450px;
 }
 
+/* Covid 19 Notice */
 .covid-notice {
-    padding-top: 20px;
-    margin-bottom: 0;
+  padding-top: 20px;
+  margin-bottom: 0;
 }
 
+/* Safety is our priority */
 .safety {
-    margin-top: 0;
-    margin-bottom: 25px;
+  margin-top: 0;
+  margin-bottom: 25px;
 }
 
 hr {
-    background-color: white;
-    width: 42px;
-    height: 2px;
+  background-color: white;
+  width: 42px;
+  height: 2px;
 }
 
-.container-3-p { /* The Covid-19 1-10 paragraphs */
-    width: 78%;
-    font-size: 18px;
-    font-family: Arial, Helvetica, sans-serif;
-    position: relative;
-    left: 10em;
+/* The Covid-19 1-10 paragraphs */
+.container-3-p {
+  width: 78%;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  left: 10em;
 }
+/*---END OF 'COVID 19 INSTRUCTIONS'*/
 
 /*-----Grid Classes-----*/
 
 /* Grid 1 */
-
 .grid-1 {
-    display: grid;
-    grid-template-columns: 50% 50%;
+  display: grid;
+  grid-template-columns: 50% 50%;
 }
 
-    .a { /* ABOUT US */
-        grid-area: 1 / 2 / 2 / 3;
-        font-size: 50px;
-        font-weight: bold;
-        letter-spacing: 10px;
-        padding-top: 50px;
-        color: #E21C21;
-        text-align: center;
-        font-family: "PT Sans";
-    }
+/* ABOUT US */
+.a {
+  grid-area: 1 / 2 / 2 / 3;
+  font-size: 50px;
+  font-weight: bold;
+  letter-spacing: 10px;
+  padding-top: 20px;
+  color: #e21c21;
+  text-align: center;
+  font-family: "PT Sans";
+}
 
-    .b { /*-About Us paragraph-*/
-        grid-area: 1 / 2 / 2 / 3; 
-        font-size: 18px; 
-        text-align: center; 
-        font-family: Arial, Helvetica, sans-serif; 
-        height: 70%; 
-        width: 57%; 
-        position: relative; 
-        top: 8em; 
-        left: 140px; 
-    }
+/*-About Us paragraph-*/
+.b {
+  grid-area: 1 / 2 / 2 / 3;
+  font-size: 18px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 70%;
+  width: 57%;
+  position: relative;
+  top: 6em;
+  left: 140px;
+}
 
-    .c { /* Read More */
-        text-decoration: underline;
-        grid-area: 1 / 2 / 2 / 3;
-        color: black;
-        width: 90px;
-        height: 20px;
-        font-size: 18px;
-        font-family: Arial, Helvetica, sans-serif;
-        position: relative;
-        top: 27em;
-        left: 15.5em;
-    }
+/* Read More */
+.c {
+  text-decoration: underline;
+  grid-area: 1 / 2 / 2 / 3;
+  color: black;
+  width: 90px;
+  height: 20px;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  top: 27em;
+  left: 15.5em;
+}
 
 /* Grid 2 */
 .grid-2 {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    margin-top: -20px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin-top: -20px;
 }
 
-    .d { /*Image 2*/
-        grid-area: 2 / 2 / 3 / 3;
-    }
+/*Image 2*/
+.d {
+  grid-area: 2 / 2 / 3 / 3;
+}
 
-    .e { /* 'Bar Gansa' title */
-        grid-area: 2 / 1 / 3 / 2;
-        height: 6%;
-        width: 87%;
-        text-align: center;
-        font-size: 40px;
-        font-family: "PT Sans";
-        letter-spacing: 9px;
-        color: #C83727; 
-        position: relative;
-        left: 80px;
-        margin-bottom: 0;
-    }
+/* 'Bar Gansa' title */
+.e {
+  grid-area: 2 / 1 / 3 / 2;
+  height: 6%;
+  width: 87%;
+  text-align: center;
+  font-size: 40px;
+  font-family: "PT Sans";
+  letter-spacing: 9px;
+  color: #c83727;
+  position: relative;
+  left: 80px;
+  margin-bottom: 0;
+}
 
-    .f { /* Grid 2 paragraph */
-        margin-top: 0;
-        grid-area: 2 / 1 / 3 / 2;
-        text-align: center;
-        font-size: 18px;
-        line-height: 1.5em;
-        font-family: Arial, Helvetica, sans-serif;
-        height: 73%; /*65%*/
-        width: 73%; /*57*/
-        position: relative;
-        left: 6em;
-        top: 5em;
-    }
+/* Grid 2 paragraph */
+.f {
+  margin-top: 0;
+  grid-area: 2 / 1 / 3 / 2;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.5em;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 73%; /*65%*/
+  width: 73%; /*57*/
+  position: relative;
+  left: 6em;
+  top: 5em;
+}
 
 /* Grid 3 */
 .grid-3 {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    margin-bottom: 0;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin-bottom: 0;
 }
 
-    .g { /* Image 3 */
-        grid-area: 3 / 1 / 4 / 2;
-        position: relative;
-        bottom: 37px;
-        left: 59px;
-    }
+/* Image: Pic 3 */
+.g {
+  grid-area: 3 / 1 / 4 / 2;
+  position: relative;
+  bottom: 37px;
+  left: 59px;
+}
 
-    .h { /* 'Brunch' title */
-        grid-area: 3 / 2 / 4 / 3;
-        height: 7.5%;
-        width: 43%;
-        position: relative;
-        left: 3em;
-        bottom: 50px;
-        font-size: 50px;
-        font-weight: bold;
-        font-family: Arial, Helvetica, sans-serif; 
-        letter-spacing: 9px; 
-        color: #C83727; 
-    }
+/* 'Brunch' title */
+.h {
+  grid-area: 3 / 2 / 4 / 3;
+  height: 7.5%;
+  width: 43%;
+  position: relative;
+  left: 3em;
+  bottom: 50px;
+  font-size: 50px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 9px;
+  color: #c83727;
+}
 
-    .i { /* Grid 3 paragraph*/
-        grid-area: 3 / 2 / 4 / 3;
-        font-size: 18px;
-        text-align: center;
-        height: 80%;
-        width: 70%;
-        position: relative;
-        left: 50px;
-        top: 70px;
-    }
+/* Grid 3 paragraph*/
+.i {
+  grid-area: 3 / 2 / 4 / 3;
+  font-size: 18px;
+  text-align: center;
+  height: 80%;
+  width: 70%;
+  position: relative;
+  left: 50px;
+  top: 70px;
+}
 
-    .j { /* Book now */
-        grid-area: 3 / 2 / 4 / 3;
-        color: #DC3727;
-        text-align: center;
-        font-size: 18px;
-        text-decoration: none;
-        border: 1px solid red;
-        height: 20px;
-        width: 80px;
-        position: relative;
-        left: 11em;
-        top: 25em;
-        padding: 10px 30px;
-        transition: background-color .5s;
-    }
+/* Book now */
+.j {
+  grid-area: 3 / 2 / 4 / 3;
+  color: #dc3727;
+  text-align: center;
+  font-size: 18px;
+  text-decoration: none;
+  border: 1px solid red;
+  height: 20px;
+  width: 80px;
+  position: relative;
+  left: 11em;
+  top: 25em;
+  padding: 10px 30px;
+  transition: background-color 0.5s;
+}
 
-    .j:hover {
-        background-color: #C83727; 
-        color: white;
-    }
+.j:hover {
+  background-color: #c83727;
+  color: white;
+}
 
 /*Grid 4*/
 .grid-4 {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    margin-bottom: 0;
-    position: relative;
-    bottom: 2.48em;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin-bottom: 0;
+  position: relative;
+  bottom: 2.48em;
 }
 
-    .k { /* Image for grid 4 */
-        grid-area: 4 / 2 / 5 / 3;
-        position: relative;
-        bottom: 2.3em;
-    }
+/* Image: Pic 4 */
+.k {
+  grid-area: 4 / 2 / 5 / 3;
+  position: relative;
+  bottom: 2.3em; /*2.3em*/
+  width: 35.6em;
+}
 
-    .l { /* 'Flamenco Sundays' title */
-        grid-area: 4 / 1 / 5 / 2;
-        font-size: 50px;
-        font-family: Arial, Helvetica, sans-serif;
-        letter-spacing: 9px; 
-        color: #E21C21;
-        width: 57%;
-        height: 110px;
-        text-align: center;
-        position: relative;
-        left: 3.5em;
-        bottom: .5em;
-    }
+/* 'Flamenco Sundays' title */
+.l {
+  grid-area: 4 / 1 / 5 / 2;
+  font-size: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 9px;
+  color: #e21c21;
+  width: 57%;
+  height: 110px;
+  text-align: center;
+  position: relative;
+  left: 3.5em;
+  bottom: 10px;
+}
 
-    .m { /* Grid 4 paragraph 1 */
-        grid-area: 4 / 1 / 5 / 2;
-        font-size: 18px;
-        font-family: Arial, Helvetica, sans-serif;
-        height: 30px;
-        width: 65%;
-        position: relative;
-        left: 8em;
-        top: 8em;
-    }
+/* Grid 4 paragraph 1 */
+.m {
+  grid-area: 4 / 1 / 5 / 2;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 30px;
+  width: 65%;
+  position: relative;
+  left: 8em;
+  top: 8em;
+}
 
-    .n { /*Grid 4 paragraph 2*/
-        grid-area: 4 / 1 / 5 / 2;
-        margin-left: 0;
-        font-size: 18px;
-        font-family: Arial, Helvetica, sans-serif;
-        height: 125px;
-        width: 60%;
-        position: relative;
-        top: 11em;
-        left: 100px;
-    }
+/*Grid 4 paragraph 2*/
+.n {
+  grid-area: 4 / 1 / 5 / 2;
+  margin-left: 0;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 125px;
+  width: 60%;
+  position: relative;
+  top: 11em;
+  left: 100px;
+}
 
-    .o { /* Book now */
-        grid-area: 4 / 1 / 5 / 2;
-        text-decoration: none;
-        text-align: center;
-        color: #DC3727;
-        font-family: Arial, Helvetica, sans-serif;
-        border: 1px solid red;
-        height: 20px;
-        width: 80px;
-        padding: 10px 30px;
-        position: relative;
-        left: 15em;
-        top: 23em;
-        transition: background-color .5s;
-    }
+/* Book now */
+.o {
+  grid-area: 4 / 1 / 5 / 2;
+  text-decoration: none;
+  text-align: center;
+  color: #dc3727;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 1px solid red;
+  height: 20px;
+  width: 80px;
+  padding: 10px 30px;
+  position: relative;
+  left: 15em;
+  top: 23em;
+  transition: background-color 0.5s;
+}
 
-    .o:hover {
-        background-color: #C83727; 
-        color: white;
-    }
+.o:hover {
+  background-color: #c83727;
+  color: white;
+}
 
-    .hr-2 {
-        background-color: #C83727;
-        width: 100%;
-        height: 50px;
-        position: relative;
-        bottom: 3em;
-    }
+.hr-2 {
+  background-color: #c83727;
+  width: 100%;
+  height: 50px;
+  position: relative;
+  bottom: 3em;
+}
 
-    .contact-us { /* Container for 'Contact Us' and the address */
-        text-align: center;
-    }
+/* Container for 'Contact Us' and the address */
+.contact-us {
+  text-align: center;
+}
 
-    .contact { /* Container for only 'Contact Us' */
-        color: #C83727;
-        letter-spacing: 9px;
-        font-size: 35px; 
-        font-family: Arial, Helvetica, sans-serif;
-        position: relative;
-        bottom: 1.5em;
-    }
+/* Container for only 'Contact Us' */
+.contact {
+  color: #c83727;
+  letter-spacing: 9px;
+  font-size: 35px;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  bottom: 1.5em;
+}
 
-    .address {
-        position: relative;
-        bottom: 70px;
-        font-size: 23px;
-        font-family: Arial, Helvetica, sans-serif;
-        font-weight: 100;
-    }
+.address {
+  position: relative;
+  bottom: 70px;
+  font-size: 23px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 100;
+}
 
-    .opening-hours {
-        font-size: 23px;
-        font-family: Arial, Helvetica, sans-serif;
-        font-weight: 100;
-        width:27%;
-        position: relative;
-        left: 300px;
-        bottom: 100px;
-    }
+.opening-hours {
+  font-size: 23px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 100;
+  width: 27%;
+  position: relative;
+  left: 300px;
+  bottom: 100px;
+}
 
-    .contact-details {
-        text-decoration: underline;
-        font-size: 23px;
-        font-family: Arial, Helvetica, sans-serif;
-        font-weight: 100;
-        text-align: right;
-        width: 20%;
-        position: relative;
-        left: 33em;
-        bottom: 8em;
-    }
+.contact-details {
+  text-decoration: underline;
+  font-size: 23px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 100;
+  text-align: right;
+  width: 20%;
+  position: relative;
+  left: 33em;
+  bottom: 8em;
+}
 
+/* Google Map */
 .map {
-    width: 90%;
-    height: 40em;
-    position: relative;
-    bottom: 11em;
-    left: 4em;
+  width: 90%;
+  height: 40em;
+  position: relative;
+  bottom: 11em;
+  left: 4em;
 }
 
 /*-----Footer-----*/
-
 .footer-form {
-    background-color: white; /* As <form> is already set to a background colour, the footer form is set to white */
+  background-color: white; /* As <form> is already set to a background colour, the footer form is set to white */
 }
 
-.email { /* Container for the <input> field */
-    border: 0;
-    border-bottom: 1px solid black;
-    width: 25%;
-    height: 25px;
-    font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 100;
-    padding-left: 20px;
-    padding-top: 11px;
-    position: relative;
-    bottom: 100px;
-    left: 10px;
+/* Container for the <input> field */
+.email {
+  border: 0;
+  border-bottom: 1px solid black;
+  width: 22%;
+  height: 25px;
+  font-size: 16px;
+  font-family: "Montserrat";
+  font-weight: 100;
+  padding: 11px 0 10px 40px;
+  position: relative;
+  bottom: 110px;
+  left: 31px;
+  background-image: url(Images/Email-icon.png);
+  background-repeat: no-repeat;
+  background-position: center left;
+}
+
+::placeholder {
+  font-family: "Montserrat";
+  font-size: 16px;
 }
 
 .subscribe-now {
-    position: relative;
-    left: 29.5em;
-    bottom: 5.8em;
-    font-size: 18px;
-    border: 1px solid black;
-    padding: 7px 25px;
+  position: relative;
+  left: 29.5em;
+  bottom: 5.8em;
+  font-size: 18px;
+  border: 1px solid black;
+  padding: 7px 25px;
+}
+
+/* (c) 2018 Bar Gansa */
+.register-mark {
+  position: relative;
+  bottom: 11.8em;
+  left: 46.4em;
+  width: 11%;
+}
+
+.facebook {
+  margin-left: -45px;
+}
+
+/* Contains both the facebook and snapchat logos */
+.facebook-snapchat {
+  width: 39px;
+  height: 41px;
 }
 
 .social-media-container {
-    width: 8%;
+  width: 8%;
+  position: relative;
+  bottom: 12.5em;
+  left: 50.8em;
+}
+
+/* Allow for smooth scrolling for all the elements that have a relative link */
+* {
+  scroll-behavior: smooth;
+}
+
+/*-----ONLY MOZILLA FIREFOX STYLING-----*/
+@-moz-document url-prefix() {
+  /* Image: Pic 3. */
+  .g {
+    margin-top: 35px;
+  }
+
+  /* Image: Pic 4. */
+  .k {
+    height: 35em;
+    margin-top: 36.2px;
+  }
+
+  /* 'Brunch' */
+  .h {
+    margin-top: 70px;
+    margin-left: 35px;
+  }
+
+  /* 'Brunch' paragraph */
+  .i {
+    margin-top: 55px;
+    margin-left: 35px;
+  }
+
+  /* 'Book Now' */
+  .j {
+    margin-top: 35px;
+    margin-left: 35px;
+  }
+}
+/* } */
+/*-----END OF MOZILLA FIREFOX STYLING-----*/
+
+@media only screen and (max-width: 375px) {
+  main {
     position: relative;
-    bottom: 12em;
-    left: 48em;
-}
+    top: 1000px;
+  }
 
-.facebook { /* Container used to align the twitter and facebook icons */
+  .hide-mobile {
+    display: none;
+  }
+
+  .show-mobile {
+    display: initial;
+  }
+
+  li,
+  li:hover {
+    all: revert; /* reverts all the properties set in the inital 'li' tag to default. */
+    margin-left: 5em;
+  }
+
+  nav ul {
+    background-color: #dc3727;
+    height: 100%;
+    width: 80%;
+    padding-top: 15em;
+    margin-right: -2.5em;
+    z-index: 9;
+  }
+
+  nav ul li a {
+    color: white;
+    font-size: 60px;
+    text-decoration: none;
+    display: block;
+    width: 58%;
+    padding: 1em 2em 1em 4.17em;
+    margin-left: -3em;
+  }
+
+  /* The three lines icon for the main menu */
+  .ham {
+    position: fixed;
+    width: 9.5em;
+    height: 9.5em;
+    margin: 1em 0 0 63em;
+    display: initial;
+    cursor: pointer;
+    z-index: 8;
+  }
+
+  /* The white strip behind the 'ham' image */
+  .ham-background {
+    position: fixed;
+    padding-bottom: 5em;
+    background-color: #ffffff;
+    height: 9em;
+    width: 81.4em;
+    z-index: 8;
+  }
+
+  /* The 'x' button to close the menu */
+  .exit-button {
+    font-size: 70px;
+    font-family: "Hachi Maru Pop";
+    position: fixed;
+    margin-left: 16.2em;
+    margin-top: 0.4em; 
+    z-index: 10;
+    cursor: pointer;
+    border: 2px solid black;
+    padding: 0.2em 0.8em 0.5em 0.8em;
+  }
+
+  /* The 'Reservation' link. This element is used to move the anchor texts downwards. For some reason which I can not understand, when using
+  the property 'margin-top' in the 'nav ul li a' element, the distance BETWEEN the anchor texts is manipulated. This should not be the case,
+  the anchor texts should all move downwards instead. */
+  .reservation {
+    padding-top: 1.5em;
+  }
+
+  /* Main image */
+  .html-image {
+    width: 1300px;
+    height: 80em;
     position: relative;
-    bottom: 5px;
+    top: 80px; /*48px*/
+    margin-top: 5em;
+  }
+
+  /* Text within the 'html-image' element */
+  .photo-text {
+    border-width: 10px;
+    width: 77em;
+    height: 75em;
+    position: relative;
+    left: 10px;
+    bottom: 74em;
+    margin: 10px 10px;
+  }
+
+  /* Tapas made with love, served with passion. */
+  .photo-p1 {
+    font-size: 50px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    bottom: 20px;
+    left: 10px;
+  }
+
+  .bar-gansa-photo {
+    width: 900px;
+    height: 263px;
+    margin-top: -20px;
+    position: relative;
+    padding-right: 150px;
+    /* right: 2000px; */
+  }
+
+  .book-now {
+    font-size: 60px;
+    padding: 30px 150px;
+    position: relative;
+    left: 10px;
+    top: 10em;
+  }
+
+  /*-----From----*/
+  form {
+    all: revert;
+    background-color: #c83727;
+    width: 60em;
+    height: 73em;
+    position: relative;
+    left: 11.5em;
+    top: 5em;
+  }
+
+  .form-grid {
+    display: grid;
+    grid-template-columns: 10em;
+    grid-template-rows: 0 100px 100px 100px;
+  }
+
+  /* Make a Reservation */
+  .form-title {
+    font-size: 25px;
+    font-size: 70px;
+    width: 8em;
+    position: relative;
+    top: 1.2em;
+    left: 3.1em;
+    margin-top: 5px;
+  }
+
+  /* Class that groups 'person', 'calender' and 'time' */
+  .dropbox {
+    transform: scale(4);
+    position: relative;
+    left: 26em;
+    top: 15em;
+    border: 1px solid rgb(179, 173, 173);
+    border-bottom: 0.5px;
+  }
+
+  /* Dropbox for booking the number of people */
+  .person {
+    width: 12.89em;
+    position: relative;
+    top: 21.1em;
+    border-bottom-left-radius: 0;
+  }
+
+  /* Dropbox for the calender */
+  .calender {
+    width: 11.28em;
+    position: relative;
+    top: 27.7em;
+    padding-left: 0;
+    padding-left: 0.8em;
+  }
+
+  /* Dropbox for booking the time */
+  .time {
+    width: 12.88em;
+    position: relative;
+    right: 80px;
+    top: 34.2em;
+  }
+
+  .find-a-table {
+    transform: scale(3.45);
+    width: 5.1em;
+    position: relative;
+    left: 18.7em;
+    top: 30em;
+    border-top-right-radius: 0;
+    border: 1px solid rgb(179, 173, 173);
+  }
+  /*---END OF FORM---*/
+
+  /*-----'Covid 19 Notice'-----*/
+  .container-3 {
+    height: 55em;
+    width: 43.4em;
+  }
+
+  .container-3-scale {
+    transform: scale(2);
+  }
+
+  /* Groups '.covid-notice' and '.safety' classes */
+  .container-3-heading {
+    position: relative;
+    top: 2em;
+  }
+
+  .safety {
+    position: relative;
+    top: 2em;
+  }
+
+  /* Paragraph for Covid 19 Notice */
+  .container-3-p {
+    text-align: left;
+    font-size: 24px;
+    width: 26em;
+    margin-left: 0;
+    position: relative;
+    left: 14em;
+    top: 23em;
+  }
+
+  .covid-hr {
+    position: relative;
+    top: 7em;
+    width: 5em;
+    height: 0.4em;
+  }
+
+  .a {
+    /* 'ABOUT US' title */
+    font-size: 80px;
+    width: 10em;
+    margin-left: 0em;
+  }
+
+  .b /* ABOUT US paragraph */ {
+    font-size: 60px;
+    width: 20em;
+    height: 150%;
+    margin-left: -4.6em;
+    margin-top: -4.5em;
+  }
+
+  /* 'Read More' link */
+  .c {
+    font-size: 60px;
+    margin-left: -11.5em;
+    margin-top: -5em;
+    width: 250%;
+    text-align: center;
+    position: relative;
+  }
+
+  /* Image: Pic 2 */
+  .d {
+    position: relative;
+    top: 68em;
+    left: 11em;
+    transform: scale(2.3);
+  }
+
+  /* 'BAR GANSA' title */
+  .e {
+    width: 8em;
+    font-size: 80px;
+    position: relative;
+    top: 26em;
+    left: 4.4em;
+  }
+
+  /* 'BAR GANSA' paragraph */
+  .f {
+    font-size: 60px;
+    width: 20em;
+    position: relative;
+    top: 38em;
+    margin-left: -5.1em;
+  }
+
+  /* Image: Pic 3 */
+  .g {
+    width: 83.2em;
+    position: relative;
+    top: 318em;
+    margin-left: -5em;
+  }
+
+  /* Image: Pic 1 */
+  .pic-1 {
+    transform: scale(2.08);
+    position: relative;
+    top: 330em;
+    left: 20em;
+  }
+
+  /* 'BRUNCH' title */
+  .h {
+    font-size: 80px;
+    position: relative;
+    top: 43em;
+    left: 3.1em;
+  }
+
+  /* Paragraph underneath 'BRUNCH'  */
+  .i {
+    font-size: 60px;
+    width: 20em;
+    position: relative;
+    top: 60em;
+    margin-left: -3em;
+  }
+
+  /* 'Book Now' link */
+  .j {
+    border-width: 3px;
+    padding: 0.8em 2em 1.8em 2em;
+    font-size: 70px;
+    width: 5em;
+    top: 68em; /* Why has this line worked without 'position: relative?' */
+    margin-left: -9em;
+  }
+
+  /* 'FLEMENCO SUNDAYS' title */
+  .l {
+    font-size: 80px;
+    text-align: center;
+    width: 7em;
+    height: 2.5em;
+    position: relative;
+    top: 64em;
+    left: 5em;
+  }
+
+  /* 'FLAMENCO SUNDAYS' paragraph 1 */
+  .m {
+    font-size: 52px;
+    width: 23em;
+    position: relative;
+    top: 104em;
+    margin-left: -6em;
+  }
+
+  /* 'FLAMENCO SUNDAYS' paragraph 2 */
+  .n {
+    font-size: 52px;
+    width: 23em;
+    position: relative;
+    top: 107em;
+    margin-left: -0.5em; /* Why is 'left: ;' not working? */
+  }
+
+  /* 'Book Now' link */
+  .o {
+    border-width: 3px;
+    padding: 0.8em 2em 1.8em 2em;
+    font-size: 70px;
+    width: 5em;
+    position: relative;
+    top: 86.5em;
+    left: 5em;
+  }
+
+  /* Images: Pic 4 */
+  .k {
+    transform: scale(2.45);
+    position: relative;
+    top: 430em;
+  }
+
+  .hr-2 {
+    position: relative;
+    top: 375em;
+    height: 10em;
+    width: 82em;
+  }
+
+  /* 'Contact Us */
+  .contact {
+    font-size: 80px;
+    width: 10em;
+    position: relative;
+    top: 76em;
+    left: 3.2em;
+  }
+
+  .address {
+    position: relative;
+    top: 85.5em;
+    left: 2.3em;
+    font-size: 70px;
+    width: 14em;
+  }
+
+  .opening-hours {
+    font-size: 70px;
+    width: 15em;
+    text-align: center;
+    position: relative;
+    top: 84em;
+    left: 2em;
+  }
+
+  .contact-details {
+    font-size: 70px;
+    position: relative;
+    top: 84.5em;
+    margin-left: -28.5em; /* When using 'left: ;' the element only moves a certain distance. After that distance it moves right. Why is that? */
+    width: 10em;
+    text-align: center;
+  }
+
+  /* Google Maps */
+  .map {
+    position: relative;
+    top: 370em;
+    margin-left: -3.5em;
+    width: 81em;
+    height: 40em;
+  }
+
+  /*-----FOOTER-----*/
+  .subscribe-now {
+    position: relative;
+    top: 108em;
+    margin-left: -27.5em;
+    font-size: 70px;
+    padding: 0.5em 4.3em;
+    border-width: 5px;
+  }
+
+  .email {
+    position: relative;
+    top: 133em;
+    left: 18.5em;
+    font-size: 55px;
+    width: 17em;
+    height: 2em;
+    padding-left: 2em;
+    padding-bottom: 0.2em;
+    border-bottom-width: 3px;
+    background-size: 80px 80px;
+  }
+
+  ::placeholder {
+    font-size: 58px;
+  }
+
+  /* (c) 2018 Bar Gansa */
+  .register-mark {
+    position: relative;
+    top: 131em;
+    margin-left: -40em;
+    font-size: 60px;
+    width: 9em;
+  }
+
+  .social-media-container {
+    position: relative;
+    top: 490em;
+    margin-left: -15.5em;
+    width: 20em;
+    height: 9em;
+    padding-bottom: 5em;
+  }
+
+  .facebook {
+    position: relative;
+    right: 3em;
+  }
+
+  .facebook-snapchat {
+    width: 150px;
+    height: 150px;
+  }
 }
 
-* { /* Allow for smooth scrolling for all the elements that have an relative link */
-    scroll-behavior: smooth;
+/*----------IPAD RESOLUTION(768 x 1024)---------------*/
+@media only screen and (max-width: 768px) and (min-width: 376px) {
+  .hide-ipad {
+    display: none;
+  }
+
+  ul {
+    grid-template-columns: 165px 165px 165px 168px 168px 168px;
+    margin-right: -0.1em;
+  }
+
+  /* CONTAINER TO EXTEND BORDER OF TEXT IN MENU */
+  .home {
+    margin-left: -1.5em;
+  }
+
+  .reservation {
+    padding: 1.3em 1.8em 1.33em 1.8em;
+  }
+
+  .menu {
+    padding: 1.3em 3.7em 1.33em 3.7em;
+    margin-left: -3.2em;
+  }
+
+  .wines {
+    padding: 1.3em 3.7em 1.33em 3.7em;
+    margin-left: -3.2em;
+  }
+
+  .about-us-top-menu {
+    padding: 1.3em 2.7em 1.33em 2.8em;
+    margin-left: -3.2em;
+  }
+
+  .contact-li {
+    padding: 1.3em 2.9em 1.33em 2.9em;
+    margin-left: -3.2em;
+  }
+  /* END CONTAINER TO EXTEND BORDER OF TEXT IN MENU */
+
+
+  .html-image {
+    height: 32em;
+    width: 62em;
+  }
+
+  /* Alters the white border within the main image */
+  .photo-text {
+    width: 50em;
+    margin-left: -11em;
+  }
+
+  /* Disables the option of the white border and the text within it to increase in scale. */
+  .photo-text:hover {
+    transform: scale(1);
+  }
+
+  form {
+    width: 112%;
+    margin-left: -21.5%;
+    margin-top: -5%;
+  }
+
+  /* Covid 19 Instructions */
+  .container-3 {
+    width: 33.08em;
+  }
+
+  /* Contains the 'covid-notice' and 'safety' classes */
+  .container-3-heading {
+    width: 12em;
+    margin-left: -4.5em;
+  }
+
+  /* Covid 19 Instructions 1-10 */
+  .container-3-p {
+    margin-left: -9em;
+    width: 50em;
+  }
+  /*END OF Covid 19 Instructions*/
+
+  .pic-1 {
+    width: 31em;
+    height: 38em;
+  }
+
+  /* 'About Us' title */
+  .about-us {
+    margin-left: 3.7em;
+    height: 2em;
+    width: 7em;
+  }
+
+  /* Serving tapas with passion to the people of Camden... */
+  .about-us-p {
+    width: 20em;
+    margin-top: -0.5em;
+    margin-left: 1.7em;
+  }
+
+  /* Read More */
+  .about-us-link {
+    margin-left: 1.5em;
+    margin-top: -1.7em;
+  }
+
+  /* Pic 2 */
+  .d {
+    width: 31.1em;
+    height: 38em;
+    margin-left: 6.9em;
+    margin-top: -0.1em;
+  }
+
+  /* Paragraph underneath 'Bar Gansa' title */
+  .f {
+    width: 26em;
+    margin-left: -5.5em;
+  }
+
+  /* Pic 3 */
+  .g {
+    width: 31.1em;
+    height: 38em;
+    margin-left: -3.7em;
+  }
+
+  /* Brunch */
+  .h {
+    margin-left: 1.8em;
+    margin-top: 1.5em;
+  }
+
+  /* Join us for an authentic Spanish... */
+  .i {
+    width: 22em;
+    margin-left: 6em;
+  }
+
+  /* Book Now */
+  .j {
+    margin-left: 4.5em;
+  }
+
+  /* Image: Pic 4 */
+  .k {
+    width: 31.1em;
+    height: 38em;
+    margin-left: 6.9em;
+    margin-top: 0em;
+  }
+
+  /* Flemnco Sundays */
+  .l {
+    width: 7em;
+    margin-left: -2em;
+  }
+
+  /* By the Escuela de Balle from 8pm every Sunday. */
+  .m {
+    width: 22em;
+    margin-left: -3.7em;
+  }
+
+  /* 
+Flamenco Sundays package including: ... */
+  .n {
+    width: 22em;
+    margin-left: -4.8em;
+  }
+
+  .o {
+    margin-left: -5em; /* Why does 'margin-right' not work. Be it if the values are negative or positive */
+    margin-top: 1em;
+  }
+
+  .hr-2 {
+    width: 61.8em;
+    margin-left: 0em;
+  }
+
+  /*-----'Contact Us' Container-----*/
+  /* Contact Us */
+  .contact {
+    margin-left: 6em;
+  }
+
+  /* Address */
+  .address {
+    margin-left: 9em;
+  }
+
+  .opening-hours {
+    width: 15em;
+    margin-left: -6.5em;
+  }
+
+  .contact-details {
+    width: 10em;
+    margin-left: -6em;
+    margin-top: -0.1em;
+  }
+  /*---END 'Contact Us' CONTAINER */
+
+  /* Google Maps */
+  .map {
+    width: 55em;
+    margin-left: -0.3em;
+  }
+
+  /*-----Footer-----*/
+  .email {
+    width: 18em;
+    margin-top: 3em;
+  }
+
+  .subscribe-now {
+    margin-left: -5em;
+  }
+
+  .facebook {
+    margin-left: -3em;
+  }
+
+  .social-media-container {
+    width: 6em;
+    margin-top: -2em;
+    margin-left: -4em;
+  }
+
+  .register-mark {
+    width: 9em;
+    margin-top: 1em;
+    margin-left: -7em;
+    padding-bottom: 2em;
+    /* margin-top: -2em; */ /* When using 'margin-top' or 'margin-bottom' the social media icons as well as the register mark are moving
+                            together. But when using 'margin-left', only the register mark moves. WHY??!!! */
+  }
+
+  @-moz-document url-prefix() {
+    /* Image: Pic 4 */
+    .k {
+      margin-top: 2.3em;
+    }
+  }
 }
-
-
-
-/*.photo-title { /* The Bar Gansa title on the main photo */
-    /*border: 3px solid white; /* The white box inside the main photo */
-    /* width: 105%; 
-    padding-top: 40px; 
-    padding-bottom: 40px; 
-    height: 400px; 
-    font-size: 80px; 
-    font-family: "PT Sans";  
-    letter-spacing: 15px; 
-    color: #C83727; 
-    position: relative; 
-    bottom: 60px; 
-}  */

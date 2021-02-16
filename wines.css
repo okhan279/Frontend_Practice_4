@@ -1,0 +1,976 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap"); /* Used in '.wines-p' */
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;500&display=swap"); /* Used in 'p', 'h1', 'span', h3, '.wines' */
+@import url("https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap"); /* Use for the 'x' for the menu in mobile mode */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"); /* Used in the '.email' class */
+
+
+.hide-desktop {
+  display: none;
+}
+
+body {
+  background-color: #c83727;
+  margin: 0;
+}
+
+main {
+  background-color: white;
+  width: 85%;
+  height: 210em; /* The height can not be changed via %, why? */
+  position: relative;
+  left: 100px;
+  top: 120px;
+}
+
+p {
+  font-family: "Oswald:wght@200", sans-serif;
+  color: #414141;
+  font-size: 23px;
+  font-weight: 600;
+  width: 100%;
+  text-align: center;
+}
+
+h1 {
+  color: #dc3727;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  padding-top: 50px;
+  border: 1px solid white;
+  text-align: center;
+}
+
+span {
+  color: #414141;
+  font-size: 20px;
+  font-weight: 100;
+  width: 100%;
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 1px;
+}
+
+h3 {
+  color: #dc3727;
+  background-color: white;
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  border: 1px solid black;
+  width: 20%;
+  text-align: center;
+  position: relative;
+  left: 13.6em;
+  padding: 17px 21px;
+  z-index: 1;
+}
+
+hr {
+  width: 45%;
+  position: relative;
+  bottom: 61px;
+  right: 6px;
+}
+
+/*-----Top Menu-----*/
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style-type: none; /* Eliminates the bullet points inside ul */
+  display: grid;
+  grid-template-columns: 214px 213px 213px 213px 213px 214px; /* Automatically creates 1 row with 7 columns */
+  position: relative;
+  right: 40px;
+  margin-bottom: 0;
+  margin-top: 30px;
+  /* background-color: white; */
+  position: fixed;
+  z-index: 2;
+}
+
+li {
+  background-color: white;
+  position: relative;
+  left: 40px;
+  border-right: 1px solid black;
+  text-align: center;
+  height: 40px;
+  padding: 0px 50px;
+  padding-top: 20px;
+  transition: background-color 0.5s;
+}
+
+/* CONTAINER TO EXTEND BORDER OF TEXT IN MENU */
+li a {
+  /* border: 0.5px solid red; */
+  padding: 1.33em 5em 1.38em 5.29em;
+  margin-left: -3.15em;
+}
+
+.reservation {
+  /* border: 1px solid red; */
+  /* padding: 1.3em 5.1em 1.35em 3.2em; */
+  padding: 1.33em 3.4em 1.38em 3.2em;
+  /* margin-left: -3.2em; */
+}
+
+.about-us {
+  border-width: 0.5px;
+  padding: 1.32em 3.98em 1.38em 4em;
+  margin-left: -3.15em;
+}
+
+.us {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  margin-left: 0.4em;
+  transition: inherit;
+}
+/*END CONTAINER TO EXTEND BORDER OF TEXT IN MENU */
+
+li:hover {
+  background-color: #c83727;
+}
+
+/* Changes the colour of the text in the top menu to white when mouse is hovered over it */
+li a:hover {
+  color: white;
+}
+
+/*-----HEADER-----*/
+/* Contains the '.wines' and '.wines-p' classes */
+.title {
+  position: relative;
+  top: 150px;
+  left: 100px;
+  background-color: #ffffff;
+  width: 85%;
+  padding: 50px 0;
+  margin-top: -30px;
+}
+
+/* 'Wines' heading */
+.wines {
+  font-size: 50px;
+  font-weight: bold;
+  position: relative;
+  bottom: 40px;
+}
+
+/* Especially selected for you...Enjoy! */
+.wines-p {
+  font-size: 30px;
+  color: #414141;
+  font-family: "Lobster", "cursive";
+  position: relative;
+  bottom: 40px;
+  width: 100%;
+}
+/*---END OF 'HEADER'---*/
+
+/*-----Container 1-----*/
+.container-1 {
+  position: relative;
+  bottom: 50px;
+}
+
+.container-1-grid {
+  display: grid;
+  grid-template-rows: 150px 150px 150px 150px 150px 150px;
+}
+
+/*-----Container 2-----*/
+.container-2 {
+  position: relative;
+  bottom: 170px;
+}
+
+.container-2-grid {
+  display: grid;
+  grid-template-rows: 150px 150px 150px 150px 150px 150px 0px;
+  padding-bottom: 20px;
+}
+
+/*-----Container 3-----*/
+.container-3 {
+  position: relative;
+  bottom: 280px;
+}
+
+/* Rose Wines */
+.container-3-h3 {
+  margin-top: 130px;
+}
+
+.container-3-grid {
+  display: grid;
+  grid-template-rows: 150px 150px;
+}
+
+/*-----Container 4-----*/
+.container-4 {
+  position: relative;
+  bottom: 250px;
+}
+
+/* Cava, Prosecco and Champagnes */
+.container-4-h3 {
+  width: 30%;
+  position: relative;
+  left: 350px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.container-4-hr {
+  position: relative;
+  bottom: 85px;
+}
+
+.container-4-grid {
+  display: grid;
+  grid-template-rows: 110px 110px 110px 110px 110px 110px 110px;
+}
+
+/*-----Footer-----*/
+footer {
+  position: relative;
+  top: 130px;
+  background-color: #ffffff;
+  padding-bottom: 200px;
+  width: 30%;
+  padding-right: 900px;
+}
+
+/* Container for the <input> field */
+.email {
+  border: 0;
+  border-bottom: 1.2px solid black;
+  width: 75%;
+  height: 25px;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 100;
+  padding: 11px 0 10px 45px;
+  position: relative;
+  bottom: 144px;
+  left: 265px;
+  background-image: url(Images/Email-icon.png);
+  background-repeat: no-repeat;
+  background-position: center left;
+}
+
+@supports (-moz-appearance: none) {
+  .email {
+    position: relative;
+    bottom: 146px;
+  }
+}
+
+::placeholder {
+  /* Styles the placeholder in ONLY Chrome */
+  font-size: 16px; /* Why does this element effect in both browsers. WHY?!!!! */
+  position: relative; /* This only effects the placeholder in Chrome */
+  top: 0.08em;
+}
+
+:placeholder-shown {
+  /* styles the placeholder in both Firefox and Chrome */
+  padding-left: 3em;
+  padding-bottom: 0.66em;
+}
+
+.subscribe-now {
+  position: relative;
+  left: 34em;
+  bottom: 5.8em;
+  font-size: 18px;
+  border: 1px solid black;
+  padding: 7px 25px;
+}
+
+/* (c) 2018 Bar Gansa */
+.register-mark {
+  position: relative;
+  bottom: 1.2em;
+  left: 55em;
+  font-size: 14px;
+  font-weight: 400;
+  width: 36%;
+}
+
+.facebook,
+.snapchat {
+  width: 39px;
+  height: 41px;
+}
+
+/* Contains the '.subscribe-now' and '.email' classes */
+.footer-form {
+  position: relative;
+  top: 200px;
+  right: 50px;
+}
+
+/* Used to reposition of the snapchat and facebook icons */
+.social-media-container {
+  position: relative;
+  left: 50em;
+  bottom: 1.7em;
+}
+
+* {
+  /* Allow for smooth scrolling for all the elements that have an relative link */
+  scroll-behavior: smooth;
+}
+
+@media only screen and (max-width: 375px) {
+  main {
+    width: 55em;
+    margin-left: -2em;
+    margin-top: -2.5em;
+  }
+
+  p {
+    font-size: 65px;
+    width: 14em;
+    font-weight: 600;
+    line-height: 1.5em;
+  }
+
+  span {
+    font-size: 60px;
+    display: inline-block;
+    width: 14em;
+  }
+
+  .hide-mobile {
+    display: none;
+  }
+
+  .show-mobile {
+    display: initial;
+  }
+
+  li,
+  li:hover {
+    all: revert;
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: 10em;
+    grid-template-rows: 10em 10em 0.8em 10em 10em;
+  }
+
+  ul {
+    background-color: #dc3727;
+    height: 100%;
+    width: 80%;
+    padding-top: 18em;
+    margin-top: -15em; /* Adjusts the position of the whole menu. */
+    margin-right: -2.5em; /* I tired using 'margin-left' but the element for some reason was not responding. Why?!!! */
+    z-index: 8;
+  }
+
+  nav ul li a {
+    /* border: 1px solid white; */
+    width: 5em;
+    color: white;
+    font-size: 50px;
+    text-decoration: none;
+    display: block;
+    padding: 1em 5em 1em 3em; /*Determines the padding between each anchor element*/
+    margin-left: -0.7em; /*Positions the anchor text slightly towards the right.*/
+  }
+
+  /* The three lines icon for the main menu */
+  .ham {
+    position: fixed;
+    margin-top: 2em;
+    margin-left: 53em;
+    height: 5em;
+    display: initial;
+    cursor: pointer;
+    z-index: 9;
+  }
+
+  /* The white strip behind the 'ham' image */
+  .ham-background {
+    background-color: #ffffff;
+    z-index: 8;
+    position: fixed;
+    height: 9em;
+    width: 63.5em;
+    margin-top: -10em;
+  }
+
+  /* The 'x' button to close the menu */
+  .exit-btn {
+    color: black;
+    font-size: 60px;
+    font-family: "Hachi Maru Pop";
+    cursor: pointer;
+    margin-left: 14.1em;
+    margin-top: -2.4em;
+    z-index: 9;
+    position: fixed; /* Only when I use this element does the 'z-index' overlap over the other elements. Also after using this element
+                     the border width automatically increases. WHY?!!!!!!! */
+    border: 2px solid black;
+    width: 1em;
+    padding: 0 0.55em 0.4em 0.55em;
+  }
+
+  /*-----HEADER-----*/
+  /* Containes the '.wines' and '.wines-p' classes */
+  .title {
+    margin-top: 10em;
+    width: 55em;
+    margin-left: -2em;
+  }
+
+  /* Especially selected for you...Enjoy! */
+  .wines-p {
+    font-size: 60px;
+    padding-bottom: 4em; /* Pushes the 'White Wines' further downwards */
+  }
+  /*---END OF 'HEADER'---*/
+
+  /*-----Container 1-----*/
+  .container-1 {
+    background-color: #ffffff;
+    width: 55em;
+    height: 270em;
+  }
+
+  .container-1-grid {
+    display: grid;
+    grid-template-rows: 45em 50em 55em 50em 30em;
+    margin-top: 11em;
+    margin-left: -1.5em;
+  }
+
+  .white-wines {
+    font-size: 90px;
+    width: 4em;
+    margin: 0em 0em -2em -12.25em;
+    border-width: 3px;
+    padding: 0.6em 1.5em;
+  }
+
+  .wines {
+    font-size: 70px;
+    display: block;
+    color: #dc3727;
+    margin-left: 2px;
+    margin-top: 5px;
+    font-family: "Oswald", sans-serif;
+  }
+
+  .container-1-hr {
+    width: 55em;
+    height: 2px;
+    background-color: black;
+    margin-left: 0.3em;
+    margin-top: 3.5em;
+  }
+
+  /* Castilla La Mancha. Verdejo grape. */
+  .a {
+    margin-left: 0.3em;
+    margin-top: 1.2em;
+  }
+
+  /* Floral notes with melon and citrus fruit */
+  .span-a {
+    width: 11em;
+    font-size: 65px;
+  }
+
+  /* Viña Sol, Parrellada - Barnacha Blanca, Penedès, Torres */
+  .b {
+    width: 10em;
+    margin-left: 2.2em;
+  }
+
+  /* Grenacha grape */
+  .span-b {
+    width: 10em;
+  }
+
+  /* Don Jacobo Rioja Blanco, Viura-Sauvignon Blanc, Bodegas Corral */
+  .c {
+    margin-left: 0.2em;
+  }
+
+  /* Rioja region. Viura grape. Bottled young to preserve maximum aromas and crispness. */
+  .span-c {
+    width: 10em;
+  }
+
+  /* Viña Esmeralda, Moscatel - Gewurztraminer, Catalunya Torres */
+  .d {
+    width: 12.5em;
+    margin-left: 0.85em;
+  }
+
+  /* Lolo Albariño Rías Baixas */
+  .e {
+    margin-left: 0.2em;
+  }
+
+  /* Galicia. Albariño grape*/
+  .span-e {
+    width: 10.2em;
+  }
+  /*-----END OF CONTAINER 1-----*/
+
+  /*-----Container 2-----*/
+  .container-2 {
+    margin-top: 0em;
+    padding-top: 10em;
+    background-color: #ffffff;
+    height: 320em;
+  }
+
+  .container-2-grid {
+    display: grid;
+    padding-top: 10em;
+    grid-template-rows: 49em 44em 51em 50em 63em 32em;
+  }
+
+  .container-2-h3 {
+    width: 5.5em;
+    font-size: 110px;
+    padding: 0.2em 0em;
+    margin-left: -12.35em;
+    border-width: 3px;
+  }
+
+  .container-2-hr {
+    width: 54.75em;
+    margin-top: -9em;
+    margin-left: 0.38em;
+    border-width: 2px;
+    background-color: black;
+  }
+
+  /* Aragon region. Tempranillo/merlot grapes. Notes of fruits of the forest mixed with sweet spice. */
+  .span-f {
+    width: 10em;
+  }
+
+  /* Tempranillo/cabernet sauvignon grapes. Ripe and dark fruit flavours. */
+  .span-g {
+    width: 10em;
+    margin-left: -0.1em;
+  }
+
+  /* Castilla La Mancha region. Tempranillo/syrah/shiraz grapes. Plenty of ripe cherry and plum fruit flavours. */
+  .span-h {
+    width: 10em;
+    margin-left: -0.2em;
+  }
+
+  /* Marqués De Morano Rioja Joven */
+  .i {
+    width: 10em;
+    margin-left: 1.8em;
+  }
+
+  /* Rioja region. Tempranillo grape. Young Rioja made using tempranillo grapes. Ripe fresh fruit flavours. */
+  .span-i {
+    width: 11em;
+  }
+
+  /* Sangre de Toro, Garnacha Tinta-Cariñena, Catalunya, Torres */
+  .j {
+    margin-left: -0.25em;
+  }
+
+  /* Catalonia. Grenache/carignan grapes. Aged for 6 months in American and French oak casks. Rich and smooth, still Spanish. */
+  .span-j {
+    width: 10.5em;
+  }
+
+  /* Altos Ibéricos, Tempranillo Rioja Crianza, Torres */
+  .k {
+    width: 13em;
+    margin-left: 0.3em;
+  }
+
+  /* Rioja region. 1005 tempranillo. Aged for 12 months. Notes of ripened black fruits and aromas including cocoa and nutmeg. */
+  .span-k {
+    width: 11em;
+  }
+  /*END OF CONTAINER 2*/
+
+  /*-----CONTAINER 3-----*/
+  .container-3 {
+    background-color: #ffffff;
+    width: 55em;
+    margin-top: 6.8em;
+    padding-top: 5em;
+    height: 130em;
+  }
+
+  /* Rose Wines */
+  .container-3-h3 {
+    font-size: 90px;
+    margin-left: -11.9em;
+    margin-bottom: 1em;
+    width: 4em;
+    border-width: 3px;
+    padding: 0.5em 1.2em;
+  }
+
+  .container-3-hr {
+    width: 54.75em;
+    border-width: 2px;
+    margin-top: -12em;
+    margin-left: 0.38em;
+  }
+
+  .container-3-grid {
+    display: grid;
+    grid-template-rows: 50em 40em;
+    padding-top: 14em;
+  }
+
+  /* Ayrum Tempranillo Rosado, Valdepeñas */
+  .l {
+    width: 10em;
+    margin-left: 1.8em;
+  }
+
+  /* La Mancha region. Grenache/tempranillo grapes. Soft and fruity, hints of strawberry jam and citrus fruits. */
+  .span-l {
+    width: 11.5em;
+    margin-left: -0.5em;
+  }
+
+  /* Casa Albali Garnacha Rosé, Valdepeñas  */
+  .m {
+    width: 11em;
+    margin-left: 1.35em;
+  }
+
+  /* Grenache grape. Generously flavoured. Ripe raspberry and red plum aromas. */
+  .span-m {
+    width: 11em;
+  }
+  /*---END OF CONTAINER 3---*/
+
+  /*-----Container 4-----*/
+  .container-4 {
+    background-color: #ffffff;
+    padding-top: 5em;
+    margin-top: -1.9em;
+    height: 163em;
+  }
+
+  /* Cava, Prosecco and Champagnes */
+  .container-4-h3 {
+    font-size: 90px;
+    margin-left: -2.75em;
+    width: 7em;
+    border-width: 3px;
+  }
+
+  .container-4-hr {
+    width: 54.75em;
+    border-width: 2px;
+    margin-left: 0.38em;
+    margin-top: -8.5em;
+  }
+
+  .container-4-grid {
+    display: grid;
+    grid-template-rows: 22em 20em 15em 20em 20em 20em 15em;
+  }
+
+  .q,
+  .r,
+  .s {
+    width: 11em;
+    margin-left: 1.3em;
+  }
+
+  /* Rondel Brut, Cava */
+  .n {
+    margin-left: -0.2em;
+    padding-top: 2em;
+  }
+
+  .p,
+  .o,
+  .t {
+    margin-left: -0.3em;
+  }
+
+  /*-----FOOTER-----*/
+  footer {
+    position: relative;
+    top: 695em;
+    height: 60em;
+  }
+
+  .email {
+    font-size: 40px;
+    width: 17.6em;
+    height: 2em;
+    border-bottom-width: 3px;
+    position: relative;
+    left: 22em;
+    top: 1em;
+    background-size: 1.5em 1.5em;
+    padding: 0.58em 0 0.5em 3em;
+  }
+
+  ::placeholder {
+    font-size: 40px;
+  }
+
+  :placeholder-shown {
+    padding-top: 0.58em;
+  }
+
+  .subscribe-now {
+    font-size: 50px;
+    position: relative;
+    top: 5em;
+    margin-left: -30.7em;
+    padding: 0.6em 5em;
+    border-width: 4px;
+  }
+
+  .social-media-container {
+    position: relative;
+    top: 40em;
+    left: 26.5em;
+    width: 18em;
+    padding-bottom: 3em;
+  }
+
+  /* (c) 2018 Bar Gansa */
+  .register-mark {
+    font-size: 45px;
+    width: 10em;
+    position: relative;
+    left: 6.5em;
+    top: 15em;
+  }
+
+  .facebook {
+    position: relative;
+    right: 2em;
+  }
+
+  .facebook-snapchat {
+    width: 7em;
+    height: 7em;
+  }
+}
+
+/*----------IPAD RESOLUTION(768 x 1024)---------------*/
+@media only screen and (max-width: 768px) and (min-width: 376px) {
+  main {
+    width: 80.05em;
+    height: 304em;
+    margin-left: -6.3em;
+  }
+
+  /* The background colour for the 'Wines' and 'Especially selected for you...Enjoy!' are set in this class. */
+  .title {
+    width: 80.05em;
+    margin-left: -6.3em;
+    margin-top: -1em;
+  }
+
+  /* After increasing the font-size of h3, the 'White Wines' container moved downwards. Hence this class moves it back up */
+  .container-1 {
+    margin-top: -1.3em;
+  }
+
+  ul {
+    grid-template-columns: 213px 213px 213px 213px 213px 215px;
+    margin-top: 1em;
+  }
+
+  /* CONTAINER TO EXTEND BORDER OF TEXT IN MENU */
+  .about-us {
+    padding: 1.3em 3em;;
+  }
+
+  .us {
+    all: revert;
+    margin-left: 0.4em;
+  }
+
+  .contact {
+    padding: 0;
+  }
+
+  .about-us {
+    padding: 1.3em 4.1em 1.35em 4.1em;
+  }
+
+  .contact {
+    padding: 1.3em 4.35em 1.35em 4.35em;
+  }
+  /* END CONTAINER TO EXTEND BORDER OF TEXT IN MENU */
+
+  h3 {
+    font-size: 50px;
+    margin-left: -3.8em;
+    /* Using 'margin-top' in this tag moves the whole container down, and not just the 'h3' title. WHY?!!! */
+  }
+
+  hr {
+    margin-top: -2.5em;
+    width: 40em;
+  }
+
+  p {
+    font-size: 30px;
+  }
+
+  span {
+    font-size: 25px;
+    display: inline-block;
+    width: 28em;
+    line-height: 38px;
+    padding-top: 15px;
+  }
+
+  /* Wines */
+  .wines {
+    font-size: 70px;
+  }
+
+  /* Especially selected for you...Enjoy! */
+  .wines-p {
+    font-size: 45px;
+  }
+
+  /*-----CONTAINER 1 (White Wines)-----*/
+  .container-1-grid {
+    grid-template-rows: 220px 220px 220px 220px 220px;
+  }
+
+  /* Ayrum Verdejo Blanco, Valdepeñas */
+  .a {
+    padding-top: 1.5em;
+  }
+  /* END CONTAINER 1 */
+
+  /*-----CONTAINER 2 (Red Wines)-----*/
+  /* Red Wines */
+  .container-2-h3 {
+    margin-top: 3.5em;
+  }
+
+  .container-2-grid {
+    grid-template-rows: 285px 220px 240px 260px 250px;
+  }
+
+  /* Talavera Tempranillo - Merlot, Tinto Cariñena */
+  .f {
+    padding-top: 1.5em;
+  }
+  /* END CONTAINER 2 */
+
+  /*-----CONTAINER 3 (Rose Wines)-----*/
+  /* Rose Wines */
+  .container-3-h3 {
+    margin-top: 3.8em;
+  }
+
+  .container-3-grid {
+    grid-template-rows: 270px 200px;
+  }
+
+  .l {
+    padding-top: 1.5em;
+  }
+  /* END CONTAINER 3 */
+
+  /*-----CONTAINER 4 (Cava, Prosecco and Champagnes)-----*/
+  /* Cava, Prosecco and Champagnes */
+  .container-4-h3 {
+    margin-left: 0.3em;
+    width: 10em;
+    line-height: 50px;
+  }
+
+  .container-4-hr {
+    width: 45em;
+    margin-top: -1.5em;
+  }
+
+  .container-4-grid {
+    grid-template-rows: 170px 140px 140px 170px 170px 155px 170px;
+  }
+
+  /* Rondel Brut, Cava */
+  .n {
+    padding-top: 1.5em;
+  }
+  /* END CONTAINER 4 */
+
+  /*-----FOOTER-----*/
+  footer {
+    width: 23.75em;
+  }
+
+  .email {
+    font-size: 25px;
+    width: 13.5em;
+    margin-left: -4.7em;
+    margin-top: -0.5em;
+    padding: 0.5em 0 0.6em 3em;
+    background-size: 1.2em 1.2em;
+    font-family: "Montserrat";
+  }
+
+  /* 'Email Address'in the <input> box */
+  ::placeholder {
+    font-size: 20px;
+    font-family: "Montserrat";
+    font-weight: 600;
+  }
+
+  .subscribe-now {
+    display: inline-block;
+    padding: 0.8em 1.5em;
+    font-weight: bold;
+    margin-left: -2em;
+    margin-top: 4em;
+  }
+
+  .facebook-snapchat {
+    width: 3em;
+    height: 3em;
+  }
+
+  .facebook {
+    margin-left: -3.5em;
+  }
+
+  .social-media-container {
+    margin-left: 3em;
+    margin-top: -0.2em;
+  }
+
+  /* © 2018 by Bar Gansa Bar Gansa Facebook */
+  .register-mark {
+    font-size: 18px;
+    margin-left: -13em;
+    margin-top: -0.2em;
+    width: 10em;
+  }
+}

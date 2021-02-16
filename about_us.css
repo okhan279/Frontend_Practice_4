@@ -1,0 +1,516 @@
+@import url("https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"); /* Used in the '.email' class */
+
+
+.hide-desktop {
+  display: none;
+}
+
+body {
+  width: 90%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style-type: none; /* Eliminates the bullet points inside ul */
+  display: grid;
+  grid-template-columns: 215px 213px 213px 213px 213px 213px; /* Automatically creates 1 row with 7 columns: 16.66% 16.66% 16.66% 16.66% 16.66% 16.66% */
+  position: relative;
+  right: 40px;
+  margin-bottom: 0;
+  margin-top: -1em;
+  background-color: white;
+  position: fixed;
+  z-index: 1;
+}
+
+li {
+  background-color: white;
+  position: relative;
+  left: 40px; /* 40px */
+  border-right: 1px solid black;
+  text-align: center;
+  height: 40px;
+  padding: 0px 50px;
+  padding-top: 20px;
+  transition: background-color 0.5s;
+}
+
+li:hover {
+  background-color: #c83727;
+}
+
+li a {
+  /* border: 1px solid red; */
+}
+
+/* CONTAINER TO EXTEND BORDER OF TEXT IN MENU */
+.home {
+  padding: 1.3em 5.6em 1.33em 4.95em;
+  margin-left: -3.15em;
+}
+
+.reservation {
+  padding: 1.3em 3.4em 1.33em 3.3em;
+  margin-left: -3.15em;
+}
+
+.menu {
+  padding: 1.3em 5.35em 1.33em 5.05em;
+  margin-left: -3.15em;
+}
+
+.wines {
+  padding: 1.3em 5.4em 1.33em 4.75em;
+  margin-left: -3.15em;
+}
+
+.about-us {
+  padding: 1.3em 4.1em 1.33em 4.1em;
+  margin-left: -3.15em;
+}
+
+.us {
+  margin-left: 0.4em;
+}
+
+.contact {
+  padding: 1.3em 4.55em 1.33em 4.4em;
+  margin-left: -3.15em;
+}
+/* END CONTAINER TO EXTEND BORDER OF TEXT IN MENU */
+
+.li-text:hover {
+  /* Changes the colour of the text in the top menu to white when mouse is hovered over it */
+  color: white;
+}
+
+.image-1 {
+  position: relative;
+  left: 430px;
+  margin-top: 100px;
+  width: 332px;
+  height: 332px;
+}
+
+figcaption {
+  color: #2b0d04;
+  font-size: 23px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  width: 72%;
+  position: relative;
+  left: 210px;
+  margin-top: 15px;
+}
+
+p {
+  font-size: 23px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: justify;
+  width: 78%;
+  position: relative;
+  left: 170px;
+}
+
+/* Following a striking redesign, Bar Gansa proudly welcomes Nacho Rivera as its new Head Chef... */
+.paragraph-1 {
+  margin-top: 80px;
+}
+
+/* Class for Pic 1 and Pic 2 */
+.about_us_pic {
+  position: relative;
+  left: 128px;
+  width: 450px;
+  height: 280px;
+}
+
+/*-----Footer-----*/
+footer {
+  position: relative;
+  top: 200px;
+  left: 50px;
+}
+
+/* Container for the <input> field */
+.email {
+  border: 0;
+  border-bottom: 1px solid black;
+  width: 22%;
+  height: 25px;
+  font-size: 16px;
+  font-family: "Montserrat";
+  font-weight: 100;
+  padding: 11px 0 10px 40px;
+  position: relative;
+  bottom: 111px;
+  left: 30px;
+  background-image: url(Images/Email-icon.png);
+  background-repeat: no-repeat;
+  background-position: center left;
+}
+
+/* The 'email' box was misaligned in Firefox, this element exclusively styles the 'email' box in Firefox. */
+@supports (-moz-appearance: none) {
+  .email {
+    position: relative;
+    bottom: 110.5px;
+  }
+}
+
+::placeholder {
+  /* Styles the placeholder in ONLY Chrome */
+  font-size: 16px; /* Why does this element effect in both browsers. WHY?!!!! */
+  position: relative; /* This only effects the placeholder in Chrome */
+  top: 0.08em;
+  font-family: "Montserrat";
+}
+
+:placeholder-shown {
+  /* styles the placeholder in both Firefox and Chrome */
+  padding-left: 2.5em;
+  padding-bottom: 0.66em;
+}
+
+.subscribe-now {
+  position: relative;
+  left: 28em;
+  bottom: 5.8em;
+  font-size: 18px;
+  border: 1px solid black;
+  padding: 7px 25px;
+}
+
+/* (c) 2018 Bar Gansa */
+.register-mark {
+  position: relative;
+  font-size: 14px;
+  bottom: 13.1em;
+  left: 51em;
+  width: 18%;
+}
+
+.facebook-snapchat {
+  width: 39px;
+  height: 41px;
+}
+
+.social-media-container {
+  width: 8%;
+  position: relative;
+  bottom: 12.1em;
+  left: 46em;
+}
+
+/* Allow for smooth scrolling for all the elements that have an relative link */
+* {
+  scroll-behavior: smooth;
+}
+
+/*----- IPHONE X RESOLUTION-----*/
+@media only screen and (max-width: 375px) {
+  .hide-mobile {
+    display: none;
+  }
+
+  .show-mobile {
+    display: initial;
+  }
+
+  /* The three lines icon for the main menu */
+  .ham {
+    background-color: #ffffff;
+    position: fixed;
+    margin-left: 46em;
+    margin-top: 1em;
+    height: 4em;
+    display: initial;
+    cursor: pointer;
+    z-index: 8;
+  }
+
+  /* The white strip behind the 'ham' image */
+  .ham-background {
+    background-color: #ffffff;
+    position: fixed;
+    z-index: 8;
+    height: 9em;
+    width: 60.5em;
+    margin-left: -0.45em;
+    margin-top: -1em;
+  }
+
+  /* The 'x' button to close the menu */
+  .exit-btn {
+    font-size: 60px;
+    font-family: "Hachi Maru Pop";
+    cursor: pointer;
+    margin-left: 13.7em;
+    z-index: 9;
+    position: fixed;
+    border: 2px solid black;
+    padding: 0 0.7em 0.3em 0.7em;
+  }
+
+  li,
+  li:hover {
+    all: revert; /* reverts all the properties set in the inital 'li' tag to default. */
+  }
+
+  nav ul {
+    background-color: #dc3727;
+    height: 100%;
+    width: 80%;
+    padding-top: 18em;
+    margin-right: -2.5em;
+    margin-top: -7.8em; /* Adjusts the position of the whole menu. */
+    z-index: 8;
+  }
+
+  nav ul li a {
+    color: white;
+    font-size: 50px;
+    text-decoration: none;
+    display: block;
+    width: 60%;
+    padding: 1em 5em 1em 3em; /* Determines the padding between each anchor element */
+    margin-left: -0.7em; /* Positions the anchor text slightly towards the right. */
+    /* When using 'margin-top' or 'margin-bottom' the anchor texts do not move. Only the space between the elements. WHY?!! */
+  }
+
+  /* This allows me to move the anchor text downwards as it was not happening in the 'nav ul li a' text. */
+  .home {
+    padding-top: 1.8em;
+  }
+
+  .image-1 {
+    width: 40em;
+    height: 40em;
+    margin-left: -19em;
+    margin-top: 10em;
+  }
+
+  figcaption {
+    font-size: 40px;
+    width: 20em;
+    margin-left: -4.2em;
+  }
+
+  /* Following a striking redesign, Bar Gansa proudly welcomes Nacho Rivera as its new Head Chef... */
+  .paragraph-1 {
+    width: 22em;
+    font-size: 40px;
+    margin-left: -4.15em;
+  }
+
+  p {
+    width: 22em;
+    font-size: 40px;
+    margin-left: -4.15em;
+    padding: 0 1em;
+  }
+
+  .about_us_pic {
+    width: 26em;
+    height: 18em;
+    /* position: relative;
+    right: 500em; */ /* For Media Queries 'position: relative;' does not seem to be working. I have to use 'margin-left/right: ;' to change the position of elements. */
+    margin-left: 13em;
+  }
+
+  /* Grid for 'pic_1' and 'pic_2' */
+  .fig-grid {
+    display: grid;
+    grid-template-columns: 28em 28em;
+    grid-template-rows: 20em;
+    justify-content: center;
+  }
+
+  /*-----FOOTER-----*/
+  .email {
+    font-family: "Montserrat";
+    font-size: 40px;
+    width: 16em;
+    height: 2em;
+    border-bottom-width: 3px;
+    position: relative;
+    left: 16em;
+    top: 2.5em;
+    background-size: 1.5em 1.5em;
+    padding: 0.6em 0em 0.5em 3em;
+  }
+
+  ::placeholder {
+    font-size: 40px;
+  }
+
+  :placeholder-shown {
+    padding-top: 0.58em;
+  }
+
+  .subscribe-now {
+    position: relative;
+    top: 6em;
+    margin-left: -27em;
+    font-size: 50px;
+    padding: 0.6em 4.5em;
+    border-width: 5px;
+  }
+
+  /* (c) 2018 Bar Gansa */
+  .register-mark {
+    font-size: 45px;
+    width: 10em;
+    position: relative;
+    left: 7.8em;
+    top: 13.5em;
+  }
+
+  .social-media-container {
+    position: relative;
+    top: 37em;
+    left: 20em;
+    width: 18em;
+    padding-bottom: 3em;
+  }
+
+  .facebook {
+    position: relative;
+    right: 2em;
+  }
+
+  .facebook-snapchat {
+    width: 120px;
+    height: 120px;
+  }
+}
+/* END IPHONE X RESOLUTION */
+
+@media only screen and (max-width: 768px) and (min-width: 376px) {
+body {
+  width: 124.5%;
+}
+
+  ul {
+    grid-template-columns: 172px 177px 173px 173px 175px 166px;
+    padding-top: 0.4em;
+    margin-top: -1.4em;
+    margin-bottom: -5em; /* Pulls the webpage under the ul higher up */
+    position: fixed;
+  }
+
+  /*CONTAINER TO SET <a> BORDER */
+  .home {
+    padding: 1.3em 3.15em 1.33em 4.5em;
+    margin-left: -3.15em;
+  }
+
+  .reservation {
+    padding: 1.3em 2.3em 1.33em 2em;
+    margin-left: -3.15em;
+  }
+
+  .menu {
+    padding: 1.3em 4em 1.33em 3.7em;
+    margin-left: -3.15em;
+  }
+
+  .wines {
+    padding: 1.3em 3.8em 1.33em 3.7em;
+    margin-left: -3.15em;
+  }
+
+  .about-us {
+    padding: 1.3em 2.9em 1.33em 2.8em;
+    margin-left: -3.15em;
+  }
+
+  .contact {
+    padding: 1.3em 2.65em 1.35em 3em;
+    margin-left: -3.15em;
+  }
+  /* END CONTAINER TO SET <a> BORDER */
+
+  .image-1 {
+    margin-left: -8em;
+  }
+
+  /* With a wide range of experience behind him, Chef Nacho Rivera brings his expert techniques and Spanish flair to the newly refurbished
+    Tapas hotspot. */
+    figcaption {
+      width: 36em;
+      margin-left: -7em;
+    }
+
+    p {
+      width: 43em;
+      margin-left: -7em;
+    }
+
+    .about_us_pic {
+      width: 31em;
+      margin-left: -10em;
+    }
+
+    .about-us-pic-2 {
+      width: 30em;
+      margin-left: -13em;
+    }
+
+    /* GRID FOR 'about-us-pic' */
+    .fig-grid {
+      display: grid;
+      grid-template-columns: 35em 35em;
+    }
+
+    /*-----FOOTER-----*/
+    footer {
+      margin-top: 2em;
+    }
+
+    .email {
+      display: block;
+      border-width: 1.5px;
+      width: 17em;
+      margin-left: -1.5em;
+      margin-top: -1.55em;
+      font-size: 20px;
+      font-family: "Montserrat";
+    }
+
+    @supports (-moz-appearance: none) {
+      .email {
+        margin-top: -1.64em;
+      }
+    }
+
+    ::placeholder {
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .subscribe-now {
+      padding: 0.7em 2em; 
+      margin-left: -5.5em;
+    }
+
+    .social-media-container {
+      width: 5.5em;
+      margin-left: -2.2em;
+    }
+
+    .facebook {
+      margin-left: -3em;
+    }
+
+    /* © 2018 by Bar Gansa */
+    .register-mark {
+      margin-left: -6em;
+    }
+    /*-----END FOOTER-----*/
+}

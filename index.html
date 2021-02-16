@@ -1,202 +1,327 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bar Gansa | Tapas | Live Music | Flamenco | Camden Town</title>
+    <link rel="stylesheet" href="./main.css" />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./main.css">
-</head>
-
-<body>
+  <body>
     <header>
-        <nav>
-            <ul>
-            <li><a class="li-text home" href="#">HOME</a></li>
-                <li><a class="li-text" href="#reservation">RESERVATION</a></li>
-                <li><a class="li-text" href="http://127.0.0.1:5500/menu.html">MENU</a></li>
-                <li><a class="li-text" href="http://127.0.0.1:5500/wines.html">WINES</a></li>
-                <li><a class="li-text" href="./about_us.html">ABOUT US</a></li>
-                <li><a class="li-text" href="#contact">CONTACT</a></li>
-            </ul>
-        </nav>
-
-        <div class="border-text">
-           <img class="html-image" src="images/HTML_Stock_Photo.jpg" alt="Bar Gansa Restaurant">
-            <div class="photo-text">
-                <img class="bar-gansa-photo" src="Images/bar_gansa.webp" alt="Bar Gansa Logo" style="width: 514px; height: 150px;">
-                <p class="photo-p1">Tapas made with <em class="love">love</em>, served with <em class="passion">passion</em></p>
-                <!-- <p class="photo-p2">25% OFF BILLS - Monday to Wednesday</p> -->
-                <a class="book-now" id="reservation" href="#reservation">Book Now</a> <!--The id="reservation" is added here to link the 
-                                                                            'reservation' to the form.-->
-            </div>
+      <div class="ham-background">
+     <img
+        class="show-mobile hide-desktop menu ham" id="menu"
+        src="Images/ham.svg"
+        alt="dropdown button">
         </div>
+
+      <span class="exit-button hide-mobile hide-desktop hide-ipad" id="exit">x</span>
+      <!-- Why does this element hide in Iphone X resolution when giving it a 'hide-desktop' class?? -->
+
+      <nav class="hide-mobile">
+        <ul class="show-mobile">
+          <li><a class="li-text home" id="home" href="#">HOME</a></li>
+          <li><a class="li-text reservation" href="#reservation">RESERVATION</a></li>
+          <li>
+            <a class="li-text menu" href="http://127.0.0.1:5500/menu.html">MENU</a>
+          </li>
+          <li>
+            <a class="li-text wines" href="http://127.0.0.1:5500/wines.html">WINES</a>
+          </li>
+          <li><a class="li-text about-us-top-menu" href="./about_us.html">ABOUT<span class="us">US</span></a></li>
+          <li><a class="li-text contact-li" href="#contact">CONTACT</a></li>
+        </ul>
+      </nav>
+
+      <div class="border-text">
+        <img
+          class="html-image"
+          src="images/HTML_Stock_Photo.jpg"
+          alt="Bar Gansa Restaurant"
+        />
+        <div class="photo-text">
+          <img
+            class="bar-gansa-photo"
+            src="Images/bar_gansa.webp"
+            alt="Bar Gansa Logo"
+          />
+          <p class="photo-p1">
+            Tapas made with <em class="love">love</em>, served with
+            <em class="passion">passion</em>
+          </p>
+          <a class="book-now" id="reservation" href="#reservation">Book Now</a>
+          <!--The id="reservation" is added here to link the 'reservation' to the form.-->
+        </div>
+      </div>
     </header>
 
     <main>
-        <form action="./example.html" method="post">
-            <p class="form-title" >Make a Reservation</p>
-            <select class="dropbox person" id="reservation-box" name="Reservation">
-                <option value="1-person">1 Person</option>
-                <option value="2-people">2 people</option>
-                <option value="3-people">3 people</option>
-                <option value="4-people">4 people</option>
-                <option value="5-people">5 people</option>
-                <option value="6-people">6 people</option>
-                <option value="7-people">7 people</option>
-                <option value="8-people">8 people</option>
-                <option value="9-people">9 people</option>
-                <option value="10-people">10 people</option>
-                <option value="11-people">11 people</option>
-                <option value="12-people">12 People</option>
-                <option value="13-people">13 people</option>
-                <option value="14-people">14 people</option>
-                <option value="15-people">15 people</option>
-                <option value="16-people">16 people</option>
-                <option value="17-people">17 people</option>
-                <option value="18-people">18 people</option>
-                <option value="19-people">19 people</option>
-                <option value="20-people">20 people</option>
-                <option value="larger-party">Larger Party</option>
-            </select>
-            <input class="dropbox calender" type="date" id="reservation-date" name="res-date" min="2020-08-10">
-            <select class="dropbox time">
-                <option value="8.00">8:00 PM</option>
-                <option value="8.30">8:30 PM</option>
-                <option value="9.00">9:00 PM</option>
-                <option value="9.30">9:30 PM</option>
-                <option value="10.00">10.00 PM</option>
-                <option value="10.30">10.30 PM</option>
-                <option value="11.00">11.00 PM</option>
-                <option value="11.30">11.30 PM</option>
-            </select>
-            <a class="find-a-table" href="#">Find a Table</a>
-        </form>
+      <form action="./example.html" method="post">
+        <div class="form-grid">
+          <p class="form-title">Make a Reservation</p>
+          <select
+            class="dropbox person"
+            id="reservation-box"
+            name="Reservation"
+          >
+            <option value="1-person">1 Person</option>
+            <option value="2-people">2 people</option>
+            <option value="3-people">3 people</option>
+            <option value="4-people">4 people</option>
+            <option value="5-people">5 people</option>
+            <option value="6-people">6 people</option>
+            <option value="7-people">7 people</option>
+            <option value="8-people">8 people</option>
+            <option value="9-people">9 people</option>
+            <option value="10-people">10 people</option>
+            <option value="11-people">11 people</option>
+            <option value="12-people">12 People</option>
+            <option value="13-people">13 people</option>
+            <option value="14-people">14 people</option>
+            <option value="15-people">15 people</option>
+            <option value="16-people">16 people</option>
+            <option value="17-people">17 people</option>
+            <option value="18-people">18 people</option>
+            <option value="19-people">19 people</option>
+            <option value="20-people">20 people</option>
+            <option value="larger-party">Larger Party</option>
+          </select>
+          <input
+            class="dropbox calender"
+            type="date"
+            id="reservation-date"
+            name="res-date"
+            min="2020-08-10"
+          />
+          <select class="dropbox time">
+            <option value="8.00">8:00 PM</option>
+            <option value="8.30">8:30 PM</option>
+            <option value="9.00">9:00 PM</option>
+            <option value="9.30">9:30 PM</option>
+            <option value="10.00">10.00 PM</option>
+            <option value="10.30">10.30 PM</option>
+            <option value="11.00">11.00 PM</option>
+            <option value="11.30">11.30 PM</option>
+          </select>
+          <a class="find-a-table" href="#">Find a Table</a>
+        </div>
+      </form>
 
-        <div class="container-3">
-            <div class="container-3-heading">
-                <h3 class="covid-notice">COVID-19 Notice</h3>
-                <h3 class="safety">Safety is our priority</h3>
-            </div>
-            <hr>
-            <p class="container-3-p">
-                1. We can only allow tables of 6 persons <br>
-                2. Service is only by the waiter. There is no service at the bar area <br>
-                3. You must wear a face mask at all times when entering the premises using the toilets and when
-                frequenting the smoking area <br>
-                4. You must fill in your details in the track and trace app provided before entering the premises
-                otherwise you will NOT be allowed entry <br>
-                5. You must observe social distancing - stay at least 1 metre away from others <br>
-                6. Please use the sanitiser made available when entering these premises . <br>
-                7. Please do not move tables or chairs. They are positioned there for a reason. <br>
-                8. We do not allow customers to ‘mingle ‘ between tables . NO MOVEMENT BETWEEN TABLES IS ALLOWED <br>
-                9. We will close at 10pm which means that all customers must leave the building by 10pm <br>
-                10. Management reserve the right to ask you to leave the premises if you do not comply with any of the
-                above . <br>
+      <div class="container-3">
+        <div class="container-3-heading">
+          <h3 class="container-3-scale covid-notice">COVID-19 Notice</h3>
+          <h3 class="container-3-scale safety">Safety is our priority</h3>
+        </div>
+        <hr class="covid-hr" />
+        <p class="container-3-scale container-3-p">
+          1. We can only allow tables of 6 persons <br />
+          2. Service is only by the waiter. There is no service at the bar area
+          <br />
+          3. You must wear a face mask at all times when entering the premises
+          using the toilets and when frequenting the smoking area
+          <br />
+          4. You must fill in your details in the track and trace app provided
+          before entering the premises otherwise you will NOT be allowed entry
+          <br />
+          5. You must observe social distancing - stay at least 1 metre away
+          from others <br />
+          6. Please use the sanitiser made available when entering these
+          premises . <br />
+          7. Please do not move tables or chairs. They are positioned there for
+          a reason. <br />
+          8. We do not allow customers to ‘mingle ‘ between tables . NO MOVEMENT
+          BETWEEN TABLES IS ALLOWED <br />
+          9. We will close at 10pm which means that all customers must leave the
+          building by 10pm <br />
+          10. Management reserve the right to ask you to leave the premises if
+          you do not comply with any of the above . <br />
+        </p>
+      </div>
+
+      <!-- <div> Not sure why this <div> is here. Will check later -->
+      <!-- This will be the grid class -->
+    <div class="grid-1">
+        <img
+          class="pic-1"
+          src="Images/pic_1.png"
+          alt="Bar Gansa Restaurant"
+        />
+        <div class="box a about-us">ABOUT US</div>
+        <div class="box b about-us-p">
+          Serving tapas with passion to the people of Camden since 1985, Bar
+          Gansa is set in the heart of Camden’s vibrant Inverness Street, just a
+          few seconds’ walk from the iconic markets. <br /><br />
+
+          Following a striking redesign, Bar Gansa proudly welcomes Nacho Rivera
+          as its new Head Chef. Rivera’s love for cooking started in his
+          hometown in Southern Spain, inspired by the region’s traditional
+          cooking and fresh produce. The menu focuses on authentic Spanish
+          cuisine including tasty Tapas dishes and classic Paella made with a
+          traditional recipe, using only the freshest ingredients.
+        </div>
+
+        <a class="box c about-us-link" href="http://127.0.0.1:5500/about_us.html"
+          >Read more</a
+        >
+    </div>
+        <br />
+      
+          <div class="grid-2">
+            <img
+              class="box d"
+              src="Images/pic_2.png"
+              alt="Bar Gansa Restaurant 2"
+            />
+            <h1 class="box e">BAR GANSA</h1>
+            <p class="box f">
+              "Bar Gansa manages to conjure up some of the elemental magic and
+              spirit of Spain with its patriotic red and yellow colour schemes
+              and classic wooden tables. It's a good-humoured and exceedingly
+              friendly venue that happily accommodates all-comers, who perch on
+              stools clustered around the bar or grab one of the rustic tables.
+              <br /><br />
+              The full menu focuses on tapas backed up a few more substantial
+              offerings. Electrifying flamenco displays bring the place to its
+              feet on Sunday evenings, but there's music and entertainment of
+              some kind most nights. The sangria flows and everyone has the best
+              of times. <br />
+              - Mobile Food Guide -
+              <br /><br />
+              Join us for a wonderful evening of fantastic food and hospitality
+              at our Spanish oasis in Camden Town!
             </p>
+          </div>
+          <div class="grid-3">
+            <img
+              class="box g"
+              src="Images/pic_3.png"
+              alt="BAR GANSA Restaurant 3"
+            />
+            <h1 class="box h">BRUNCH</h1>
+            <p class="box i">
+              Join us for an authentic Spanish bottomless brunch available on
+              weekends until 4pm <br /><br />
+
+              Authentic Spanish brunch dishes made with love and served with
+              passion! <br /> <br>
+              🎫 <br />
+              90 minutes bottomless sangria or beer & one Spanish brunch item
+              from the menu <br />
+              📅 <br />
+              Date: Saturdays & Sundays <br />
+              🍽 <br />
+              Food options: vegan and vegetarian options are available
+            </p>
+            <br /><br />
+            <a class="box j" href="#">Book now</a> <br />
+          </div>
+
+          <div class="grid-4">
+            <img
+              class="box k hide-mobile"
+              src="Images/pic_4.png"
+              alt="BAR GANSA Restaurant 4"
+            />
+            <h1 class="box l">FLAMENCO SUNDAYS</h1>
+            <p class="box m">By the Escuela de Balle from 8pm every Sunday.</p>
+            <br /><br />
+
+            <p class="box n">
+              Flamenco Sundays package including: <br />
+              - Flamenco show <br />
+              - Half a bottle of red / white wine <br />
+              - Bread and olives <br />
+              - Paella of any choice from the menu or 3 tapas <br />
+              - Dessert of the day <br />
+            </p>
+            <a class="box o" href="#">Book now</a>
+          </div>
         </div>
+      </div>
 
-        <div>
-            <!-- This will be the grid class -->
-            <div class="grid-1">
-                <img src="Images/pic_1.png" alt="Bar Gansa Restaurant">
-                <div class="box a">ABOUT US</div>
-                <div class="box b">Serving tapas with passion to the people of Camden since 1985, Bar Gansa is set in
-                    the heart of
-                    Camden’s
-                    vibrant Inverness Street, just a few seconds’ walk from the iconic markets. <br><br>
 
-                    Following a striking redesign, Bar Gansa proudly welcomes Nacho Rivera as its new Head Chef.
-                    Rivera’s love for cooking started in his hometown in Southern Spain, inspired by the region’s
-                    traditional cooking and
-                    fresh produce. The menu focuses on authentic Spanish cuisine including tasty Tapas dishes and
-                    classic Paella
-                    made with a traditional recipe, using only the freshest ingredients.</div>
-                <a class="box c" href="http://127.0.0.1:5500/about_us.html">Read more</a> <br>
+      <hr id="contact" class="hr-2" />
 
-            </div>
-
-            <div class="grid-2">
-                <img class="box d" src="Images/pic_2.png" alt="Bar Gansa Restaurant 2">
-                <h1 class="box e">BAR GANSA</h1>
-                <p class="box f">"Bar Gansa manages to conjure up some of the elemental magic and spirit of Spain with
-                    its patriotic red and yellow colour schemes and classic wooden tables. It's a good-humoured and
-                    exceedingly
-                    friendly venue that happily accommodates all-comers, who perch on stools clustered around the bar or
-                    grab one
-                    of the rustic tables. <br><br>
-                    The full menu focuses on tapas backed up a few more substantial offerings. Electrifying flamenco
-                    displays bring the place to its feet on Sunday evenings, but there's music and entertainment of some
-                    kind
-                    most nights. The sangria flows and everyone has the best of times. <br>
-                    - Mobile Food Guide -
-                    <br><br>
-                    Join us for a wonderful evening of fantastic food and hospitality at our Spanish oasis in Camden
-                    Town!
-                </p>
-            </div>
-            <div class="grid-3">
-                <img class="box g" src="Images/pic_3.png" alt="BAR GANSA Restaurant 3">
-                <h1 class="box h">BRUNCH</h1>
-                <p class="box i">Join us for an authentic Spanish bottomless brunch available on weekends until 4pm
-                    <br><br>
-
-                    Authentic Spanish brunch dishes made with love and served with passion! <br><br>
-                    🎫 <br>
-                    90 minutes bottomless sangria or beer & one Spanish brunch item from the menu <br>
-                    📅 <br>
-                    Date: Saturdays & Sundays <br>
-                    🍽 <br>
-                    Food options: vegan and vegetarian options are available</p> <br><br>
-                <a class="box j" href="#">Book now</a> <br>
-            </div>
-
-            <div class="grid-4">
-                <img class="box k" src="Images/pic_4.png" alt="BAR GANSA Restaurant 4">
-                <h1 class="box l">FLAMENCO SUNDAYS</h1>
-                <p class="box m">By the Escuela de Balle from 8pm every Sunday.</p> <br><br>
-
-                <p class="box n">Flamenco Sundays package including: <br>
-                    - Flamenco show <br>
-                    - Half a bottle of red / white wine <br>
-                    - Bread and olives <br>
-                    - Paella of any choice from the menu or 3 tapas <br>
-                    - Dessert of the day <br>
-                </p>
-                <a class="box o" href="#">Book now</a>
-            </div>
+      <div>
+        <h1 class="contact-us contact">CONTACT US</h1>
+        <br /><br />
+        <h3 class="contact-us address">2 Inverness Street, Camden, NW1 7HJ</h3>
+        <br /><br />
+        <div class="opening-hours">
+          <p style="margin-bottom: 7px">​Monday - Friday: 4pm - 10pm</p>
+          <p style="margin-top: 7px">​​Saturday - Sunday: 10am - 10pm​</p>
         </div>
-
-        <hr id="contact" class="hr-2">
-
-        <div>
-            <h1 class="contact-us contact">CONTACT US</h1> <br><br>
-            <h3 class="contact-us address">2 Inverness Street, Camden, NW1 7HJ</h3> <br><br>
-            <div class="opening-hours">
-                <p style="margin-bottom: 7px;">​Monday - Friday: 4pm - 10pm</p>
-                <p style="margin-top: 7px;">​​Saturday - Sunday: 10am - 10pm​</p>
-            </div>
-            <div class="contact-details">
-                <p>info@bargansa.co.uk</p>
-                <p>020 7267 8909</p> <br>
-            </div>
+        <div class="contact-details">
+          <p>info@bargansa.co.uk</p>
+          <p>020 7267 8909</p>
+          <br />
         </div>
+      </div>
 
-        <iframe class="map" 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2481.5520133073496!2d-0.14601560355384144!3d51.53977611615692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761ae10a2de441%3A0x26c44dc02d158489!2sBar%20Gansa%20London!5e0!3m2!1sen!2suk!4v1603104886279!5m2!1sen!2suk" 
-            width="1000" height="450" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-
-        <footer>
-                <label class="subscribe-now" for="subscribe">Subscribe Now</label>
-                <input id="subscribe" class="email" type="text" name="email-address" placeholder="Email Address">
-
-            <p style="position: relative; bottom: 11em; left: 46.4em; width: 11%;">&copy; 2018 by Bar Gansa</p>
-            <div class="social-media-container">
-                <img class="facebook" src="Images/facebook_footer.png" alt="Bar Gansa Facebook">
-                <img src="Images/twitter_footer.png" alt="Bar Gansa Twitter">
-            </div>
-        </footer>
+      <iframe
+        class="map"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2481.5520133073496!2d-0.14601560355384144!3d51.53977611615692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761ae10a2de441%3A0x26c44dc02d158489!2sBar%20Gansa%20London!5e0!3m2!1sen!2suk!4v1603104886279!5m2!1sen!2suk"
+        width="1000"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        aria-hidden="false"
+        tabindex="0"
+      ></iframe>
     </main>
-</body>
 
+      <footer>
+        <label class="subscribe-now" for="subscribe"
+          ><a href="#">Subscribe Now</a></label
+        >
+        <input
+          id="subscribe"
+          class="email"
+          type="text"
+          name="email-address"
+          placeholder="Email Address"
+        />
+
+        <p class="register-mark">
+          &copy; 2018 by Bar Gansa
+        </p>
+        <div class="social-media-container">
+          <a href="#"
+            ><img
+              class="facebook-snapchat facebook"
+              src="Images/facebook_href.webp"
+              alt="Bar Gansa Facebook"
+          /></a>
+          <a href="#"
+            ><img
+            class="facebook-snapchat"
+              src="Images/snapchat_href.webp"
+              alt="Bar Gansa Twitter"
+          /></a>
+        </div>
+      </footer>
+
+    <script>
+        const menu = document.getElementById('menu');
+        const nav = document.querySelector('nav');
+        const exit = document.getElementById('exit');
+        const home = document.getElementById('home');
+
+        
+        menu.addEventListener('click', function(e) {
+          nav.classList.toggle('hide-mobile'); /* Removes 'hide-mobile' from  */
+          exit.classList.remove('hide-mobile'); /* Adds the 'X' for the exit class when the menu is opened up  */
+          home.classList.add('hide-mobile'); /* Removes the 'Home' link from the menu by adding the 'hide-mobile' class to the element */
+          menu.style.display = 'none'; /* Removes the 'ham' image when clicked on */
+        });
+
+        exit.addEventListener('click', function(e) {
+          nav.classList.add('hide-mobile'); /* Hides the menu when 'X' is clicked on */
+          exit.classList.add('hide-mobile'); /* Removes the 'X' when clicked on. If this isn't added then the 'X' will be displayed on the web page */
+          menu.style.display = 'initial'; /* Returns the 'ham' image for the main menu. */
+        });
+    </script>
+
+  </body>
 </html>
