@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;500&display=swap"); /* Used in 'p', 'h1', '.right-text', header and '.container-4-p' */
 @import url("https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap"); /* Use for the 'x' for the menu in mobile mode */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"); /* Used in the '.email' class */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"); /* Used in the '.email' and '::placeholder' class */
 
 .hide-desktop {
   display: none;
@@ -12,10 +12,12 @@
 
 /* This class covers a number of 'span' elements in multiple containers.  */
 .span-position {
-  font-size: 19px;
+  font-size: 18px;
   position: relative;
   top: 10px;
   letter-spacing: 1px;
+  margin-top: 10px;
+  line-height: 1px;
 }
 
 body {
@@ -40,7 +42,6 @@ p {
 span {
   font-size: 18px;
   font-weight: 100;
-  /* letter-spacing: 1px; */
 }
 
 h1 {
@@ -53,7 +54,7 @@ h1 {
   top: 15px;
 }
 
-/* 'Bar Gansa' text to the right of the whole menu */
+/* 'Bar Gansa' text to the right of the page that is rotated 90 degrees */
 .right-text {
   transform: rotate(90deg);
   width: 13%;
@@ -84,7 +85,7 @@ a {
 ul {
   list-style-type: none; /* Eliminates the bullet points inside ul */
   display: grid;
-  grid-template-columns: 213px 213px 213px 213px 213px 215px;
+  grid-template-columns: 214px 213px 213px 213px 213px 214px;
   position: relative;
   right: 40px;
   position: fixed;
@@ -96,7 +97,7 @@ li {
   background-color: white;
   position: relative;
   left: 40px;
-  border-right: 0.5px solid black;
+  border-right: 1px solid black;
   text-align: center;
   height: 40px;
   padding: 25px 0 5px 0;
@@ -105,19 +106,57 @@ li {
 
 /*-----CONTAINER FOR BORDER OF <a> IN MAIN MENU. This container expands the border for the links so they are clickable anywhere inside
     their respective container-----*/
-li a {
-  padding: 1.2em 5.1em 1.3em 5.1em;
-}
+/* li a {
+  outline: 1px solid red;
+} */
 
-/* Used to change the border of 'About Us' which was skewed in 'li a' */
-.about-us {
-  padding: 1.2em 4em 1.3em 4.18em;
+.home {
+  padding: 18px 84px 23px 84px;
+  position: relative;
+  right: 1.5px;
+  bottom: 2px;
 }
 
 /* Used to change the border of 'Reservation' which was skewed in 'li a' */
 .reservation {
-  margin-left: -0.5em;
-  padding: 1.2em 2.9em 1.3em 3.9em;
+  padding: 18px 51.5px 23px 55px;
+  position: relative;
+  bottom: 2px;
+}
+
+.menu-li {
+  padding: 20px 86px 23px 82px;
+  position: relative;
+  bottom: 1.8px;
+  right: 1px;
+}
+
+.wines {
+  padding: 18px 82px 23px 80px;
+  position: relative;
+  bottom: 2.2px;
+  left: 0px;
+}
+
+/* Used to change the border of 'About Us' which was skewed in 'li a' */
+.about-us {
+  padding: 17px 67px 23px 66px;
+  position: relative;
+  bottom: 2px;
+}
+
+/* The 'US' in 'ABOUT US' */
+.us {
+  font-size: inherit;
+  font-family: inherit;
+  margin-left: 4.3px;
+}
+
+.contact {
+  padding: 20px 69px 23px 69.3px;
+  position: relative;
+  right: 1px;
+  bottom: 1.3px;
 }
 /*-----END OF CONTAINER FOR BORDER OF <a> IN MAIN MENU-----*/
 
@@ -125,7 +164,7 @@ li:hover {
   background-color: #c83727;
 }
 
-.li-text:hover {
+li a:hover {
   /* Changes the colour of the text in the top menu to white when mouse is hovered over it */
   color: white;
 }
@@ -153,6 +192,7 @@ header {
   margin-bottom: -21.5px;
 }
 
+/* 'Menu' title */
 .header-menu {
   width: 2em;
 }
@@ -161,7 +201,6 @@ header {
 .container-2,
 .container-3,
 .container-5 {
-  margin-top: 0;
   color: #dc3727;
   background-color: white;
   width: 90%;
@@ -169,8 +208,24 @@ header {
   left: 70px;
 }
 
+/* 'Para Picar' */
+.container-1 {
+  margin-top: 1.3em;
+}
+
+/* 'Our Tapas Selection' */
+.container-2 {
+  margin-top: 12.5em;
+}
+
+/* 'Tapas for 2' */
+.container-3 {
+  margin-top: 2.5em;
+}
+
+/* 'Paella' */
 .container-4 {
-  margin-top: -21.5px;
+  margin-top: -1.4em;
   height: 40em;
   color: #dc3727;
   background-color: white;
@@ -179,16 +234,31 @@ header {
   left: 70px;
 }
 
+/* 'Sharing Tablas' title */
+.container-5 {
+  margin-top: 2.38em; /* Overlaps the bottom of container 4. */
+}
+
+/* 'Desserts' */
+.container-6 {
+  color: #dc3727;
+  background-color: white;
+  width: 90%;
+  position: relative;
+  left: 70px;
+  padding-bottom: 50px;
+}
+
 /*-----Container 1 Grid-----*/
 .container-1-grid {
   display: grid;
   grid-template-columns: 200px 200px;
-  grid-template-rows: 130px 220px 200px;
+  grid-template-rows: 130px 220px 30px;
   justify-items: center;
   justify-content: space-evenly;
 }
 
-/* 'Para Picar' */
+/* 'Para Picar' title */
 .container-1-h1 {
   width: 12%;
 }
@@ -205,7 +275,7 @@ header {
   left: 70px;
 }
 
-/* 'Bread' */
+/* Bread */
 .d {
   position: relative;
   bottom: 5px;
@@ -227,17 +297,23 @@ header {
   justify-content: space-evenly;
 }
 
-/* Our Tapas Selection */
+/* 'Our Tapas Selection' title */
 .container-2-h1 {
   margin-top: -200px;
   width: 22%;
 }
 
+/* Piquillo stuffed with brandada */
 .g,
+/* Tortilla Espanola */
 .i,
+/* Huevos Rotos Con Chorizo */
 .k,
+/* Carrileras De Bacalao Con Alioli De */
 .m,
+/* Bocaditos De Morcilla */
 .o,
+/* Ensalda Mixta */
 .q {
   position: relative;
   left: 80px;
@@ -248,6 +324,14 @@ header {
   position: relative;
   top: 10px;
 }
+
+/* Mixed green salad with tomatoes, cucumbers, olives and onions */
+.span-q {
+  display: inline-block;
+  width: 23em;
+  line-height: 30px;
+}
+/*----- END Container 2 Grid-----*/
 
 /*-----Container 3 Grid-----*/
 .container-3-grid {
@@ -264,18 +348,28 @@ header {
   width: 13%;
 }
 
+/* hipiron Relleno */
 .t,
+/* Pulpo A La Gallega */
 .v,
+/* POLLO AL AJILLO CON EL BOLLO */
 .x {
   position: relative;
   left: 80px;
+}
+
+/* Chicken in garlic and white wine, toasted brioche */
+.span-x {
+  display: inline-block;
+  width: 21em;
+  line-height: 25px;
 }
 
 /*-----Container 4 Grid-----*/
 /* Paella */
 .container-4-h1 {
   padding-top: 70px;
-  width: 10%;
+  width: 8%;
 }
 
 /* Our Paellas are classic - made to a traditional recipe using only the freshest of ingredients with no additives. Takes 25 minutes from
@@ -287,12 +381,14 @@ header {
   line-height: 1.5;
   position: relative;
   left: 120px;
+  display: inline-block;
+  width: 43em;
 }
 
 .container-4-grid {
   display: grid;
   grid-template-columns: 200px 200px;
-  grid-template-rows: 150px 150px;
+  grid-template-rows: 150px 100px; /* Why is the second row not having an effect?? Increasing or decreasing the px has not effect. */
   justify-items: center;
   justify-content: space-evenly;
 }
@@ -323,6 +419,13 @@ header {
   top: 100px;
 }
 
+/* salmorreta, mushrooms, artichokes and green pea cream */
+.span-a2 {
+  display: inline-block;
+  width: 20em;
+  line-height: 25px;
+}
+
 /*-----Container 5 Grid-----*/
 .container-5-grid {
   display: grid;
@@ -344,16 +447,6 @@ header {
 }
 
 /*-----Container 6 Grid-----*/
-.container-6 {
-  margin-top: 0;
-  color: #dc3727;
-  background-color: white;
-  width: 90%;
-  position: relative;
-  left: 70px;
-  padding-bottom: 50px;
-}
-
 /* Desserts */
 .container-6-h1 {
   position: relative;
@@ -381,7 +474,7 @@ footer {
   padding-bottom: 200px;
   position: relative; /* Positions the whole footer container to the right by 7px. */
   right: 7px;
-  width: 40%;
+  width: 38%;
   padding-right: 800px;
   margin-top: 10px;
 }
@@ -391,30 +484,30 @@ footer {
   font-family: "Montserrat";
   border: 0;
   border-bottom: 1px solid black;
-  width: 59%;
+  width: 57%;
   height: 25px;
   font-size: 16px;
-  font-family: Arial, Helvetica, sans-serif;
   font-weight: 100;
   padding: 11px 0 10px 50px;
   position: relative;
-  bottom: 100px;
-  left: 93px;
+  bottom: 130px;
+  left: 124px;
   background-image: url(Images/Email-icon.png);
   background-repeat: no-repeat;
   background-position: center left;
+  background-size: 20px 20px;
 }
 
-  /* Styles the placeholder in ONLY Chrome */
+/* Styles the placeholder in ONLY Chrome */
 ::placeholder {
-  font-size: 20px; /* Why does this element effect in both browsers. WHY?!!!! */
+  font-size: 16px; /* Why does this element effect in both browsers. WHY?!!!! */
   position: relative; /* This only effects the placeholder in Chrome */
   top: 0.08em;
   font-family: "Montserrat";
 }
 
+/* styles the placeholder in both Firefox and Chrome */
 :placeholder-shown {
-  /* styles the placeholder in both Firefox and Chrome */
   padding-left: 3em;
   padding-bottom: 0.66em;
 }
@@ -422,7 +515,7 @@ footer {
 .subscribe-now {
   position: relative;
   left: 34em;
-  bottom: 5.2em;
+  bottom: 6.9em;
   font-size: 18px;
   border: 1px solid black;
   padding: 7px 25px;
@@ -431,11 +524,11 @@ footer {
 /* (c) 2018 Bar Gansa */
 .register-mark {
   position: relative;
-  top: 1.5em;
-  left: 55em;
+  bottom: 0.3em;
+  left: 53.2em;
   font-size: 14px;
   font-weight: 400;
-  width: 27%;
+  width: 28%;
 }
 
 .footer-form {
@@ -444,24 +537,22 @@ footer {
   right: 50px;
 }
 
-.facebook {
+/* Styles the width and height on the Facebook and Snapchat icons */
+.facebook-snapchat {
   width: 39px;
   height: 41px;
-}
-
-.snapchat {
-  width: 39px;
-  height: 41px;
-}
-
-.social-media-container {
   position: relative;
-  left: 50em;
-  top: 1em;
+  left: 48em;
+  bottom: 0.9em;
 }
 
+/* Styles the Facebook icon */
+.facebook {
+  padding-right: 10px;
+}
+
+/* Allow for smooth scrolling for all the elements that have a relative link */
 * {
-  /* Allow for smooth scrolling for all the elements that have a relative link */
   scroll-behavior: smooth;
 }
 
@@ -475,8 +566,9 @@ footer {
   .span-font-size {
     display: inline-block;
     margin-top: 1em;
-    font-size: 60px;
+    font-size: 55px;
     letter-spacing: 2px;
+    line-height: 80px;
   }
 
   .hide-mobile {
@@ -493,31 +585,48 @@ footer {
   }
 
   ul {
-    display: grid;
-    grid-template-columns: 10em;
-    grid-template-rows: 10em 1em 10em 10em 10em;
-  }
-
-  ul {
+    grid-template-columns: 1fr;
+    grid-template-rows: 11.4em 2.6em 8.8em 11.3em 11.6em;
     background-color: #dc3727;
     height: 100%;
     width: 80%;
-    padding-top: 18em;
-    margin-top: -16em; /* Adjusts the position of the whole menu. */
-    margin-right: -2.2em; /* Why is 'margin-left' not working? */
+    padding-top: 18.95em;
+    margin-top: -16em; /* Adjusts the position of the whole container. */
+    margin-right: -2.5em; /* Why is 'margin-left' not working? */
     z-index: 8;
   }
 
-  nav ul li a {
-    width: 5em;
+  li a {
+    font-family: "Montserrat";
     color: white;
-    font-size: 50px;
-    text-decoration: none;
+    font-size: 52px;
     display: block;
-    padding: 1em 5em 1em 3em; /* Determines the padding between each anchor element */
-    margin-left: -0.7em; /* Positions the anchor text slightly towards the right. */
-    margin-top: -1em;
+    width: 81%;
+    margin-left: 2em; /*Positions the anchor elements to the right*/
+    /* outline: 1.5px solid white; */
   }
+
+  .home,
+  .reservation,
+  .wines,
+  .about-us-top-menu,
+  .contact {
+    padding: 0 0em 2em 0;
+  }
+
+  /*The 'US' in 'ABOUT US'*/
+  .us {
+    padding-left: 0.2em;
+  }
+
+  /* Styles the 'Reservation' element in the menu */
+  /* .reservation {
+    margin-left: -1.6em;
+  }
+
+  .contact {
+    padding-top: 1.5em;
+  } */
 
   /* The 'x' button to close the menu */
   .exit-btn {
@@ -547,6 +656,7 @@ footer {
   .ham-background {
     position: fixed;
     background-color: #ffffff;
+    /* background-color: cyan; */
     height: 10em;
     width: 65.5em;
     margin-top: -15.6em;
@@ -568,7 +678,7 @@ footer {
     /* letter-spacing: 1.5px; */
   }
 
-  /* 'Menu' */
+  /* 'Menu' title */
   .header-menu {
     margin-left: -1.9em;
     font-size: 50px;
@@ -604,7 +714,7 @@ footer {
   .container-1-grid {
     display: grid;
     grid-template-columns: 20em;
-    grid-template-rows: 28em 24em 35em 30em 20em;
+    grid-template-rows: 29em 24em 40em 32em 20em;
   }
 
   /* Gorda Olives */
@@ -619,7 +729,7 @@ footer {
     font-size: 60px;
   }
 
-  /* 'Bread & Olives' */
+  /* Bread & Olives */
   .b {
     width: 14em;
     margin-left: -1.15em;
@@ -631,14 +741,16 @@ footer {
     width: 13em;
   }
 
-  /* 'Bread' */
+  /* Bread */
   .d {
     width: 13em;
     margin-left: -2em;
   }
 
   /* Olive oil & balsamic */
-  .box-d-span {
+  .span-d {
+    display: inline-block;
+    margin-top: 1em;
     font-size: 60px;
   }
 
@@ -654,7 +766,7 @@ footer {
     margin-top: 12.3em;
   }
 
-  /* Our Tapas Selection */
+  /* 'Our Tapas Selection' title */
   .container-2-h1 {
     font-size: 80px;
     width: 8em;
@@ -669,15 +781,15 @@ footer {
   .container-2-grid {
     display: grid;
     grid-template-columns: 20em;
-    grid-template-rows: 33em 37em 31em 32em 35em 35em 33em 43em 37em 37em 37em 37em 35em;
+    grid-template-rows: 34em 40em 32em 32em 35em 35em 36em 45em 39em 39em 39em 39em 35em;
   }
 
-  .f,
-  .h,
-  .j,
-  .l,
-  .p,
-  .r {
+  .f,  /* Gambas Ajillo */ 
+  .h,  /* Txistorra Parrilla */
+  .j,  /* Croquetas de Jamón Serrano */
+  .l,  /* Patatas Bravas */
+  .p,  /* Pisto */
+  .r   /* Ensalda Tomate */ {
     width: 13.5em;
     margin-left: 0em;
   }
@@ -696,10 +808,10 @@ footer {
     margin-top: -1em;
   }
 
-  .i,
-  .k,
-  .o,
-  .q {
+  .i, /* Tortilla Espanola */
+  .k, /* Huevos Rotos Con Chorizo */
+  .o, /* Bocaditos De Morcilla */
+  .q  /* Ensalda Mixta */ {
     width: 13.5em;
     margin-left: -1.9em;
   }
@@ -716,13 +828,25 @@ footer {
     margin-left: -0.1em;
   }
 
+  /* Mixed green salad with tomatoes, cucumbers, olives and onions */
+  .span-q {
+    display: inline-block;
+    width: 14em;
+  }
+
+  /* Tomatoes, goats cheese, PX and caramelised onion */
+  .span-r {
+    display: inline-block;
+    width: 15em;
+  }
+
   /*-----CONTAINER 3-----*/
   .container-3 {
     width: 57em;
-    margin-top: 2.5em;
+    margin-top: 2.4em;
   }
 
-  /* Tapas for 2 */
+  /* 'Tapas for 2' title */
   .container-3-h1 {
     width: 6em;
     font-size: 80px;
@@ -737,12 +861,12 @@ footer {
   .container-3-grid {
     display: grid;
     grid-template-columns: 20em;
-    grid-template-rows: 40em 35em 38em 32em 50em 35em;
+    grid-template-rows: 42em 38em 43em 34em 52em 37em;
   }
 
-  .s,
-  .u,
-  .w {
+  .s,   /* RISOTTO DE SETAS CON BACALAO */
+  .u,   /* arrilleras De ternera */
+  .w /* ALCACHOFAS CONFITADAS CON PUR DE PIMIENTO DE LA VERA */ {
     width: 13.5em;
   }
 
@@ -751,8 +875,8 @@ footer {
     width: 13em;
   }
 
-  .t,
-  .v {
+  .t, /* Chipiron Relleno */
+  .v /* Pulpo A La Gallega */ {
     width: 13.5em;
     margin-left: -1.9em;
   }
@@ -794,7 +918,7 @@ footer {
   .container-4-grid {
     display: grid;
     grid-template-columns: 20em;
-    grid-template-rows: 40em 25em 34em 20em;
+    grid-template-rows: 40em 24em 38em 20em;
   }
 
   /*  De arroz negro */
@@ -809,10 +933,8 @@ footer {
     margin-left: 0em;
   }
 
-  /* z: Valenciana
-    a2: Vegetal */
-  .z,
-  .a2 {
+  .z,  /* Valenciana */
+  .a2  /* Vegetal */ {
     width: 13.5em;
     margin-left: -1.7em;
   }
@@ -824,7 +946,7 @@ footer {
     height: 95em;
   }
 
-  /* Sharing Tablas */
+  /* 'Sharing Tablas' title */
   .container-5-h1 {
     width: 6em;
     font-size: 80px;
@@ -840,7 +962,7 @@ footer {
   .container-5-grid {
     display: grid;
     grid-template-columns: 20em;
-    grid-template-rows: 45em 25em;
+    grid-template-rows: 49em 25em;
   }
 
   /* Queso */
@@ -858,7 +980,7 @@ footer {
   .container-6 {
     width: 57em;
     margin-top: -0.5em;
-    height: 118em;
+    height: 128em;
   }
 
   /* Desserts */
@@ -876,7 +998,7 @@ footer {
   .container-6-grid {
     display: grid;
     grid-template-columns: 20em;
-    grid-template-rows: 39em 38em 35em;
+    grid-template-rows: 48em 39em 42em;
   }
 
   /* Torijja */
@@ -910,24 +1032,26 @@ footer {
   }
 
   .email {
-    font-family: "Montserrat";
     font-size: 40px;
+    font-family: "Montserrat";
     width: 17.4em;
     height: 2em;
     border-bottom-width: 3px;
     position: relative;
     left: 22em;
     top: 1em;
+    padding: 0.2em 0 0.1em 3em;
     background-size: 1.5em 1.5em;
-    padding: 0.58em 0 0.5em 3em;
+    background-position: left center;
   }
 
   ::placeholder {
-    font-size: 40px;
+    font-size: 50px;
+    font-family: "Montserrat";
   }
 
   :placeholder-shown {
-    padding-top: 0.58em;
+    padding-bottom: 0.3em;
   }
 
   .subscribe-now {
@@ -947,24 +1071,24 @@ footer {
 
   .social-media-container {
     position: relative;
-    top: 42em;
-    left: 26em;
+    top: 42.5em;
+    right: 23.5em;
     width: 18em;
     padding-bottom: 1em;
   }
 
+  .facebook {
+    padding-right: 2em;
+  }
+
   /* (c) 2018 Bar Gansa */
   .register-mark {
+    font-family: "Oswald:wght@200", sans-serif;
     font-size: 45px;
     width: 10em;
     position: relative;
     left: 6.8em;
     top: 15em;
-  }
-
-  .facebook {
-    position: relative;
-    right: 2em;
   }
 
   .facebook-snapchat {
@@ -996,68 +1120,99 @@ footer {
     font-size: 25px;
   }
 
+  /* This class styles the english translation of the menu. */
   .span-font-size {
-    font-size: 25px;
+    font-size: 24px;
+    letter-spacing: 1px;
   }
 
-  .container-1,
-  .container-2,
-  .container-3,
-  .container-4,
-  .container-5,
-  .container-6 {
+  .container-3, /* Tapas for 2 */
+  .container-5, /* Sharing Tablas */
+  .container-6  /* Desserts */ {
     width: 68em;
-    margin-right: 0.2em;
-    margin-top: -2.1em;
+    margin-top: -0.1em;
+    left: 58px;
+  }
+
+  .container-1, /* Para Picar */
+  .container-4  /* Paella */ {
+    width: 68em;
+    margin-top: -1.75em;
+    left: 58px;
+  }
+
+  /* Our Tapas Selection */
+  .container-2 {
+    width: 68em;
+    margin-top: 12.45em;
+    left: 58px;
   }
 
   header {
     width: 68em;
     margin-top: 2em;
+    left: 58px;
   }
 
-  ul {
-    grid-template-columns: 205px 203px 203px 203px 205px 204px;
-    margin-top: -9.9em;
-    margin-right: 0em;
+  nav ul {
+    border-right-width: 1px;
+    grid-template-columns: 204px 200px 199px 203px 204px 214px;
+    margin-top: -9.5em;
+    margin-right: -0.8em;
   }
 
+  li {
+    padding-bottom: 6px;
+    padding-top: 25px;
+  }
+
+  /* CONTAINER FOR BORDER OF <a> IN MAIN MENU. This container expands the border for the links so they are clickable anywhere inside their respective 
+  container. */
+  li a {
+    font-size: 19.5px;
+    position: relative;
+    top: -0.25em; /*Why does 'bottom' not work for this element. But 'top' works fine? WHY?!!!*/
+  }
+
+  /*Cancels out the transition for the background to turn reddish when hovered over. Need to learn how to cancel a transition*/
   li:hover {
-    background-color: #ffffff;
+    background-color: #fff;
   }
 
-  .li-text:hover {
+  /*Cancels out the transition for the background to turn reddish when hovered over. Need to learn how to cancel a transition*/
+  li a:hover {
     color: black;
   }
 
-  /* CONTAINER FOR BORDER OF <a> IN MAIN MENU. This container expands the border for the links so they are clickable anywhere inside
-    their respective container. */
-  li a {
-    padding: 0;
-    padding: 1.4em 5em 1.3em 5em;
+  .home {
+    padding: 1.1em 3.7em 1.35em 3.9em;
   }
 
   .reservation {
-    margin-left: -0.1em;
-    padding: 1.4em 3.2em 1.3em 3em;
+    padding: 1.1em 1.8em 1.35em 1.8em;
+  }
+
+  .menu-li {
+    padding: 1.1em 3.6em 1.35em 3.65em;
+  }
+
+  .wines {
+    padding: 1.1em 3.6em 1.35em 3.6em;
   }
 
   .about-us {
-    padding: 1.4em 3.85em 1.3em 3.8em;
+    position: relative;
+    top: -0.57em; /*When I was using 'position: relative' with 'bottom: 0.25em' on all the classes, the element was moving upwards. But when using it in
+                  'li a', I had to use 'top' with a negative value, the 'bottom' property was not responding. WHY?!!! */
+    padding: 1.05em 2.8em 1.37em 2.75em;
   }
 
   .contact {
-    padding-left: 4em;
-    padding-right: 4em;
+    padding: 1.1em 3.4em 1.35em 2.75em;
   }
-  /* END OF CONTAINER FOR BORDER OF <a> IN MAIN MENU */
+  /* END CONTAINER FOR BORDER OF <a> IN MAIN MENU */
 
-  /* The 'Bar Gansa' text to the right of the menu */
-  .right-text {
-    margin-left: 5em;
-  }
-
-  /* 'Menu' */
+  /* 'Menu' title */
   .header-menu {
     font-size: 60px;
   }
@@ -1080,10 +1235,10 @@ footer {
   }
 
   .container-1-grid {
-    grid-template-rows: 200px 320px 300px;
+    grid-template-rows: 190px 320px 100px;
   }
 
-  /* 'Gorda Olives' */
+  /* Gorda Olives */
   .a {
     margin-left: 4em;
     font-size: 30px;
@@ -1130,45 +1285,37 @@ footer {
   }
 
   .container-2-grid {
-    grid-template-rows: 230px 175px 230px 260px 230px 220px 250px;
+    grid-template-rows: 250px 200px 260px 300px 260px 270px 270px;
   }
 
-  /* Gambas Ajillo */
-  .f,
-  /* Txistorra Parrilla */
-  .h {
+  .f, /* Gambas Ajillo */
+  .h  /* Txistorra Parrilla */ {
     font-size: 30px;
     margin-left: 3.9em;
   }
 
+  /* 3 grilled king prawns with chilli oil */
   .span-f {
     display: inline-block;
-    width: 12em;
+    width: 11em;
+    line-height: 40px;
+    margin-top: -0.6em;
   }
 
-  /* Piquillo stuffed with brandada */
-  .g,
-  /* Tortilla Espanola */
-  .i,
-  /* arrileras De Bacalao Con Alioli De Ago Negro */
-  .m,
-  /* Bocaditos De Morcilla */
-  .o,
-  /* Ensalda Mixta */
-  .q {
+  .g, /* Piquillo stuffed with brandada */
+  .i, /* Tortilla Espanola */
+  .m, /* arrileras De Bacalao Con Alioli De Ago Negro */
+  .o, /* Bocaditos De Morcilla */
+  .q  /* Ensalda Mixta */ {
     font-size: 30px;
+    margin-left: -0.66em;
   }
 
-  /* Croquetas de Jamón Serrano */
-  .j,
-  /* 'Patatas Bravas' */
-  .l,
-  /* Berenjena Con Queso De Cabr */
-  .n,
-  /* Pisto */
-  .p,
-  /* Ensalda Tomate */ 
-  .r {
+  .j, /* Croquetas de Jamón Serrano */
+  .l, /* Patatas Bravas */
+  .n, /* Berenjena Con Queso De Cabr */
+  .p, /* Pisto */
+  .r  /* Ensalda Tomate */ {
     font-size: 30px;
     margin-left: 4em;
   }
@@ -1177,7 +1324,14 @@ footer {
   .k {
     font-size: 30px;
     width: 9em;
-    margin-left: -7.6em;
+    margin-left: -8.45em;
+  }
+
+  /* Scrambled eggs with chorizo */
+  .span-k {
+    display: inline-block;
+    width: 15em;
+    margin-top: -0.6em;
   }
 
   /* Cubed fried potatoes with salsa rosa */
@@ -1218,7 +1372,7 @@ footer {
   }
 
   .container-3-grid {
-    grid-template-rows: 200px 200px 250px;
+    grid-template-rows: 270px 260px 300px;
   }
 
   /* Risotto De Setas Con Bacalao */
@@ -1228,21 +1382,30 @@ footer {
     margin-left: 2.3em;
   }
 
-  /*  Mushroom Risotto with pan fried Cod */
-  .span-s,
-  /* Stuffed squid with chorizo and manchego cheese, PX reduction */
-  .span-t,
-  /* Slow cooked ox cheeks with truffle cauliflower puree */
-  .span-u,
-  /* Artichoke confit with pepper puree de la vera */
-  .span-w {
+  .span-t, /* Stuffed squid with chorizo and manchego cheese, PX reduction */
+  .span-w  /* Artichoke confit with pepper puree de la vera */ {
     display: inline-block;
     width: 13em;
+  }
+
+  /* Slow cooked ox cheeks with truffle cauliflower puree */
+  .span-u {
+    display: inline-block;
+    width: 15em;
+  }
+
+  /*  Mushroom Risotto with pan fried Cod */
+  .span-s {
+    display: inline-block;
+    width: 13em;
+    line-height: 40px;
+    margin-top: -0.6em;
   }
 
   /* Chipiron Relleno */
   .t {
     font-size: 30px;
+    margin-left: -0.66em;
   }
 
   /* Carrilleras De Ternera */
@@ -1273,6 +1436,9 @@ footer {
 
   /*-----CONTIANER 4 (Paella)-----*/
 
+  .container-4 {
+    padding-bottom: 10em;
+  }
   /* Paella */
   .container-4-h1 {
     font-size: 40px;
@@ -1293,20 +1459,22 @@ footer {
   }
 
   .container-4-grid {
-    grid-template-rows: 130px 250px; /* Why is the second row not having an effect on the element???? */
+    grid-template-rows: 180px 250px; /* Why is the second row not having an effect on the element???? */
   }
 
-  /* De arroz negro */
-  .y,
-  /* De Carne */
-  .a1 {
+  .y,   /* De arroz negro */
+  .a1   /* De Carne */ {
     font-size: 30px;
     margin-left: 4em;
   }
 
   /* Squid ink with chopped squid and tiger prawns, lime aioli */
-  .span-y,
-  /* Pork shoulder with mushrooms and romesco */ 
+  .span-y {
+    display: inline-block;
+    width: 15em;
+  }
+
+  /* Pork shoulder with mushrooms and romesco */
   .span-a1 {
     display: inline-block;
     width: 14em;
@@ -1328,13 +1496,13 @@ footer {
   /* salmorreta, mushrooms, artichokes and green pea cream */
   .span-a2 {
     display: inline-block;
-    width: 11em;
+    width: 13em;
   }
   /*-----END OF CONTAINER 4-----*/
 
   /*-----CONTIANER 5 (Sharing Tablas)-----*/
   .container-5 {
-    margin-top: 4.3em;
+    margin-top: 4.3em; /* 4.3 */
   }
 
   /* Sharing Tablas */
@@ -1375,6 +1543,7 @@ footer {
   /*-----END OF CONTAINER 5-----*/
 
   /*-----CONTIANER 6 (Desserts)-----*/
+  /* 'Desserts' title */
   .container-6-h1 {
     font-size: 40px;
     margin-left: 1.2em;
@@ -1385,7 +1554,7 @@ footer {
   }
 
   .container-6-grid {
-    grid-template-rows: 250px 220px;
+    grid-template-rows: 300px 220px;
   }
 
   /* Torijja */
@@ -1403,6 +1572,7 @@ footer {
   /* Bizcocho de Chocolate */
   .a6 {
     font-size: 30px;
+    margin-left: -0.8em;
   }
 
   /* Spanish chocolate brownie with vanilla chocolate sauce */
@@ -1421,29 +1591,26 @@ footer {
   .span-a7 {
     display: inline-block;
     width: 13em;
-  } /*-----END OF CONTAINER 6-----*/
+  }
+  /*-----END OF CONTAINER 6-----*/
 
   /*-----FOOTER-----*/
   .email {
     display: block;
     width: 16.5em;
     font-size: 20px;
-    font-family: "Montserrat";
-    margin-left: 3.5em;
-    margin-top: -2.23em;
-    padding-left: 3.5em;
-    padding-bottom: 0.7em;
-    background-image: url(Images/Email-icon.png);
-    background-repeat: no-repeat;
-    background-position: center left;
+    border-bottom-width: 1.5px;
+    margin: -2.55em 0 0 2em;
+    padding: 0.7em 0em 0.8em 3.5em;
     background-size: 1.3em 1.3em;
+    background-position: left center;
   }
 
   /* Styles the 'email' class in the Firefox browser */
   @supports (-moz-appearance: none) {
     .email {
       position: relative;
-      bottom: 100px;
+      bottom: 129.5px;
     }
   }
 
@@ -1456,8 +1623,8 @@ footer {
   .subscribe-now {
     display: inline-block;
     margin-left: -2em;
-    margin-top: 1em;
-    padding: 0.8em 1.5em;
+    margin-top: 0em;
+    padding: 0.6em 1.3em;
     font-weight: bold;
   }
 
@@ -1470,32 +1637,32 @@ footer {
   .register-mark {
     font-size: 18px;
     width: 10em;
-    margin-left: -13.5em;
+    margin-left: -11em;
     margin-top: 0em;
   }
 
   .facebook-snapchat {
     width: 3em;
     height: 3em;
+    position: relative;
+    left: 53em;
+    top: -1em;
   }
 
   .facebook {
     margin-left: -3.5em;
   }
 
-  .social-media-container {
-    margin-left: 2em;
-    margin-top: 1em;
-  }
-
   /* The 'Bar Gansa' located on the right of the webpage. */
   .ipad-right-text {
+    /*The '.right-text' class was not functioning, so I had a create a new class for this element specifically for the
+                      Ipad*/
     font-size: 27px;
     font-family: "Oswald", sans-serif;
     color: #ffffff;
     z-index: 2;
     position: fixed;
-    margin-left: -15.1em;
+    margin-left: -14.5em;
     letter-spacing: 1px;
     margin-top: 60em;
     display: block;

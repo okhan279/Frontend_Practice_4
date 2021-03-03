@@ -10,27 +10,33 @@
   <body>
     <header>
       <div class="ham-background">
-     <img
+        <!-- <img
         class="show-mobile hide-desktop menu ham" id="menu"
         src="Images/ham.svg"
-        alt="dropdown button">
+        alt="dropdown button"> -->
+        <div class="ham" id="ham">
+          <hr class="hide-desktop show-mobile ham1" id="ham1">
+          <hr class="hide-desktop show-mobile ham2" id="ham2">
+          <hr class="hide-desktop show-mobile ham2 ham3" id="ham3">
         </div>
+        <!-- <hr class="ham1"> -->
+      </div>
 
-      <span class="exit-button hide-mobile hide-desktop hide-ipad" id="exit">x</span>
+      <!-- <span class="exit-button hide-mobile hide-desktop hide-ipad" id="exit">x</span> -->
       <!-- Why does this element hide in Iphone X resolution when giving it a 'hide-desktop' class?? -->
 
       <nav class="hide-mobile">
-        <ul class="show-mobile">
-          <li><a class="li-text home" id="home" href="#">HOME</a></li>
-          <li><a class="li-text reservation" href="#reservation">RESERVATION</a></li>
+        <ul class="show-mobile ul-mobile" id="ul">
+          <li><a class="home" id="home" href="#">HOME</a></li>
+          <li><a class="reservation" href="#reservation">RESERVATION</a></li>
           <li>
-            <a class="li-text menu" href="http://127.0.0.1:5500/menu.html">MENU</a>
+            <a class="menu" href="http://127.0.0.1:5500/menu.html">MENU</a>
           </li>
           <li>
-            <a class="li-text wines" href="http://127.0.0.1:5500/wines.html">WINES</a>
+            <a class="wines" href="http://127.0.0.1:5500/wines.html">WINES</a>
           </li>
-          <li><a class="li-text about-us-top-menu" href="./about_us.html">ABOUT<span class="us">US</span></a></li>
-          <li><a class="li-text contact-li" href="#contact">CONTACT</a></li>
+          <li><a class="about-us-top-menu" href="./about_us.html">ABOUT<span class="us">US</span></a></li>
+          <li><a class="contact-li" href="#contact">CONTACT</a></li>
         </ul>
       </nav>
 
@@ -307,19 +313,39 @@
         const nav = document.querySelector('nav');
         const exit = document.getElementById('exit');
         const home = document.getElementById('home');
+        const ham = document.getElementById('ham');
+        const ham1 = document.getElementById('ham1');
+        // const ham2 = document.getElementById('ham2');
+        const ham3 = document.getElementById('ham3');
+        const ulMobile = document.getElementById('ul');
 
+
+        ham.addEventListener('click', function(e) {
+          nav.classList.toggle('hide-mobile'); 
+          ulMobile.style.width = '80%';
+          home.classList.add('hide-mobile'); /* Removes the 'Home' link from the menu by adding the 'hide-mobile' class to the element */
+          ham1.style.transform = 'rotate(-45deg)';
+          ham1.style.top = '1.9em';
+          ham3.style.transform = 'rotate(45deg)';
+          ham3.style.top = '2.3em'; /*The bottom ham has to move upwards as 'ham2' is removed once the click event happens*/
+          ham2.style.display = 'none';
+        });
         
         menu.addEventListener('click', function(e) {
-          nav.classList.toggle('hide-mobile'); /* Removes 'hide-mobile' from  */
-          exit.classList.remove('hide-mobile'); /* Adds the 'X' for the exit class when the menu is opened up  */
+          // nav.classList.toggle('hide-mobile'); 
+          /* Removes 'hide-mobile' from the nav tag */
+          // exit.classList.remove('hide-mobile'); 
+          /* Adds the 'X' for the exit class when the menu is opened up  */
+          exit.classList.remove('hide-desktop'); /* Adds the 'X' for the exit class when the menu is opened up  */
           home.classList.add('hide-mobile'); /* Removes the 'Home' link from the menu by adding the 'hide-mobile' class to the element */
-          menu.style.display = 'none'; /* Removes the 'ham' image when clicked on */
+          // menu.style.display = 'none'; 
+          /* Removes the 'ham' image when clicked on */
         });
 
         exit.addEventListener('click', function(e) {
           nav.classList.add('hide-mobile'); /* Hides the menu when 'X' is clicked on */
           exit.classList.add('hide-mobile'); /* Removes the 'X' when clicked on. If this isn't added then the 'X' will be displayed on the web page */
-          menu.style.display = 'initial'; /* Returns the 'ham' image for the main menu. */
+          menu.style.display = 'block'; /* Returns the 'ham1' image for the main menu. */
         });
     </script>
 

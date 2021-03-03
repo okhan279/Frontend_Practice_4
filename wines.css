@@ -3,7 +3,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap"); /* Use for the 'x' for the menu in mobile mode */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"); /* Used in the '.email' class */
 
-
 .hide-desktop {
   display: none;
 }
@@ -98,43 +97,49 @@ li {
   border-right: 1px solid black;
   text-align: center;
   height: 40px;
-  padding: 0px 50px;
-  padding-top: 20px;
+  padding: 20px 50px 0px 50px;
   transition: background-color 0.5s;
+}
+
+li:hover {
+  background-color: #c83727;
 }
 
 /* CONTAINER TO EXTEND BORDER OF TEXT IN MENU */
 li a {
-  /* border: 0.5px solid red; */
-  padding: 1.33em 5em 1.38em 5.29em;
-  margin-left: -3.15em;
+  padding: 20px 85px 23px 82px;
+  position: relative;
+  right: 51px;
+  bottom: 1px;
+}
+
+.home {
+  position: relative;
+  right: 50px;
 }
 
 .reservation {
-  /* border: 1px solid red; */
-  /* padding: 1.3em 5.1em 1.35em 3.2em; */
-  padding: 1.33em 3.4em 1.38em 3.2em;
-  /* margin-left: -3.2em; */
+  padding: 20px 51px 23px 55px;
+  position: relative;
+  right: 50px;
 }
 
 .about-us {
-  border-width: 0.5px;
-  padding: 1.32em 3.98em 1.38em 4em;
-  margin-left: -3.15em;
+  padding: 20px 65px 23px 66px;
 }
 
 .us {
   font-family: inherit;
   font-size: inherit;
   color: inherit;
-  margin-left: 0.4em;
+  margin-left: 4px;
   transition: inherit;
 }
-/*END CONTAINER TO EXTEND BORDER OF TEXT IN MENU */
 
-li:hover {
-  background-color: #c83727;
+.contact {
+  padding: 20px 71px 23px 70px;
 }
+/*END CONTAINER TO EXTEND BORDER OF TEXT IN MENU */
 
 /* Changes the colour of the text in the top menu to white when mouse is hovered over it */
 li a:hover {
@@ -242,7 +247,7 @@ footer {
   top: 130px;
   background-color: #ffffff;
   padding-bottom: 200px;
-  width: 30%;
+  width: 29.6%;
   padding-right: 900px;
 }
 
@@ -250,18 +255,19 @@ footer {
 .email {
   border: 0;
   border-bottom: 1.2px solid black;
-  width: 75%;
+  width: 73%;
   height: 25px;
   font-size: 16px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Montserrat";
   font-weight: 100;
   padding: 11px 0 10px 45px;
   position: relative;
-  bottom: 144px;
-  left: 265px;
+  top: -130px; /*144px, -101px*/
+  left: 271px; /*265px, 250px*/
   background-image: url(Images/Email-icon.png);
   background-repeat: no-repeat;
   background-position: center left;
+  background-size: 20px 20px;
 }
 
 @supports (-moz-appearance: none) {
@@ -276,6 +282,7 @@ footer {
   font-size: 16px; /* Why does this element effect in both browsers. WHY?!!!! */
   position: relative; /* This only effects the placeholder in Chrome */
   top: 0.08em;
+  font-family: "Montserrat";
 }
 
 :placeholder-shown {
@@ -286,18 +293,18 @@ footer {
 
 .subscribe-now {
   position: relative;
-  left: 34em;
-  bottom: 5.8em;
-  font-size: 18px;
+  left: 37.8em; /* 34em */
+  bottom: 5.6em; /*bottom: 5.8em*/
+  font-size: 16px;
   border: 1px solid black;
-  padding: 7px 25px;
+  padding: 8px 25px;
 }
 
 /* (c) 2018 Bar Gansa */
 .register-mark {
   position: relative;
-  bottom: 1.2em;
-  left: 55em;
+  bottom: 0.3em;
+  left: 52.65em;
   font-size: 14px;
   font-weight: 400;
   width: 36%;
@@ -307,6 +314,10 @@ footer {
 .snapchat {
   width: 39px;
   height: 41px;
+}
+
+.facebook {
+  padding-right: 10px;
 }
 
 /* Contains the '.subscribe-now' and '.email' classes */
@@ -319,8 +330,8 @@ footer {
 /* Used to reposition of the snapchat and facebook icons */
 .social-media-container {
   position: relative;
-  left: 50em;
-  bottom: 1.7em;
+  left: 47.55em;
+  bottom: 0.9em;
 }
 
 * {
@@ -362,38 +373,57 @@ footer {
   }
 
   ul {
-    display: grid;
-    grid-template-columns: 10em;
-    grid-template-rows: 10em 10em 0.8em 10em 10em;
-  }
-
-  ul {
+    grid-template-columns: 1fr;
+    grid-template-rows: 11em 11em 0em 11em 12em;
     background-color: #dc3727;
     height: 100%;
     width: 80%;
     padding-top: 18em;
-    margin-top: -15em; /* Adjusts the position of the whole menu. */
+    margin-top: -4.5em; /* Adjusts the position of the whole red container. */
     margin-right: -2.5em; /* I tired using 'margin-left' but the element for some reason was not responding. Why?!!! */
     z-index: 8;
   }
 
-  nav ul li a {
-    /* border: 1px solid white; */
-    width: 5em;
+  li a {
+    font-family: "Montserrat";
     color: white;
     font-size: 50px;
     text-decoration: none;
     display: block;
-    padding: 1em 5em 1em 3em; /*Determines the padding between each anchor element*/
-    margin-left: -0.7em; /*Positions the anchor text slightly towards the right.*/
+    margin-left: 3em; /*Positions the anchor text slightly towards the right.*/
+    /* outline: 1.5px solid white; */
+  }
+
+  /*NOTE: When using 'padding' for the 'li a' element, only 'HOME' and 'MENU' were responding. But when calling their classes, they all respond to 
+  'padding'. WHY?!!*/
+
+  .us {
+    padding-left: 0.2em;
+    width: 0em;
+  }
+
+  .reservation,
+  .li-menu,
+  .about-us,
+  /* .contact, */
+  .home {
+    padding: 0em 0em 2em 0em;
+  }
+
+  /*Had to create seperate styling for 'contact' as originally the margin was inconsistent with the other elements, so had to set the 
+    margin for this to make it consistent.*/
+  .contact {
+    padding: 0em 0em 2em 0em;
+    margin-top: -0.3em;
   }
 
   /* The three lines icon for the main menu */
   .ham {
     position: fixed;
-    margin-top: 2em;
-    margin-left: 53em;
-    height: 5em;
+    margin-top: 2.5em;
+    margin-left: 51.8em;
+    height: 4.8em;
+    width: 8.8em;
     display: initial;
     cursor: pointer;
     z-index: 9;
@@ -404,9 +434,9 @@ footer {
     background-color: #ffffff;
     z-index: 8;
     position: fixed;
-    height: 9em;
+    height: 9.8em;
     width: 63.5em;
-    margin-top: -10em;
+    margin-top: -4.5em;
   }
 
   /* The 'x' button to close the menu */
@@ -416,19 +446,19 @@ footer {
     font-family: "Hachi Maru Pop";
     cursor: pointer;
     margin-left: 14.1em;
-    margin-top: -2.4em;
+    margin-top: -0.75em;
     z-index: 9;
     position: fixed; /* Only when I use this element does the 'z-index' overlap over the other elements. Also after using this element
                      the border width automatically increases. WHY?!!!!!!! */
     border: 2px solid black;
     width: 1em;
-    padding: 0 0.55em 0.4em 0.55em;
+    padding: 0 0.5em 0.25em 0.5em;
   }
 
   /*-----HEADER-----*/
   /* Containes the '.wines' and '.wines-p' classes */
   .title {
-    margin-top: 10em;
+    margin-top: 4.5em;
     width: 55em;
     margin-left: -2em;
   }
@@ -720,59 +750,56 @@ footer {
   }
 
   .email {
-    font-size: 40px;
-    width: 17.6em;
+    font-size: 50px;
+    width: 13.5em;
     height: 2em;
     border-bottom-width: 3px;
     position: relative;
-    left: 22em;
-    top: 1em;
-    background-size: 1.5em 1.5em;
-    padding: 0.58em 0 0.5em 3em;
+    left: 21.2em;
+    top: 1.7em;
+    background-size: 1.15em 1.15em;
+    background-position: left center;
+    padding: 0em 0 0em 2.3em;
   }
 
   ::placeholder {
-    font-size: 40px;
-  }
-
-  :placeholder-shown {
-    padding-top: 0.58em;
+    font-size: 48px;
   }
 
   .subscribe-now {
-    font-size: 50px;
+    font-size: 49px;
     position: relative;
-    top: 5em;
-    margin-left: -30.7em;
-    padding: 0.6em 5em;
+    top: 5.8em;
+    margin-left: -34.5em;
+    padding: 0.55em 4.9em;
     border-width: 4px;
   }
 
   .social-media-container {
     position: relative;
-    top: 40em;
-    left: 26.5em;
+    top: 42em;
+    left: 24.7em;
     width: 18em;
     padding-bottom: 3em;
   }
 
   /* (c) 2018 Bar Gansa */
   .register-mark {
-    font-size: 45px;
+    font-size: 43px;
     width: 10em;
     position: relative;
-    left: 6.5em;
-    top: 15em;
+    left: 6.6em;
+    top: 16.1em;
   }
 
   .facebook {
     position: relative;
-    right: 2em;
+    right: 1.4em;
   }
 
   .facebook-snapchat {
-    width: 7em;
-    height: 7em;
+    width: 115px;
+    height: 115px;
   }
 }
 
@@ -797,30 +824,56 @@ footer {
   }
 
   ul {
-    grid-template-columns: 213px 213px 213px 213px 213px 215px;
+    grid-template-columns: 213px 213px 213px 217px 214px 215px;
     margin-top: 1em;
   }
 
+  li {
+    font-size: 20.5px;
+    padding-bottom: 0.8em;
+  }
+
+  li a {
+    position: relative;
+    top: 0.3em;
+  }
+
+  /*Cancels out the transition for the background to turn reddish when hovered over. Need to learn how to cancel a transition*/
+  li:hover {
+    background-color: #fff;
+  }
+
+  /*Cancels out the transition for the text colour to turn white when hovered over. Need to learn how to cancel a transition*/
+  li a:hover {
+    color: black;
+  }
+
   /* CONTAINER TO EXTEND BORDER OF TEXT IN MENU */
+  .home,
+  .li-menu,
+  .li-wines {
+    padding: 1.25em 3.8em 1.4em 3.65em;
+  }
+
+  .reservation {
+    padding: 1.25em 1.9em 1.4em 1.8em;
+  }
+
   .about-us {
-    padding: 1.3em 3em;;
+    padding: 1.25em 2.8em 1.4em 2.7em;
+    position: relative;
+    right: 2.45em;
   }
 
   .us {
     all: revert;
-    margin-left: 0.4em;
+    margin-left: 0.28em;
   }
 
   .contact {
-    padding: 0;
-  }
-
-  .about-us {
-    padding: 1.3em 4.1em 1.35em 4.1em;
-  }
-
-  .contact {
-    padding: 1.3em 4.35em 1.35em 4.35em;
+    padding: 1.25em 2.9em 1.4em 2.9em;
+    position: relative;
+    right: 2.45em;
   }
   /* END CONTAINER TO EXTEND BORDER OF TEXT IN MENU */
 
@@ -925,52 +978,58 @@ footer {
   /*-----FOOTER-----*/
   footer {
     width: 23.75em;
+    /* background-color: cyan; */
   }
 
   .email {
     font-size: 25px;
-    width: 13.5em;
-    margin-left: -4.7em;
-    margin-top: -0.5em;
-    padding: 0.5em 0 0.6em 3em;
-    background-size: 1.2em 1.2em;
-    font-family: "Montserrat";
+    width: 14.1em;
+    border-bottom-width: 1.5px;
+    padding: 0.5em 0 0.7em 2.9em;
+    background-size: 1.1em 1.1em;
+    position: relative;
+    top: -4.8em;
+    left: 6.6em;
   }
 
   /* 'Email Address'in the <input> box */
   ::placeholder {
-    font-size: 20px;
-    font-family: "Montserrat";
+    font-size: 21.5px;
     font-weight: 600;
   }
 
   .subscribe-now {
-    display: inline-block;
-    padding: 0.8em 1.5em;
+    /* display: inline-block; */
+    font-size: 21px;
+    border-width: 1.5px;
+    padding: 0.7em 1.2em 0.6em 1.2em;
     font-weight: bold;
-    margin-left: -2em;
-    margin-top: 4em;
+    position: relative;
+    left: 28.7em;
+    bottom: 3.7em;
   }
 
   .facebook-snapchat {
-    width: 3em;
-    height: 3em;
+    width: 3.2em;
+    height: 3.2em;
   }
 
   .facebook {
-    margin-left: -3.5em;
+    padding-right: 0.65em;
   }
 
   .social-media-container {
-    margin-left: 3em;
-    margin-top: -0.2em;
+    position: relative;
+    bottom: 1.9em;
+    left: 52.2em;
   }
 
   /* © 2018 by Bar Gansa Bar Gansa Facebook */
   .register-mark {
-    font-size: 18px;
-    margin-left: -13em;
-    margin-top: -0.2em;
+    font-size: 19px;
     width: 10em;
+    position: relative;
+    left: 42em;
+    bottom: 1.05em;
   }
 }
