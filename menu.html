@@ -11,16 +11,12 @@
 
   <body>
     <header>
-      <div class="ham-background">
-        <img
-          class="show-mobile ham hide-desktop"
-          id="ham"
-          src="Images/ham.svg"
-          alt="dropdown button"
-        />
-      </div>
+      <div class="ham-background"></div>
 
-      <span class="hide-mobile hide-desktop exit-btn" id="exit">x</span>
+      <div class="ham" id="ham">
+        <!-- Line for hamburger icon. The other 2 lines will be created using ::before and ::after -->
+        <div class="hide-desktop show-mobile ham1" id="ham1"></div>
+      </div>
 
       <nav class="hide-mobile">
         <ul>
@@ -32,7 +28,7 @@
               >RESERVATION</a
             >
           </li>
-          <li><a class="menu-li" id="menu" href="#">MENU</a></li>
+          <li><a class="hide-mobile menu-li" id="menu" href="#">MENU</a></li>
           <li>
             <a class="li-text wines" href="http://127.0.0.1:5500/wines.html"
               >WINES</a
@@ -1205,34 +1201,25 @@
       const menu = document.getElementById("menu");
       // const input = document.querySelector(".email");
 
-      // input.addEventListener("click", function () {
-      //   input.style.backgroundImage =
-      //     "none"; /* Removes the envelop icon in the footer when the <input> taga is clicked on */
+      // ham.addEventListener("click", function (e) {
+      /* Removes 'hide-mobile' from  */
+      // nav.classList.toggle("hide-mobile");
+      /* Adds the 'X' for the exit class when the menu is clicked  */
+      // exit.classList.add("show-mobile");
+      /* Removes the 'ham' image when clicked on */
+      // ham.style.display = "none";
+
+      // menu.classList.add("hide-mobile");
       // });
 
-      ham.addEventListener("click", function (e) {
-        nav.classList.toggle("hide-mobile"); /* Removes 'hide-mobile' from  */
-
-        exit.classList.add(
-          "show-mobile"
-        ); /* Adds the 'X' for the exit class when the menu is clicked  */
-
-        ham.style.display =
-          "none"; /* Removes the 'ham' image when clicked on */
-
-        menu.classList.add("hide-mobile");
-      });
-
-      exit.addEventListener("click", function (e) {
-        nav.classList.add(
-          "hide-mobile"
-        ); /* Hides the menu when 'X' is clicked on */
-        exit.classList.remove(
-          "show-mobile"
-        ); /* Removes the 'X' when clicked on. If this isn't added then the 'X' will be displayed on the web page */
-        ham.style.display =
-          "initial"; /* Returns the 'ham' image for the main menu. */
-      });
+      // exit.addEventListener("click", function (e) {
+      /* Hides the menu when 'X' is clicked on */
+      // nav.classList.add("hide-mobile");
+      /* Removes the 'X' when clicked on. If this isn't added then the 'X' will be displayed on the web page */
+      // exit.classList.remove("show-mobile");
+      /* Returns the 'ham' image for the main menu. */
+      // ham.style.display = "initial";
+      // });
     </script>
   </body>
 </html>

@@ -586,13 +586,13 @@ footer {
 
   ul {
     grid-template-columns: 1fr;
-    grid-template-rows: 11.4em 2.6em 8.8em 11.3em 11.6em;
+    grid-template-rows: 11.35em 2.55em 8.75em 11.25em 11.55em;
     background-color: #dc3727;
     height: 100%;
     width: 80%;
     padding-top: 18.95em;
     margin-top: -16em; /* Adjusts the position of the whole container. */
-    margin-right: -2.5em; /* Why is 'margin-left' not working? */
+    margin-right: -2.45em; /* Why is 'margin-left' not working? */
     z-index: 8;
   }
 
@@ -629,7 +629,7 @@ footer {
   } */
 
   /* The 'x' button to close the menu */
-  .exit-btn {
+  /* .exit-btn {
     color: black;
     border: 2px solid black;
     padding: 0 0.7em 0.3em 0.7em;
@@ -640,16 +640,67 @@ footer {
     margin-top: -3.7em;
     z-index: 9;
     position: fixed;
-  }
+  } */
 
   /* The three lines icon for the main menu */
-  .ham {
+  /* .ham {
     position: fixed;
     height: 5em;
     cursor: pointer;
     z-index: 8;
     margin-left: 54.5em;
     margin-top: 2.5em;
+  } */
+
+  /*Border around the hamburger icon.*/
+  /*The reason for using the ::before element and not '.ham' is because this way I can apply z-index to the 'border' property. Otherwise it is not possible.*/
+  .ham::before {
+    display: block;
+    content: "";
+    border: 2px solid #e7412e;
+    /* background-color: white; */
+    width: 135px;
+    height: 135px;
+    position: fixed;
+    top: 0.7em;
+    left: 54.2em;
+    z-index: 11;
+    cursor: pointer;
+  }
+
+  .ham1 {
+    display: block;
+    width: 72px;
+    height: 6px;
+    background-color: #e7412e;
+    border-radius: 10px;
+    cursor: pointer;
+    position: fixed;
+    top: 4.8em;
+    left: 56.3em;
+    z-index: 10;
+  }
+
+  .ham1::before {
+    content: "";
+    position: absolute;
+    top: 24px;
+    width: 72px;
+    height: 6px;
+    border-radius: inherit;
+    background-color: inherit;
+    transition: 0.2s; /* Transitions for moving the line upwards 45 degrees */
+  }
+
+  .ham1::after {
+    content: "";
+    position: absolute;
+    top: -24px;
+    width: 72px;
+    height: 6px;
+    border-radius: inherit;
+    background-color: inherit;
+    transition: 0.2s; /* Transitions from moving the line downwards 45 degrees */
   }
 
   /* The white strip behind the 'ham' image */
@@ -657,7 +708,7 @@ footer {
     position: fixed;
     background-color: #ffffff;
     /* background-color: cyan; */
-    height: 10em;
+    height: 10.5em;
     width: 65.5em;
     margin-top: -15.6em;
     margin-left: -4.4em;

@@ -727,12 +727,27 @@ hr {
     top: 1000px;
   }
 
+  body.transition-1 {
+    overflow: hidden;
+  }
+
   .hide-mobile {
     display: none;
   }
 
   .show-mobile {
     display: block;
+  }
+
+  /*shadow behind the menu when the hamburger icon is clicked on.*/
+  .overlay {
+    position: absolute;
+    top: -96.8em;
+    left: 0;
+    width: 82em;
+    height: 178em;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 9;
   }
 
   li,
@@ -742,13 +757,22 @@ hr {
   }
 
   ul {
+    grid-template-columns: 0;
     background-color: #dc3727;
     height: 100%; /* Determins height of the background container */
-    width: 10%; /* Determines width of the background container */
+    width: 80%; /* Determines width of the background container */
     padding-top: 21.8em; /* Groups the anchor tags together and adds padding to the top of the element. */
     margin-right: -2.5em;
-    z-index: 9;
-    transition: all 3s;
+    z-index: 10;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all 0.5s;
+    display: block;
+  }
+
+  .menu-transition {
+    transform: translateX(0%);
+    opacity: 1;
   }
 
   li a {
@@ -766,7 +790,7 @@ hr {
   .wines,
   .contact-li {
     padding: 0 0 2.05em 0; /*Sets the padding of the elements within their borders.*/
-    margin: 0.25em 0 0 0.75em; /* Moves the anchor tags to the right */
+    margin: 0.25em 0 0 0.75em; /* Moves the anchor tags top & right */
   }
 
   /* CONTAINER TO ADJUST THE POSITIONING OF THE <a> tag */
@@ -798,85 +822,91 @@ hr {
   } */
   /* END CONTAINER TO ADJUST THE POSITIONING OF THE <a> tag */
 
-  /* The three lines icon for the main menu */
-  /* .ham {
-    position: fixed;
-    width: 9.5em;
-    height: 9.5em;
-    margin: 1.6em 0 0 68em;
-    display: initial;
-    cursor: pointer;
-    z-index: 8; */
-  /* } */
-
-  .ham {
-    margin-left: 68em;
-    margin-top: 1em;
-    border: 2px solid black;
+  /*Border around the hamburger icon.*/
+  /*The reason for using the ::before element and not '.ham' is because this way I can apply z-index to the 'border' property. Otherwise it is not possible.*/
+  .ham::before {
+    /* display: block; */
+    content: "";
+    border: 2px solid #e7412e;
     width: 170px;
     height: 170px;
+    position: fixed;
+    left: 68em;
+    top: 1em;
+    z-index: 11;
     cursor: pointer;
-    z-index: 10;
   }
 
+  .ham.transition-1::before {
+    border-color: black;
+  }
+
+  /*Middle line of the hamburger icon. This element also edits the property of the ::before and ::after elements.*/
   .ham1 {
     background-color: #e7412e;
     width: 90px;
     height: 8px;
-    margin-top: 3em;
-    margin-bottom: 1.5em;
     border-radius: 10px;
-    transition: transform 0.5s;
     cursor: pointer;
-    position: relative;
+    position: fixed;
+    top: 6em;
+    left: 70.6em;
+    transition: 0.1s;
+    z-index: 11;
   }
 
-  .ham2 {
-    background-color: #e7412e;
+  /*Bottom line in hamburger icon*/
+  .ham1::before {
+    content: "";
+    position: absolute;
+    top: 30px;
     width: 90px;
     height: 8px;
-    margin-top: 0em;
-    margin-bottom: 4em;
-    border-radius: 10px;
+    border-radius: inherit;
+    background-color: inherit;
+    transition: 0.2s; /*Transitions for moving the line upwards 45 degrees */
   }
 
-  .ham3 {
-    margin-top: -2.5em;
-    transition: transform 0.5s;
-    position: relative;
+  /*Top line in hamburger icon*/
+  .ham1::after {
+    content: "";
+    position: absolute;
+    top: -30px;
+    width: 90px;
+    height: 8px;
+    border-radius: inherit;
+    background-color: inherit;
+    transition: 0.2s; /*Transitions from moving the line downwards 45 degrees*/
   }
 
-  /* .ham1:hover {
+  /*Transitions middle line in hamburger icon.*/
+  .ham.transition-1 .ham1 {
+    width: 0;
+    background-color: black;
+  }
+
+  /*Transitions top line in hamburger icon.*/
+  .ham.transition-1 .ham1::after {
     transform: rotate(-45deg);
+    top: 0px;
   }
 
-  .ham3:hover {
+  /*Transitions bottom line in hamburger icon.*/
+  .ham.transition-1 .ham1::before {
     transform: rotate(45deg);
-  } */
+    top: 1px;
+  }
 
   /* The white strip behind the 'ham' image */
   .ham-background {
     position: fixed;
     padding-bottom: 4em;
-    background-color: #ffffff;
-    /* background-color: cyan; */
+    background-color: #fff;
+    /* background-color: orange; */
     height: 9em;
     width: 81.4em;
     z-index: 8;
   }
-
-  /* The 'x' button to close the menu */
-  /* .exit-button {
-    font-size: 70px;
-    font-family: "Hachi Maru Pop";
-    position: fixed;
-    margin-left: 15.8em;
-    margin-top: 0.4em;
-    z-index: 10;
-    cursor: pointer;
-    border: 2px solid black;
-    padding: 0.1em 0.75em 0.4em 0.75em;
-  } */
 
   /* Main image */
   .html-image {

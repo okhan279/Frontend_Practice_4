@@ -39,5 +39,8 @@ menu.html:
 IPAD resolution: Everything is fine. The only problem is that some elements in the Chrome browser have more dots (.......) as compared to the Firefox browser.
 Mobile version: all fine.-----------
 
-Last thing I did: Aligned the mobile resolution menu for menu.html with the reference wines.html.
-For tomorrow: Finish off alignment of the last section about_us.html with reference wines.html.
+For tomorrow: The X hides behind ul when clicked. figure out how have the X above the ul.
+
+Note: Can I use border-box: box-sizing; for the menu at the top of the page?
+
+test to see if uploaded to GitHub successfully: 11/03/2021

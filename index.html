@@ -9,25 +9,16 @@
 
   <body>
     <header>
-      <div class="ham-background">
-        <!-- <img
-        class="show-mobile hide-desktop menu ham" id="menu"
-        src="Images/ham.svg"
-        alt="dropdown button"> -->
-        <div class="ham" id="ham">
-          <hr class="hide-desktop show-mobile ham1" id="ham1">
-          <hr class="hide-desktop show-mobile ham2" id="ham2">
-          <hr class="hide-desktop show-mobile ham2 ham3" id="ham3">
-        </div>
-        <!-- <hr class="ham1"> -->
+      <div class="ham-background"></div>
+
+      <div class="ham" id="ham">
+        <!-- Line for hamburger icon. The other 2 lines will be created using ::before and ::after -->
+        <div class="hide-desktop show-mobile ham1" id="ham1"></div>
       </div>
 
-      <!-- <span class="exit-button hide-mobile hide-desktop hide-ipad" id="exit">x</span> -->
-      <!-- Why does this element hide in Iphone X resolution when giving it a 'hide-desktop' class?? -->
-
-      <nav class="hide-mobile">
-        <ul class="show-mobile ul-mobile" id="ul">
-          <li><a class="home" id="home" href="#">HOME</a></li>
+      <nav>
+        <ul class="ul-mobile" id="ul">
+          <li><a class="home hide-mobile" id="home" href="#">HOME</a></li>
           <li><a class="reservation" href="#reservation">RESERVATION</a></li>
           <li>
             <a class="menu" href="http://127.0.0.1:5500/menu.html">MENU</a>
@@ -35,7 +26,11 @@
           <li>
             <a class="wines" href="http://127.0.0.1:5500/wines.html">WINES</a>
           </li>
-          <li><a class="about-us-top-menu" href="./about_us.html">ABOUT<span class="us">US</span></a></li>
+          <li>
+            <a class="about-us-top-menu" href="./about_us.html"
+              >ABOUT<span class="us">US</span></a
+            >
+          </li>
           <li><a class="contact-li" href="#contact">CONTACT</a></li>
         </ul>
       </nav>
@@ -147,12 +142,8 @@
 
       <!-- <div> Not sure why this <div> is here. Will check later -->
       <!-- This will be the grid class -->
-    <div class="grid-1">
-        <img
-          class="pic-1"
-          src="Images/pic_1.png"
-          alt="Bar Gansa Restaurant"
-        />
+      <div class="grid-1">
+        <img class="pic-1" src="Images/pic_1.png" alt="Bar Gansa Restaurant" />
         <div class="box a about-us">ABOUT US</div>
         <div class="box b about-us-p">
           Serving tapas with passion to the people of Camden since 1985, Bar
@@ -167,85 +158,87 @@
           traditional recipe, using only the freshest ingredients.
         </div>
 
-        <a class="box c about-us-link" href="http://127.0.0.1:5500/about_us.html"
+        <a
+          class="box c about-us-link"
+          href="http://127.0.0.1:5500/about_us.html"
           >Read more</a
         >
-    </div>
-        <br />
-      
-          <div class="grid-2">
-            <img
-              class="box d"
-              src="Images/pic_2.png"
-              alt="Bar Gansa Restaurant 2"
-            />
-            <h1 class="box e">BAR GANSA</h1>
-            <p class="box f">
-              "Bar Gansa manages to conjure up some of the elemental magic and
-              spirit of Spain with its patriotic red and yellow colour schemes
-              and classic wooden tables. It's a good-humoured and exceedingly
-              friendly venue that happily accommodates all-comers, who perch on
-              stools clustered around the bar or grab one of the rustic tables.
-              <br /><br />
-              The full menu focuses on tapas backed up a few more substantial
-              offerings. Electrifying flamenco displays bring the place to its
-              feet on Sunday evenings, but there's music and entertainment of
-              some kind most nights. The sangria flows and everyone has the best
-              of times. <br />
-              - Mobile Food Guide -
-              <br /><br />
-              Join us for a wonderful evening of fantastic food and hospitality
-              at our Spanish oasis in Camden Town!
-            </p>
-          </div>
-          <div class="grid-3">
-            <img
-              class="box g"
-              src="Images/pic_3.png"
-              alt="BAR GANSA Restaurant 3"
-            />
-            <h1 class="box h">BRUNCH</h1>
-            <p class="box i">
-              Join us for an authentic Spanish bottomless brunch available on
-              weekends until 4pm <br /><br />
+      </div>
+      <br />
 
-              Authentic Spanish brunch dishes made with love and served with
-              passion! <br /> <br>
-              🎫 <br />
-              90 minutes bottomless sangria or beer & one Spanish brunch item
-              from the menu <br />
-              📅 <br />
-              Date: Saturdays & Sundays <br />
-              🍽 <br />
-              Food options: vegan and vegetarian options are available
-            </p>
-            <br /><br />
-            <a class="box j" href="#">Book now</a> <br />
-          </div>
+      <div class="grid-2">
+        <img
+          class="box d"
+          src="Images/pic_2.png"
+          alt="Bar Gansa Restaurant 2"
+        />
+        <h1 class="box e">BAR GANSA</h1>
+        <p class="box f">
+          "Bar Gansa manages to conjure up some of the elemental magic and
+          spirit of Spain with its patriotic red and yellow colour schemes and
+          classic wooden tables. It's a good-humoured and exceedingly friendly
+          venue that happily accommodates all-comers, who perch on stools
+          clustered around the bar or grab one of the rustic tables.
+          <br /><br />
+          The full menu focuses on tapas backed up a few more substantial
+          offerings. Electrifying flamenco displays bring the place to its feet
+          on Sunday evenings, but there's music and entertainment of some kind
+          most nights. The sangria flows and everyone has the best of times.
+          <br />
+          - Mobile Food Guide -
+          <br /><br />
+          Join us for a wonderful evening of fantastic food and hospitality at
+          our Spanish oasis in Camden Town!
+        </p>
+      </div>
+      <div class="grid-3">
+        <img
+          class="box g"
+          src="Images/pic_3.png"
+          alt="BAR GANSA Restaurant 3"
+        />
+        <h1 class="box h">BRUNCH</h1>
+        <p class="box i">
+          Join us for an authentic Spanish bottomless brunch available on
+          weekends until 4pm <br /><br />
 
-          <div class="grid-4">
-            <img
-              class="box k hide-mobile"
-              src="Images/pic_4.png"
-              alt="BAR GANSA Restaurant 4"
-            />
-            <h1 class="box l">FLAMENCO SUNDAYS</h1>
-            <p class="box m">By the Escuela de Balle from 8pm every Sunday.</p>
-            <br /><br />
-
-            <p class="box n">
-              Flamenco Sundays package including: <br />
-              - Flamenco show <br />
-              - Half a bottle of red / white wine <br />
-              - Bread and olives <br />
-              - Paella of any choice from the menu or 3 tapas <br />
-              - Dessert of the day <br />
-            </p>
-            <a class="box o" href="#">Book now</a>
-          </div>
-        </div>
+          Authentic Spanish brunch dishes made with love and served with
+          passion! <br />
+          <br />
+          🎫 <br />
+          90 minutes bottomless sangria or beer & one Spanish brunch item from
+          the menu <br />
+          📅 <br />
+          Date: Saturdays & Sundays <br />
+          🍽 <br />
+          Food options: vegan and vegetarian options are available
+        </p>
+        <br /><br />
+        <a class="box j" href="#">Book now</a> <br />
       </div>
 
+      <div class="grid-4">
+        <img
+          class="box k hide-mobile"
+          src="Images/pic_4.png"
+          alt="BAR GANSA Restaurant 4"
+        />
+        <h1 class="box l">FLAMENCO SUNDAYS</h1>
+        <p class="box m">By the Escuela de Balle from 8pm every Sunday.</p>
+        <br /><br />
+
+        <p class="box n">
+          Flamenco Sundays package including: <br />
+          - Flamenco show <br />
+          - Half a bottle of red / white wine <br />
+          - Bread and olives <br />
+          - Paella of any choice from the menu or 3 tapas <br />
+          - Dessert of the day <br />
+        </p>
+        <a class="box o" href="#">Book now</a>
+      </div>
+      <!-- </div>
+      </div> -->
 
       <hr id="contact" class="hr-2" />
 
@@ -264,6 +257,7 @@
           <br />
         </div>
       </div>
+      <div class="overlay hide-mobile"></div>
 
       <iframe
         class="map"
@@ -277,77 +271,71 @@
       ></iframe>
     </main>
 
-      <footer>
-        <label class="subscribe-now" for="subscribe"
-          ><a href="#">Subscribe Now</a></label
-        >
-        <input
-          id="subscribe"
-          class="email"
-          type="text"
-          name="email-address"
-          placeholder="Email Address"
-        />
+    <footer>
+      <label class="subscribe-now" for="subscribe"
+        ><a href="#">Subscribe Now</a></label
+      >
+      <input
+        id="subscribe"
+        class="email"
+        type="text"
+        name="email-address"
+        placeholder="Email Address"
+      />
 
-        <p class="register-mark">
-          &copy; 2018 by Bar Gansa
-        </p>
-        <div class="social-media-container">
-          <a href="#"
-            ><img
-              class="facebook-snapchat facebook"
-              src="Images/facebook_href.webp"
-              alt="Bar Gansa Facebook"
-          /></a>
-          <a href="#"
-            ><img
+      <p class="register-mark">&copy; 2018 by Bar Gansa</p>
+      <div class="social-media-container">
+        <a href="#"
+          ><img
+            class="facebook-snapchat facebook"
+            src="Images/facebook_href.webp"
+            alt="Bar Gansa Facebook"
+        /></a>
+        <a href="#"
+          ><img
             class="facebook-snapchat"
-              src="Images/snapchat_href.webp"
-              alt="Bar Gansa Twitter"
-          /></a>
-        </div>
-      </footer>
+            src="Images/snapchat_href.webp"
+            alt="Bar Gansa Twitter"
+        /></a>
+      </div>
+    </footer>
 
     <script>
-        const menu = document.getElementById('menu');
-        const nav = document.querySelector('nav');
-        const exit = document.getElementById('exit');
-        const home = document.getElementById('home');
-        const ham = document.getElementById('ham');
-        const ham1 = document.getElementById('ham1');
-        // const ham2 = document.getElementById('ham2');
-        const ham3 = document.getElementById('ham3');
-        const ulMobile = document.getElementById('ul');
+      // const menu = document.getElementById("menu");
+      // const nav = document.getElementById("nav");
+      // const exit = document.getElementById("exit");
+      // const home = document.getElementById("home");
+      const ham = document.getElementById("ham");
+      const ulMobile = document.querySelector(".ul-mobile");
+      const overlay = document.querySelector(".overlay");
+      const body = document.querySelector("body");
 
+      ham.addEventListener("click", function () {
+        ulMobile.classList.toggle("menu-transition");
+        /*Adds 'transition-1' class to ham */
+        ham.classList.toggle("transition-1");
+        /*Adds the '' */
+        body.classList.toggle("transition-1");
+        /*toggles the 'overlay' class when hamburgur icon is clicked.*/
+        overlay.classList.toggle("hide-mobile");
+      });
 
-        ham.addEventListener('click', function(e) {
-          nav.classList.toggle('hide-mobile'); 
-          ulMobile.style.width = '80%';
-          home.classList.add('hide-mobile'); /* Removes the 'Home' link from the menu by adding the 'hide-mobile' class to the element */
-          ham1.style.transform = 'rotate(-45deg)';
-          ham1.style.top = '1.9em';
-          ham3.style.transform = 'rotate(45deg)';
-          ham3.style.top = '2.3em'; /*The bottom ham has to move upwards as 'ham2' is removed once the click event happens*/
-          ham2.style.display = 'none';
-        });
-        
-        menu.addEventListener('click', function(e) {
-          // nav.classList.toggle('hide-mobile'); 
-          /* Removes 'hide-mobile' from the nav tag */
-          // exit.classList.remove('hide-mobile'); 
-          /* Adds the 'X' for the exit class when the menu is opened up  */
-          exit.classList.remove('hide-desktop'); /* Adds the 'X' for the exit class when the menu is opened up  */
-          home.classList.add('hide-mobile'); /* Removes the 'Home' link from the menu by adding the 'hide-mobile' class to the element */
-          // menu.style.display = 'none'; 
-          /* Removes the 'ham' image when clicked on */
-        });
+      // ham.addEventListener('click', function(e) {
+      //   nav.classList.toggle('hide-mobile');
+      //   ulMobile.classList.add('menu-transition');
+      //   // home.classList.add('hide-mobile'); /* Removes the 'Home' link from the menu by adding the 'hide-mobile' class to the element */
+      //   ham1.style.transform = 'rotate(-45deg)';
+      //   ham1.style.top = '1.9em';
+      //   ham3.style.transform = 'rotate(45deg)';
+      //   ham3.style.top = '2.3em'; /*The bottom ham has to move upwards as 'ham2' is removed once the click event happens*/
+      //   ham2.style.display = 'none';
+      // });
 
-        exit.addEventListener('click', function(e) {
-          nav.classList.add('hide-mobile'); /* Hides the menu when 'X' is clicked on */
-          exit.classList.add('hide-mobile'); /* Removes the 'X' when clicked on. If this isn't added then the 'X' will be displayed on the web page */
-          menu.style.display = 'block'; /* Returns the 'ham1' image for the main menu. */
-        });
+      // exit.addEventListener('click', function(e) {
+      //   nav.classList.add('hide-mobile'); /* Hides the menu when 'X' is clicked on */
+      //   exit.classList.add('hide-mobile'); /* Removes the 'X' when clicked on. If this isn't added then the 'X' will be displayed on the web page */
+      //   menu.style.display = 'block'; /* Returns the 'ham1' image for the main menu. */
+      // });
     </script>
-
   </body>
 </html>
