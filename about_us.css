@@ -7,7 +7,6 @@
 
 body {
   width: 90%;
-  /* background-color: cyan; */
 }
 
 a {
@@ -43,7 +42,7 @@ li:hover {
   background-color: #c83727;
 }
 
-/* CONTAINER TO EXTEND BORDER OF THE ANCHOR LINKS IN TOP MENU */
+/* CONTAINER TO EXTEND BORDER OF THE <a> LINKS IN TOP MENU */
 .home {
   padding: 20px 85px 23px 81px;
   position: relative; /* Why does 'margin-top/bottom/left/right' not work here. WHY?!!! */
@@ -170,16 +169,17 @@ footer {
   }
 }
 
+/*'Email Address' inside <input> tag*/
+/* Styles the placeholder in ONLY Chrome */
 ::placeholder {
-  /* Styles the placeholder in ONLY Chrome */
   font-size: 16px; /* Why does this element effect in both browsers. WHY?!!!! */
   position: relative; /* This only effects the placeholder in Chrome */
   top: 0.08em;
   font-family: "Montserrat";
 }
 
+/* styles the placeholder in both Firefox and Chrome */
 :placeholder-shown {
-  /* styles the placeholder in both Firefox and Chrome */
   padding-left: 3em;
   padding-bottom: 0.66em;
 }
@@ -206,11 +206,13 @@ footer {
   padding-right: 10px;
 }
 
+/*Sets width and height for the facebook and snapchat icons*/
 .facebook-snapchat {
   width: 39px;
   height: 41px;
 }
 
+/* Used to style the snapchat and facebook icons */
 .social-media-container {
   width: 8%;
   position: relative;
@@ -223,8 +225,15 @@ footer {
   scroll-behavior: smooth;
 }
 
-/*----- IPHONE X RESOLUTION-----*/
+/*--------IPHONE X RESOLUTION--------*/
 @media only screen and (max-width: 375px) {
+  p {
+    width: 22em;
+    font-size: 40px;
+    margin-left: -4.15em;
+    padding: 0 1em;
+  }
+
   .hide-mobile {
     display: none;
   }
@@ -233,40 +242,19 @@ footer {
     display: initial;
   }
 
-  /* The three lines icon for the main menu */
-  .ham {
-    background-color: #ffffff;
-    position: fixed;
-    margin-left: 50.5em;
-    margin-top: 2.5em;
-    height: 4.5em;
-    display: initial;
-    cursor: pointer;
-    z-index: 8;
-  }
-
-  /* The white strip behind the 'ham' image */
-  .ham-background {
-    background-color: #ffffff;
-    position: fixed;
-    z-index: 8;
-    height: 9em;
-    width: 60.5em;
-    margin-left: -0.45em;
-    margin-top: -1em;
-  }
-
-  /* The 'x' button to close the menu */
-  .exit-btn {
-    font-size: 60px;
-    font-family: "Hachi Maru Pop";
-    cursor: pointer;
-    margin-left: 13.5em;
-    margin-top: 0.1em;
+  /*shadow behind the menu when the hamburger icon is clicked on.*/
+  .overlay {
+    position: absolute;
+    top: -96.8em;
+    left: 0;
+    width: 60.8em;
+    height: 379.2em;
+    background-color: rgba(0, 0, 0, 0.3);
     z-index: 9;
-    position: fixed;
-    border: 2px solid black;
-    padding: 0 0.65em 0.25em 0.65em;
+  }
+
+  body.transition-1 {
+    overflow: hidden;
   }
 
   li,
@@ -274,30 +262,31 @@ footer {
     all: revert; /* reverts all the properties set in the inital 'li' tag to default. */
   }
 
-  nav ul {
+  ul {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0fr 0fr 0fr 0fr 0fr 0fr;
     background-color: #dc3727;
     height: 100%;
     width: 80%;
-    padding-top: 23.25em;
+    padding-top: 16.15em;
     margin-right: -2.5em;
-    margin-top: -8em; /* Adjusts the position of the whole menu */
-    z-index: 8;
+    z-index: 10;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all 0.5s;
+  }
+
+  /*Transitions translateX and opacity for the menu (ul)*/
+  .menu-transition {
+    transform: translateX(0%);
+    opacity: 1;
   }
 
   li a {
     font-family: "Montserrat";
     color: white;
     font-size: 48.2px;
-    text-decoration: none;
     display: block;
-    /* width: 60%; */
-    /* padding: 3em 1em 1em 2em; */
-    /* Determines the padding between each anchor element */
-    /* margin-left: 0.7em; Positions the anchor text slightly towards the right. */
-    /* When using 'margin-top' or 'margin-bottom' the anchor texts do not move. Only the space between the elements. WHY?!! */
-    /* margin-top: 0.5em; */
-    /* margin-top: 1.2em; */ /* Determines the space BETWEEN the anchor elements */
-    /* outline: 2px solid white; */
   }
 
   .home,
@@ -305,35 +294,120 @@ footer {
   .top-menu,
   .wines,
   .contact {
-    margin: 0.3em 0 0 2.99em;
+    margin: 0.3em 0 0 3.03em;
     padding: 0 0 1.98em 0;
   }
 
-  /* This allows me to move the anchor text downwards as it was not happening in the 'nav ul li a' text. */
-  /* .home {
-    margin-left: 2.2em;
-    padding: 0;
-    padding-bottom: 2.1em;
+  /*Border around the hamburger icon.*/
+  /*The reason for using the ::before element and not '.ham' is because this way I can apply z-index to the 'border' property. Otherwise it 
+  is not possible.*/
+  .ham::before {
+    content: "";
+    border: 2px solid #e7412e;
+    width: 128px;
+    height: 128px;
+    position: fixed;
+    top: 0.7em;
+    left: 50.4em;
+    z-index: 11;
+    cursor: pointer;
+    transition: transform 0.3s;
   }
 
-  .reservation {
-    margin-left: -1.15em;
-    padding-bottom: 1.5em;
+  /*Transitions border colour to black when hamburger icon clicked*/
+  .ham.transition-1::before {
+    border-color: black;
   }
 
-  .wines {
-    margin-left: -2.52em;
+  /*Moves the border of the hamburger icon upwards when scrolling down*/
+  .ham.scroll-transition::before {
+    transform: translateY(-110%);
   }
 
-  .menu {
-    margin-left: 2.15em;
-    padding: 2em 0;
+  /*Main element of the hamburger icon: Middle line of the hamburger icon. This element also edits the property of the ::before and 
+  ::after elements.*/
+  .ham1 {
+    background-color: #e7412e;
+    width: 67px;
+    height: 6px;
+    border-radius: 10px;
+    cursor: pointer;
+    position: fixed;
+    top: 4.4em;
+    left: 52.4em;
+    transition: 0.1s, transform 0.3s; /*2 transitions: when hamburger icon is clicked, and when page is scrolled up or down*/
+    z-index: 11;
   }
 
-  .contact {
-    margin-left: 2.2em;
-    padding: 0;
-  } */
+  /*Bottom line in hamburger icon*/
+  .ham1::before {
+    content: "";
+    position: absolute;
+    top: 22.5px;
+    width: 67px;
+    height: 6px;
+    border-radius: inherit;
+    background-color: inherit;
+    transition: 0.2s; /*Transitions for moving the line upwards 45 degrees */
+  }
+
+  /*Top line in hamburger icon*/
+  .ham1::after {
+    content: "";
+    position: absolute;
+    top: -22.5px;
+    width: 67px;
+    height: 6px;
+    border-radius: inherit;
+    background-color: inherit;
+    transition: 0.2s;
+  }
+
+  /*Transitions middle line in hamburger icon.*/
+  .ham.transition-1 .ham1 {
+    width: 0;
+    background-color: black;
+  }
+
+  /*Moves the hamburger icon upwards when scrolling down*/
+  .ham.scroll-transition .ham1 {
+    transform: translateY(-2000%);
+  }
+
+  /*Transitions top line in hamburger icon.*/
+  .ham.transition-1 .ham1::after {
+    transform: rotate(-45deg);
+    top: 0px;
+  }
+
+  /*Transitions bottom line in hamburger icon.*/
+  .ham.transition-1 .ham1::before {
+    transform: rotate(45deg);
+    top: 1px;
+  }
+
+  /* The white strip behind the hamburger icon */
+  .ham-background {
+    background-color: #ffffff;
+    /* background-color: orange; */
+    position: fixed;
+    z-index: 1;
+    height: 10em;
+    width: 60.7em;
+    margin-left: -0.45em;
+    margin-top: -1em;
+    transition: transform 0.3s;
+  }
+
+  /*Adds translateY to the '.ham-background' class when scrolling down*/
+  .ham-background.scroll-transition {
+    transform: translateY(-100%);
+  }
+
+  /*Adds translateY to the '.ham-background' class when scrolling down*/
+  .ham-background.scroll-transition {
+    transform: translateY(-100%);
+  }
 
   .image-1 {
     width: 40em;
@@ -353,13 +427,6 @@ footer {
     width: 22em;
     font-size: 40px;
     margin-left: -4.15em;
-  }
-
-  p {
-    width: 22em;
-    font-size: 40px;
-    margin-left: -4.15em;
-    padding: 0 1em;
   }
 
   .about_us_pic {
@@ -399,10 +466,13 @@ footer {
     padding: 0.2em 0em 0em 2.75em;
   }
 
+  /*'Email Address' inside <input> tag*/
   ::placeholder {
     font-size: 47px;
+    padding-bottom: 0.2em;
   }
 
+  /*Adds padding in both the Chrome and Firefox browsers*/
   :placeholder-shown {
     padding-bottom: 0.2em; /* Adds padding to the 'Email Address' text. */
   }
@@ -425,6 +495,7 @@ footer {
     top: 13em;
   }
 
+  /* Used to style the snapchat and facebook icons */
   .social-media-container {
     position: relative;
     top: 33.85em;
@@ -443,7 +514,6 @@ footer {
     height: 110px;
   }
 }
-/* END IPHONE X RESOLUTION */
 
 /*----------IPAD RESOLUTION(768 x 1024)---------------*/
 @media only screen and (max-width: 768px) and (min-width: 376px) {
@@ -451,8 +521,17 @@ footer {
     width: 124.5%;
   }
 
+  figcaption {
+    width: 36em;
+    margin-left: -7em;
+  }
+
+  p {
+    width: 43em;
+    margin-left: -7em;
+  }
+
   ul {
-    /* grid-template-columns: 172px 190px 173px 173px 175px 275px; */
     grid-template-columns: 170px 167px 168px 171px 170px 170px;
     padding-top: 0.4em;
     margin: -1.4em -0.1em -5em 0em; /*The 'margin-bottom' is to pull the container under the top menu higher up */
@@ -518,15 +597,6 @@ footer {
 
   /* With a wide range of experience behind him, Chef Nacho Rivera brings his expert techniques and Spanish flair to the newly refurbished
     Tapas hotspot. */
-  figcaption {
-    width: 36em;
-    margin-left: -7em;
-  }
-
-  p {
-    width: 43em;
-    margin-left: -7em;
-  }
 
   .about_us_pic {
     width: 31em;
@@ -561,18 +631,20 @@ footer {
     width: 13.95em;
     position: relative;
     left: 4.6em;
-    top: 1.8em; /*-4.72em*/
+    top: 1.8em;
     font-size: 20px;
     padding-bottom: 0.55em;
     background-size: 1.1em 1.1em;
   }
 
+  /*Query to edit only in Firefox*/
   @supports (-moz-appearance: none) {
     .email {
-      margin-top: 0em; /*-1.64em*/
+      margin-top: 0em;
     }
   }
 
+  /*'Email Address' inside <input> tag*/
   ::placeholder {
     font-size: 17px;
     font-weight: 600;
@@ -587,6 +659,7 @@ footer {
     font-size: 17px;
   }
 
+  /* Used to style the snapchat and facebook icons */
   .social-media-container {
     width: 6.5em;
     position: relative;
@@ -594,6 +667,7 @@ footer {
     left: 41.52em;
   }
 
+  /*Styles both the facebook and snapchat icons*/
   .facebook-snapchat {
     width: 2.5em;
     height: 2.5em;

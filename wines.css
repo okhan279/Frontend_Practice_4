@@ -147,6 +147,7 @@ li a:hover {
 }
 
 /*-----HEADER-----*/
+
 /* Contains the '.wines' and '.wines-p' classes */
 .title {
   position: relative;
@@ -175,9 +176,9 @@ li a:hover {
   bottom: 40px;
   width: 100%;
 }
-/*---END OF 'HEADER'---*/
+/*---END HEADER---*/
 
-/*-----Container 1-----*/
+/*-----CONTAINER 1: 'White Wines'-----*/
 .container-1 {
   position: relative;
   bottom: 50px;
@@ -187,8 +188,9 @@ li a:hover {
   display: grid;
   grid-template-rows: 150px 150px 150px 150px 150px 150px;
 }
+/*-----END CONTAINER 1'-----*/
 
-/*-----Container 2-----*/
+/*-----CONTAINER 2: 'Red Wines'-----*/
 .container-2 {
   position: relative;
   bottom: 170px;
@@ -199,8 +201,9 @@ li a:hover {
   grid-template-rows: 150px 150px 150px 150px 150px 150px 0px;
   padding-bottom: 20px;
 }
+/*-----END CONTAINER 2-----*/
 
-/*-----Container 3-----*/
+/*-----CONTAINER 3: 'Rose Wines'-----*/
 .container-3 {
   position: relative;
   bottom: 280px;
@@ -215,8 +218,9 @@ li a:hover {
   display: grid;
   grid-template-rows: 150px 150px;
 }
+/*-----END CONTAINER 3-----*/
 
-/*-----Container 4-----*/
+/*-----CONTAINER 4: 'Cava, Prosecco and Champagnes'-----*/
 .container-4 {
   position: relative;
   bottom: 250px;
@@ -240,6 +244,7 @@ li a:hover {
   display: grid;
   grid-template-rows: 110px 110px 110px 110px 110px 110px 110px;
 }
+/*-----END CONTAINER 4-----*/
 
 /*-----Footer-----*/
 footer {
@@ -264,12 +269,13 @@ footer {
   position: relative;
   top: -130px; /*144px, -101px*/
   left: 271px; /*265px, 250px*/
-  background-image: url(Images/Email-icon.png);
+  background-image: url(Images/Email-icon.png); /*Email icon*/
   background-repeat: no-repeat;
   background-position: center left;
   background-size: 20px 20px;
 }
 
+/*Styling for Firefox browser*/
 @supports (-moz-appearance: none) {
   .email {
     position: relative;
@@ -277,16 +283,17 @@ footer {
   }
 }
 
+/*'Email Address' inside <input> tag*/
+/* Styles the placeholder in ONLY Chrome */
 ::placeholder {
-  /* Styles the placeholder in ONLY Chrome */
   font-size: 16px; /* Why does this element effect in both browsers. WHY?!!!! */
   position: relative; /* This only effects the placeholder in Chrome */
   top: 0.08em;
   font-family: "Montserrat";
 }
 
+/* styles the placeholder in both Firefox and Chrome */
 :placeholder-shown {
-  /* styles the placeholder in both Firefox and Chrome */
   padding-left: 3em;
   padding-bottom: 0.66em;
 }
@@ -367,6 +374,22 @@ footer {
     display: initial;
   }
 
+  /*shadow behind the menu when the hamburger icon is clicked on.*/
+  .overlay {
+    position: absolute;
+    top: -96.8em;
+    left: 0;
+    width: 63.15em;
+    height: 1121em;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 9;
+  }
+
+  /*Stops scrolling when menu is clicked*/
+  body.transition-1 {
+    overflow: hidden;
+  }
+
   li,
   li:hover {
     all: revert;
@@ -381,7 +404,16 @@ footer {
     padding-top: 18em;
     margin-top: -4.5em; /* Adjusts the position of the whole red container. */
     margin-right: -2.5em; /* I tired using 'margin-left' but the element for some reason was not responding. Why?!!! */
-    z-index: 8;
+    z-index: 10;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all 0.5s;
+  }
+
+  /*Transitions translateX and opacity for the menu(ul)*/
+  .menu-transition {
+    transform: translateX(0%);
+    opacity: 1;
   }
 
   li a {
@@ -405,7 +437,6 @@ footer {
   .reservation,
   .li-menu,
   .about-us,
-  /* .contact, */
   .home {
     padding: 0em 0em 2em 0em;
   }
@@ -417,16 +448,90 @@ footer {
     margin-top: -0.3em;
   }
 
-  /* The three lines icon for the main menu */
-  .ham {
+  /*Border around the hamburger icon.*/
+  /*The reason for using the ::before element and not '.ham' is because this way I can apply z-index to the 'border' property. Otherwise it is not possible.*/
+  .ham::before {
+    content: "";
+    border: 2px solid #e7412e;
+    width: 130px;
+    height: 130px;
     position: fixed;
-    margin-top: 2.5em;
-    margin-left: 51.8em;
-    height: 4.8em;
-    width: 8.8em;
-    display: initial;
+    left: 52.3em;
+    top: 0.7em;
+    z-index: 11;
     cursor: pointer;
-    z-index: 9;
+    transition: transform 0.3s;
+  }
+
+  /*Transitions border colour to black when hamburger icon clicked*/
+  .ham.transition-1::before {
+    border-color: black;
+  }
+
+  /*Moves the border of the hamburger icon upwards when scrolling down*/
+  .ham.scroll-transition::before {
+    transform: translateY(-110%);
+  }
+
+  /*Middle line of the hamburger icon. This element also edits the property of the ::before and ::after elements.*/
+  .ham1 {
+    background-color: #e7412e;
+    width: 70px;
+    height: 6px;
+    border-radius: 10px;
+    cursor: pointer;
+    position: fixed;
+    left: 54.3em;
+    top: 4.6em;
+    transition: 0.1s, transform 0.3s;
+    z-index: 11;
+  }
+
+  /*Bottom line in hamburger icon*/
+  .ham1::before {
+    content: "";
+    position: absolute;
+    top: 23px;
+    width: 70px;
+    height: 6px;
+    border-radius: inherit;
+    background-color: inherit;
+    transition: 0.2s; /*Transitions for moving the line upwards 45 degrees */
+  }
+
+  /*Top line in hamburger icon*/
+  .ham1::after {
+    content: "";
+    position: absolute;
+    top: -23px;
+    width: 70px;
+    height: 6px;
+    border-radius: inherit;
+    background-color: inherit;
+    transition: 0.2s; /*Transitions from moving the line downwards 45 degrees*/
+  }
+
+  /*Transitions middle line in hamburger icon.*/
+  .ham.transition-1 .ham1 {
+    width: 0;
+    background-color: black;
+  }
+
+  /*Moves the hamburger icon upwards when scrolling down*/
+  .ham.scroll-transition .ham1 {
+    transform: translateY(-2000%);
+  }
+
+  /*Transitions top line in hamburger icon.*/
+  .ham.transition-1 .ham1::after {
+    transform: rotate(-45deg);
+    top: 0px;
+  }
+
+  /*Transitions bottom line in hamburger icon.*/
+  .ham.transition-1 .ham1::before {
+    transform: rotate(45deg);
+    top: 1px;
   }
 
   /* The white strip behind the 'ham' image */
@@ -434,25 +539,15 @@ footer {
     background-color: #ffffff;
     z-index: 8;
     position: fixed;
-    height: 9.8em;
+    height: 10em;
     width: 63.5em;
     margin-top: -4.5em;
+    transition: transform 0.3s;
   }
 
-  /* The 'x' button to close the menu */
-  .exit-btn {
-    color: black;
-    font-size: 60px;
-    font-family: "Hachi Maru Pop";
-    cursor: pointer;
-    margin-left: 14.1em;
-    margin-top: -0.75em;
-    z-index: 9;
-    position: fixed; /* Only when I use this element does the 'z-index' overlap over the other elements. Also after using this element
-                     the border width automatically increases. WHY?!!!!!!! */
-    border: 2px solid black;
-    width: 1em;
-    padding: 0 0.5em 0.25em 0.5em;
+  /*Adds translateY to the '.ham-background' class when scrolling down*/
+  .ham-background.scroll-transition {
+    transform: translateY(-100%);
   }
 
   /*-----HEADER-----*/
@@ -468,9 +563,9 @@ footer {
     font-size: 60px;
     padding-bottom: 4em; /* Pushes the 'White Wines' further downwards */
   }
-  /*---END OF 'HEADER'---*/
+  /*---END HEADER---*/
 
-  /*-----Container 1-----*/
+  /*-----CONTAINER 1: 'White Wines'-----*/
   .container-1 {
     background-color: #ffffff;
     width: 55em;
@@ -557,9 +652,9 @@ footer {
   .span-e {
     width: 10.2em;
   }
-  /*-----END OF CONTAINER 1-----*/
+  /*-----END CONTAINER 1-----*/
 
-  /*-----Container 2-----*/
+  /*-----CONTAINER 2: 'Red Wines'-----*/
   .container-2 {
     margin-top: 0em;
     padding-top: 10em;
@@ -637,9 +732,9 @@ footer {
   .span-k {
     width: 11em;
   }
-  /*END OF CONTAINER 2*/
+  /*END CONTAINER 2*/
 
-  /*-----CONTAINER 3-----*/
+  /*-----CONTAINER 3: 'Rose Wines'-----*/
   .container-3 {
     background-color: #ffffff;
     width: 55em;
@@ -693,9 +788,9 @@ footer {
   .span-m {
     width: 11em;
   }
-  /*---END OF CONTAINER 3---*/
+  /*---END CONTAINER 3---*/
 
-  /*-----Container 4-----*/
+  /*-----CONTAINER 4: 'Cava, Prosecco and Champagnes'-----*/
   .container-4 {
     background-color: #ffffff;
     padding-top: 5em;
@@ -741,6 +836,7 @@ footer {
   .t {
     margin-left: -0.3em;
   }
+  /*-----END CONTAINER 4-----*/
 
   /*-----FOOTER-----*/
   footer {
@@ -762,6 +858,7 @@ footer {
     padding: 0em 0 0em 2.3em;
   }
 
+  /*'Email Address' inside <input> tag*/
   ::placeholder {
     font-size: 48px;
   }
@@ -775,6 +872,7 @@ footer {
     border-width: 4px;
   }
 
+  /* Used to Style the snapchat and facebook icons */
   .social-media-container {
     position: relative;
     top: 42em;
@@ -811,7 +909,7 @@ footer {
     margin-left: -6.3em;
   }
 
-  /* The background colour for the 'Wines' and 'Especially selected for you...Enjoy!' are set in this class. */
+  /* Styles the 'Wines' and 'Especially selected for you...Enjoy!' elements */
   .title {
     width: 80.05em;
     margin-left: -6.3em;
@@ -910,7 +1008,7 @@ footer {
     font-size: 45px;
   }
 
-  /*-----CONTAINER 1 (White Wines)-----*/
+  /*-----CONTAINER 1: 'White Wines'-----*/
   .container-1-grid {
     grid-template-rows: 220px 220px 220px 220px 220px;
   }
@@ -921,7 +1019,7 @@ footer {
   }
   /* END CONTAINER 1 */
 
-  /*-----CONTAINER 2 (Red Wines)-----*/
+  /*-----CONTAINER 2: 'Red Wines'-----*/
   /* Red Wines */
   .container-2-h3 {
     margin-top: 3.5em;
@@ -937,7 +1035,7 @@ footer {
   }
   /* END CONTAINER 2 */
 
-  /*-----CONTAINER 3 (Rose Wines)-----*/
+  /*-----CONTAINER 3: 'Rose Wines'-----*/
   /* Rose Wines */
   .container-3-h3 {
     margin-top: 3.8em;
@@ -953,7 +1051,7 @@ footer {
   /* END CONTAINER 3 */
 
   /*-----CONTAINER 4 (Cava, Prosecco and Champagnes)-----*/
-  /* Cava, Prosecco and Champagnes */
+  /*'Cava, Prosecco and Champagnes' title */
   .container-4-h3 {
     margin-left: 0.3em;
     width: 10em;
@@ -978,7 +1076,6 @@ footer {
   /*-----FOOTER-----*/
   footer {
     width: 23.75em;
-    /* background-color: cyan; */
   }
 
   .email {
@@ -999,7 +1096,6 @@ footer {
   }
 
   .subscribe-now {
-    /* display: inline-block; */
     font-size: 21px;
     border-width: 1.5px;
     padding: 0.7em 1.2em 0.6em 1.2em;
@@ -1018,6 +1114,7 @@ footer {
     padding-right: 0.65em;
   }
 
+  /* Used to Style the snapchat and facebook icons */
   .social-media-container {
     position: relative;
     bottom: 1.9em;

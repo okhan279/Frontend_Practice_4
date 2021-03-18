@@ -20,6 +20,12 @@
   line-height: 1px;
 }
 
+/* This element groups ALL the food elements of the menu */
+.box {
+  position: relative;
+  left: 20px;
+}
+
 body {
   background-color: #c83727;
   margin: 0;
@@ -54,6 +60,13 @@ h1 {
   top: 15px;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  font-family: "Times New Roman", Times, serif;
+}
+
 /* 'Bar Gansa' text to the right of the page that is rotated 90 degrees */
 .right-text {
   transform: rotate(90deg);
@@ -62,7 +75,7 @@ h1 {
   font-family: "Oswald", sans-serif;
   font-size: 23px;
   font-weight: bold;
-  position: relative;
+  /* position: relative; */
   position: fixed;
   left: 50.5em;
   bottom: 12em;
@@ -75,13 +88,6 @@ h1 {
 }
 
 /*---Top Menu---*/
-a {
-  text-decoration: none;
-  color: black;
-  font-size: 16px;
-  font-family: "Times New Roman", Times, serif;
-}
-
 ul {
   list-style-type: none; /* Eliminates the bullet points inside ul */
   display: grid;
@@ -103,12 +109,6 @@ li {
   padding: 25px 0 5px 0;
   transition: background-color 0.5s;
 }
-
-/*-----CONTAINER FOR BORDER OF <a> IN MAIN MENU. This container expands the border for the links so they are clickable anywhere inside
-    their respective container-----*/
-/* li a {
-  outline: 1px solid red;
-} */
 
 .home {
   padding: 18px 84px 23px 84px;
@@ -197,9 +197,13 @@ header {
   width: 2em;
 }
 
+/*'Para Picar' container*/
 .container-1,
+/*'Our Tapas Selection' container*/ 
 .container-2,
+/*'Tapas for 2' container*/ 
 .container-3,
+/*'Sharing Tablas' container*/  
 .container-5 {
   color: #dc3727;
   background-color: white;
@@ -249,7 +253,7 @@ header {
   padding-bottom: 50px;
 }
 
-/*-----Container 1 Grid-----*/
+/*-----'Para Picar' GRID-----*/
 .container-1-grid {
   display: grid;
   grid-template-columns: 200px 200px;
@@ -261,12 +265,6 @@ header {
 /* 'Para Picar' title */
 .container-1-h1 {
   width: 12%;
-}
-
-/* This element groups all the food elements of the menu */
-.box {
-  position: relative;
-  left: 20px;
 }
 
 /* Bread & Olives */
@@ -288,7 +286,7 @@ header {
   bottom: 60px;
 }
 
-/*-----Container 2 Grid-----*/
+/*-----'Our Tapas Selection' GRID-----*/
 .container-2-grid {
   display: grid;
   grid-template-columns: 200px 200px;
@@ -331,9 +329,9 @@ header {
   width: 23em;
   line-height: 30px;
 }
-/*----- END Container 2 Grid-----*/
+/*-----END 'Our Tapas Selection' GRID-----*/
 
-/*-----Container 3 Grid-----*/
+/*-----'Tapas for 2' GRID-----*/
 .container-3-grid {
   display: grid;
   grid-template-columns: 200px 200px;
@@ -342,7 +340,7 @@ header {
   justify-content: space-evenly;
 }
 
-/* Tapas for 2 */
+/* 'Tapas for 2' title */
 .container-3-h1 {
   margin-top: -40px;
   width: 13%;
@@ -365,7 +363,7 @@ header {
   line-height: 25px;
 }
 
-/*-----Container 4 Grid-----*/
+/*-----'Paella' Grid-----*/
 /* Paella */
 .container-4-h1 {
   padding-top: 70px;
@@ -381,10 +379,11 @@ header {
   line-height: 1.5;
   position: relative;
   left: 120px;
-  display: inline-block;
+  display: block;
   width: 43em;
 }
 
+/*'Paella' GRID*/
 .container-4-grid {
   display: grid;
   grid-template-columns: 200px 200px;
@@ -426,7 +425,7 @@ header {
   line-height: 25px;
 }
 
-/*-----Container 5 Grid-----*/
+/*-----'Sharing Tablas' Grid-----*/
 .container-5-grid {
   display: grid;
   grid-template-columns: 200px 200px;
@@ -446,7 +445,7 @@ header {
   left: 80px;
 }
 
-/*-----Container 6 Grid-----*/
+/*-----'Desserts' Grid-----*/
 /* Desserts */
 .container-6-h1 {
   position: relative;
@@ -492,7 +491,7 @@ footer {
   position: relative;
   bottom: 130px;
   left: 124px;
-  background-image: url(Images/Email-icon.png);
+  background-image: url(Images/Email-icon.png); /*Email icon*/
   background-repeat: no-repeat;
   background-position: center left;
   background-size: 20px 20px;
@@ -556,6 +555,7 @@ footer {
   scroll-behavior: smooth;
 }
 
+/*----------IPHONE X RESOLUTION----------*/
 @media only screen and (max-width: 375px) {
   /* Sets the font-size of the price */
   .price-font-size {
@@ -576,7 +576,23 @@ footer {
   }
 
   .show-mobile {
-    display: initial;
+    display: block;
+  }
+
+  /*shadow behind the menu when the hamburger icon is clicked on.*/
+  .overlay {
+    position: absolute;
+    top: -14.5em;
+    left: -4.4em;
+    width: 65.5em;
+    height: 1452em;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 9;
+  }
+
+  /*Stops scrolling when hamburger icon is clicked*/
+  body.transition-1 {
+    overflow: hidden;
   }
 
   li,
@@ -593,7 +609,15 @@ footer {
     padding-top: 18.95em;
     margin-top: -16em; /* Adjusts the position of the whole container. */
     margin-right: -2.45em; /* Why is 'margin-left' not working? */
-    z-index: 8;
+    z-index: 10;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.5s;
+  }
+
+  .menu-transition {
+    transform: translateX(0%);
+    opacity: 1;
   }
 
   li a {
@@ -619,46 +643,13 @@ footer {
     padding-left: 0.2em;
   }
 
-  /* Styles the 'Reservation' element in the menu */
-  /* .reservation {
-    margin-left: -1.6em;
-  }
-
-  .contact {
-    padding-top: 1.5em;
-  } */
-
-  /* The 'x' button to close the menu */
-  /* .exit-btn {
-    color: black;
-    border: 2px solid black;
-    padding: 0 0.7em 0.3em 0.7em;
-    font-size: 60px;
-    font-family: "Hachi Maru Pop";
-    cursor: pointer;
-    margin-left: 13.5em;
-    margin-top: -3.7em;
-    z-index: 9;
-    position: fixed;
-  } */
-
-  /* The three lines icon for the main menu */
-  /* .ham {
-    position: fixed;
-    height: 5em;
-    cursor: pointer;
-    z-index: 8;
-    margin-left: 54.5em;
-    margin-top: 2.5em;
-  } */
-
   /*Border around the hamburger icon.*/
-  /*The reason for using the ::before element and not '.ham' is because this way I can apply z-index to the 'border' property. Otherwise it is not possible.*/
+  /*The reason for using '.ham::before' and not '.ham' is because this way I can apply z-index to the 'border' property. Otherwise it is 
+  not possible.*/
   .ham::before {
     display: block;
     content: "";
     border: 2px solid #e7412e;
-    /* background-color: white; */
     width: 135px;
     height: 135px;
     position: fixed;
@@ -666,8 +657,20 @@ footer {
     left: 54.2em;
     z-index: 11;
     cursor: pointer;
+    transition: transform 0.3s;
   }
 
+  /*Transitions border colour to black when hamburger icon clicked*/
+  .ham.transition-1::before {
+    border-color: black;
+  }
+
+  /*Moves the border of the hamburger icon upwards when scrolling down*/
+  .ham.scroll-transition::before {
+    transform: translateY(-110%);
+  }
+
+  /*Middle line of the hamburger icon. This element also edits the property of the ::before and ::after elements.*/
   .ham1 {
     display: block;
     width: 72px;
@@ -678,7 +681,8 @@ footer {
     position: fixed;
     top: 4.8em;
     left: 56.3em;
-    z-index: 10;
+    z-index: 11;
+    transition: transform 0.3s;
   }
 
   .ham1::before {
@@ -703,6 +707,29 @@ footer {
     transition: 0.2s; /* Transitions from moving the line downwards 45 degrees */
   }
 
+  /*Transitions middle line in hamburger icon.*/
+  .ham.transition-1 .ham1 {
+    width: 0;
+    background-color: black;
+  }
+
+  /*Moves the hamburger icon upwards when scrolling down*/
+  .ham.scroll-transition .ham1 {
+    transform: translateY(-2000%);
+  }
+
+  /*Transitions top line in hamburger icon.*/
+  .ham.transition-1 .ham1::after {
+    transform: rotate(-45deg);
+    top: 0px;
+  }
+
+  /*Transitions bottom line in hamburger icon.*/
+  .ham.transition-1 .ham1::before {
+    transform: rotate(45deg);
+    top: 1px;
+  }
+
   /* The white strip behind the 'ham' image */
   .ham-background {
     position: fixed;
@@ -713,6 +740,12 @@ footer {
     margin-top: -15.6em;
     margin-left: -4.4em;
     z-index: 8;
+    transition: 0.3s;
+  }
+
+  /*Adds translateY to the '.ham-background' class when scrolling down*/
+  .ham-background.scroll-transition {
+    transform: translateY(-100%);
   }
 
   header {
@@ -726,7 +759,6 @@ footer {
 
   span {
     font-size: 60px;
-    /* letter-spacing: 1.5px; */
   }
 
   /* 'Menu' title */
@@ -743,7 +775,7 @@ footer {
     width: 16em;
   }
 
-  /*-----Container 1-----*/
+  /*-----CONTAINER 1: 'Para Picar'-----*/
   .container-1 {
     width: 57em;
     margin-top: -3em;
@@ -810,8 +842,9 @@ footer {
     width: 14em;
     margin-left: 0.5em;
   }
+  /*-----END CONTAINER 1-----*/
 
-  /*-----CONTAINER 2-----*/
+  /*-----CONTAINER 2: 'Our Tapas Selection'-----*/
   .container-2 {
     width: 57em;
     margin-top: 12.3em;
@@ -890,8 +923,9 @@ footer {
     display: inline-block;
     width: 15em;
   }
+  /*-----END CONTAINER 2-----*/
 
-  /*-----CONTAINER 3-----*/
+  /*-----CONTAINER 3: 'Tapas for 2'-----*/
   .container-3 {
     width: 57em;
     margin-top: 2.4em;
@@ -937,8 +971,9 @@ footer {
     width: 13.5em;
     margin-left: -1.85em;
   }
+  /*-----END CONTAINER 3-----*/
 
-  /*-----Container 4-----*/
+  /*-----CONTAINER 4: 'Paella'-----*/
   .container-4 {
     width: 57em;
     height: 200em;
@@ -989,8 +1024,9 @@ footer {
     width: 13.5em;
     margin-left: -1.7em;
   }
+  /*-----END CONTAINER 4-----*/
 
-  /*-----Container 5-----*/
+  /*-----Container 5: 'Sharing Tablas'-----*/
   .container-5 {
     width: 57em;
     margin-top: 2.5em;
@@ -1026,8 +1062,9 @@ footer {
     width: 14em;
     margin-left: -1.35em;
   }
+  /*-----END Container 5'-----*/
 
-  /*-----Container 6-----*/
+  /*-----CONTAINER 6: 'Desserts'-----*/
   .container-6 {
     width: 57em;
     margin-top: -0.5em;
@@ -1073,6 +1110,7 @@ footer {
     width: 13.5em;
     margin-left: -0.1em;
   }
+  /*-----END CONTAINER 6-----*/
 
   /*-----Footer-----*/
   footer {
@@ -1084,7 +1122,6 @@ footer {
 
   .email {
     font-size: 40px;
-    font-family: "Montserrat";
     width: 17.4em;
     height: 2em;
     border-bottom-width: 3px;
@@ -1098,7 +1135,6 @@ footer {
 
   ::placeholder {
     font-size: 50px;
-    font-family: "Montserrat";
   }
 
   :placeholder-shown {
@@ -1706,16 +1742,15 @@ footer {
 
   /* The 'Bar Gansa' located on the right of the webpage. */
   .ipad-right-text {
-    /*The '.right-text' class was not functioning, so I had a create a new class for this element specifically for the
-                      Ipad*/
+    /*The '.right-text' class was not functioning, so I had a create a new class for this element specifically for the Ipad*/
     font-size: 27px;
     font-family: "Oswald", sans-serif;
     color: #ffffff;
     z-index: 2;
     position: fixed;
     margin-left: -14.5em;
-    letter-spacing: 1px;
     margin-top: 60em;
+    letter-spacing: 1px;
     display: block;
     transform: rotate(90deg);
   }

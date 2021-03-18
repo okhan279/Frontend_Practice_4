@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./menu.css" />
   </head>
 
-  <body>
+  <body class="body">
     <header>
       <div class="ham-background"></div>
 
@@ -18,8 +18,8 @@
         <div class="hide-desktop show-mobile ham1" id="ham1"></div>
       </div>
 
-      <nav class="hide-mobile">
-        <ul>
+      <nav>
+        <ul class="ul-mobile" id="ul">
           <li><a class="home" href="./index.html">HOME</a></li>
           <li>
             <a
@@ -63,6 +63,8 @@
         >
         <!-- END OF BAR GANSA ELEMENT FOR IPAD -->
       </div>
+
+      <div class="overlay hide-mobile"></div>
     </header>
 
     <main>
@@ -1194,32 +1196,7 @@
       </div>
     </footer>
 
-    <script>
-      const ham = document.getElementById("ham");
-      const nav = document.querySelector("nav");
-      const exit = document.getElementById("exit");
-      const menu = document.getElementById("menu");
-      // const input = document.querySelector(".email");
-
-      // ham.addEventListener("click", function (e) {
-      /* Removes 'hide-mobile' from  */
-      // nav.classList.toggle("hide-mobile");
-      /* Adds the 'X' for the exit class when the menu is clicked  */
-      // exit.classList.add("show-mobile");
-      /* Removes the 'ham' image when clicked on */
-      // ham.style.display = "none";
-
-      // menu.classList.add("hide-mobile");
-      // });
-
-      // exit.addEventListener("click", function (e) {
-      /* Hides the menu when 'X' is clicked on */
-      // nav.classList.add("hide-mobile");
-      /* Removes the 'X' when clicked on. If this isn't added then the 'X' will be displayed on the web page */
-      // exit.classList.remove("show-mobile");
-      /* Returns the 'ham' image for the main menu. */
-      // ham.style.display = "initial";
-      // });
-    </script>
+    <!--Javascript code-->
+    <script src="myscript.js"></script>
   </body>
 </html>

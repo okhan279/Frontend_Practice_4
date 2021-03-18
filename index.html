@@ -37,9 +37,9 @@
 
       <div class="border-text">
         <img
-          class="html-image"
-          src="images/HTML_Stock_Photo.jpg"
-          alt="Bar Gansa Restaurant"
+          class="show-mobile top-image"
+          src="Images/BG_Mobile.jpg"
+          alt="Bar Gansa Restauran"
         />
         <div class="photo-text">
           <img
@@ -56,6 +56,8 @@
         </div>
       </div>
     </header>
+
+    <div class="overlay hide-mobile"></div>
 
     <main>
       <form action="./example.html" method="post">
@@ -257,6 +259,7 @@
           <br />
         </div>
       </div>
+
       <div class="overlay hide-mobile"></div>
 
       <iframe
@@ -300,42 +303,7 @@
       </div>
     </footer>
 
-    <script>
-      // const menu = document.getElementById("menu");
-      // const nav = document.getElementById("nav");
-      // const exit = document.getElementById("exit");
-      // const home = document.getElementById("home");
-      const ham = document.getElementById("ham");
-      const ulMobile = document.querySelector(".ul-mobile");
-      const overlay = document.querySelector(".overlay");
-      const body = document.querySelector("body");
-
-      ham.addEventListener("click", function () {
-        ulMobile.classList.toggle("menu-transition");
-        /*Adds 'transition-1' class to ham */
-        ham.classList.toggle("transition-1");
-        /*Adds the '' */
-        body.classList.toggle("transition-1");
-        /*toggles the 'overlay' class when hamburgur icon is clicked.*/
-        overlay.classList.toggle("hide-mobile");
-      });
-
-      // ham.addEventListener('click', function(e) {
-      //   nav.classList.toggle('hide-mobile');
-      //   ulMobile.classList.add('menu-transition');
-      //   // home.classList.add('hide-mobile'); /* Removes the 'Home' link from the menu by adding the 'hide-mobile' class to the element */
-      //   ham1.style.transform = 'rotate(-45deg)';
-      //   ham1.style.top = '1.9em';
-      //   ham3.style.transform = 'rotate(45deg)';
-      //   ham3.style.top = '2.3em'; /*The bottom ham has to move upwards as 'ham2' is removed once the click event happens*/
-      //   ham2.style.display = 'none';
-      // });
-
-      // exit.addEventListener('click', function(e) {
-      //   nav.classList.add('hide-mobile'); /* Hides the menu when 'X' is clicked on */
-      //   exit.classList.add('hide-mobile'); /* Removes the 'X' when clicked on. If this isn't added then the 'X' will be displayed on the web page */
-      //   menu.style.display = 'block'; /* Returns the 'ham1' image for the main menu. */
-      // });
-    </script>
+    <!--Javascript code-->
+    <script src="myscript.js"></script>
   </body>
 </html>

@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Jaldi&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&display=swap"); /*used in '.book-now'*/
+@import url("https://fonts.googleapis.com/css2?family=Jaldi&display=swap"); /*Used in '.form-title'*/
 @import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@300&display=swap"); /* Font: Commissioner - for '.container-3-heading */
 @import url("https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap"); /* Used as a font for the 'exit-button' class in the mobile version */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"); /* Used in the '.email' class */
@@ -9,6 +9,11 @@
 /* 1293 x 990 */
 body {
   margin: 0;
+}
+
+/* Allow for smooth scrolling for all the elements */
+* {
+  scroll-behavior: smooth;
 }
 
 a {
@@ -23,6 +28,7 @@ a {
   display: none;
 }
 
+/*Menu at the very top*/
 ul {
   list-style-type: none; /* Eliminates the bullet points inside ul */
   display: grid;
@@ -35,6 +41,7 @@ ul {
   z-index: 1;
 }
 
+/*Idividual elements of the menu*/
 li {
   background-color: white; /* Fills the background of the 'Contact' tab */
   position: relative;
@@ -44,6 +51,10 @@ li {
   height: 40px;
   padding: 19px 50px 0 50px;
   transition: background-color 0.5s;
+}
+
+li:hover {
+  background-color: #c83727;
 }
 
 /* CONTAINER TO EXTEND BORDER OF TEXT IN MENU */
@@ -80,28 +91,22 @@ li {
 .contact-li {
   padding: 21px 70px 22px 70px;
   margin-left: -3.2em;
+  border-right: none;
 }
 /* END CONTAINER TO EXTEND BORDER OF TEXT IN MENU */
-
-li:hover {
-  background-color: #c83727;
-}
 
 /* Changes the colour of the text in the top menu to white when mouse is hovered over it */
 nav ul li a:hover {
   color: white;
 }
 
-.contact-li {
-  border-right: none;
-}
-
 /*---SECTION FOR HTML STOCK PHOTO---*/
 /* Main image of the page */
-.html-image {
+.top-image {
   opacity: 0.7;
   margin-top: -21px;
   width: 100%;
+  height: 100%;
 }
 
 .photo-text {
@@ -128,14 +133,13 @@ nav ul li a:hover {
   top: 5em;
 }
 
-/* The Bar Gansa image with the duck located inside the white borders of the main image. */
+/* Bar Gansa image with the duck located inside the white borders of the main image. */
 .bar-gansa-photo {
   width: 514px;
   height: 150px;
   position: relative;
   top: 20px;
   left: 90px;
-  transition: all 0.4s ease 0s;
 }
 
 /* Tapas made with love, served with passion */
@@ -147,7 +151,6 @@ nav ul li a:hover {
   right: 200px;
   font-weight: bold;
   font-size: 20px;
-  transition: all 0.4s ease 0s;
 }
 
 /* Changes the word 'love'*/
@@ -171,12 +174,11 @@ nav ul li a:hover {
   position: relative;
   top: 200px;
   right: 270px;
-  transition: all 0.4s ease 0s;
 }
 
 /*---------------Form---------------*/
 form {
-  width: 66%; /* 66% */
+  width: 66%;
   height: 125px;
   background-color: #c83727;
   padding-bottom: 38px;
@@ -219,7 +221,7 @@ form {
   border-bottom-left-radius: 3px;
 }
 
-/* Dropbox for the calender to booking a date */
+/* Dropbox for the calender to book a date */
 .calender {
   padding-left: 10px;
   padding-right: 10px;
@@ -300,7 +302,7 @@ hr {
   position: relative;
   left: 10em;
 }
-/*-----END OF 'COVID 19 INSTRUCTIONS-----'*/
+/*-----END OF COVID 19 INSTRUCTION-----*/
 
 /*-----Grid Classes-----*/
 
@@ -384,8 +386,8 @@ hr {
   font-size: 18px;
   line-height: 1.5em;
   font-family: Arial, Helvetica, sans-serif;
-  height: 73%; /*65%*/
-  width: 73%; /*57*/
+  height: 73%;
+  width: 73%;
   position: relative;
   left: 6em;
   top: 5.5em;
@@ -542,7 +544,7 @@ hr {
   bottom: 3em;
 }
 
-/* Container for 'Contact Us' and the address */
+/* Container for classes 'Contact Us' and the 'address' */
 .contact-us {
   text-align: center;
 }
@@ -614,12 +616,13 @@ hr {
   position: relative;
   bottom: 130px;
   left: 68.5px;
-  background-image: url(Images/Email-icon.png);
+  background-image: url(Images/Email-icon.png); /*Email icon*/
   background-repeat: no-repeat;
   background-position: center left;
   background-size: 20px 20px;
 }
 
+/*'Email Address' inside <input> tag*/
 ::placeholder {
   font-family: "Montserrat";
   font-size: 16px;
@@ -655,16 +658,12 @@ hr {
   height: 41px;
 }
 
+/*Div container for facebook and snapchat icons*/
 .social-media-container {
   width: 8%;
   position: relative;
   bottom: 13.4em;
   left: 47.55em;
-}
-
-/* Allow for smooth scrolling for all the elements that have a relative link */
-* {
-  scroll-behavior: smooth;
 }
 
 /*-----ONLY MOZILLA FIREFOX STYLING-----*/
@@ -721,6 +720,7 @@ hr {
 }
 /*-----END OF MOZILLA FIREFOX STYLING-----*/
 
+/*----------IPHONE X RESOLUTION----------*/
 @media only screen and (max-width: 375px) {
   main {
     position: relative;
@@ -745,7 +745,7 @@ hr {
     top: -96.8em;
     left: 0;
     width: 82em;
-    height: 178em;
+    height: 1275em;
     background-color: rgba(0, 0, 0, 0.3);
     z-index: 9;
   }
@@ -757,12 +757,13 @@ hr {
   }
 
   ul {
-    grid-template-columns: 0;
+    grid-template-columns: 1fr;
     background-color: #dc3727;
     height: 100%; /* Determins height of the background container */
     width: 80%; /* Determines width of the background container */
     padding-top: 21.8em; /* Groups the anchor tags together and adds padding to the top of the element. */
     margin-right: -2.5em;
+    margin-top: -5em;
     z-index: 10;
     transform: translateX(100%);
     opacity: 0;
@@ -770,6 +771,7 @@ hr {
     display: block;
   }
 
+  /*Transition properties for the ul icon*/
   .menu-transition {
     transform: translateX(0%);
     opacity: 1;
@@ -793,39 +795,15 @@ hr {
     margin: 0.25em 0 0 0.75em; /* Moves the anchor tags top & right */
   }
 
-  /* CONTAINER TO ADJUST THE POSITIONING OF THE <a> tag */
-
-  /* The 'Reservation' link. This element is used to move the anchor texts downwards. For some reason which I can not understand, when using
-  the property 'margin-top' in the 'nav ul li a' element, the distance BETWEEN the anchor texts is manipulated. This should not be the case,
-  the anchor texts should all move downwards instead. */
-  /* .reservation {
-    margin-left: 0em;
-  } */
-
   /* The 'US' in 'ABOUT US'. I added the word 'US' inside a <span> tag as when expanding the borders of the 'ABOUT US' element initially, the borders
   were becoming skewed. To solve the problem I had to wrap the 'US' inside a <span> element. */
   .us {
     margin-left: 0.3em;
   }
 
-  /* .menu,
-  .wines {
-    margin-left: -0.77em;
-  } */
-
-  /* .about-us-top-menu {
-    margin-left: -0.04em;
-  } */
-
-  /* .contact-li {
-    margin-left: -0.1em;
-  } */
-  /* END CONTAINER TO ADJUST THE POSITIONING OF THE <a> tag */
-
   /*Border around the hamburger icon.*/
   /*The reason for using the ::before element and not '.ham' is because this way I can apply z-index to the 'border' property. Otherwise it is not possible.*/
   .ham::before {
-    /* display: block; */
     content: "";
     border: 2px solid #e7412e;
     width: 170px;
@@ -835,10 +813,17 @@ hr {
     top: 1em;
     z-index: 11;
     cursor: pointer;
+    transition: transform 0.3s;
   }
 
+  /*Transitions border colour to black when hamburger icon clicked*/
   .ham.transition-1::before {
     border-color: black;
+  }
+
+  /*Moves the border of the hamburger icon upwards when scrolling down*/
+  .ham.scroll-transition::before {
+    transform: translateY(-110%);
   }
 
   /*Middle line of the hamburger icon. This element also edits the property of the ::before and ::after elements.*/
@@ -851,7 +836,7 @@ hr {
     position: fixed;
     top: 6em;
     left: 70.6em;
-    transition: 0.1s;
+    transition: 0.1s, transform 0.3s;
     z-index: 11;
   }
 
@@ -885,6 +870,11 @@ hr {
     background-color: black;
   }
 
+  /*Moves the hamburger icon upwards when scrolling down*/
+  .ham.scroll-transition .ham1 {
+    transform: translateY(-2000%);
+  }
+
   /*Transitions top line in hamburger icon.*/
   .ham.transition-1 .ham1::after {
     transform: rotate(-45deg);
@@ -900,32 +890,37 @@ hr {
   /* The white strip behind the 'ham' image */
   .ham-background {
     position: fixed;
-    padding-bottom: 4em;
+    top: 0em;
     background-color: #fff;
     /* background-color: orange; */
-    height: 9em;
-    width: 81.4em;
+    height: 13em; /*9em*/
+    width: 81.8em;
     z-index: 8;
+    transition: 0.3s;
+  }
+
+  /*Adds translateY to the '.ham-background' class when scrolling down*/
+  .ham-background.scroll-transition {
+    transform: translateY(-100%);
   }
 
   /* Main image */
-  .html-image {
-    width: 1300px;
-    height: 1280px;
+  .top-image {
+    width: 1308px;
+    height: 1300px;
     position: relative;
-    top: 80px;
+    top: 48px;
     margin-top: 5em;
   }
 
-  /* Text within the 'html-image' element */
+  /* Text and white-border within the 'top-image' element */
   .photo-text {
     border-width: 10px;
-    width: 77em;
-    height: 75em;
+    width: 76em;
+    height: 74em;
     position: relative;
-    left: 10px;
-    bottom: 74em;
-    margin: 10px 10px;
+    left: 33px;
+    bottom: 75.3em;
   }
 
   /* Tapas made with love, served with passion. */
@@ -938,13 +933,13 @@ hr {
     left: 10px;
   }
 
+  /*Image inside the white border with the duck*/
   .bar-gansa-photo {
     width: 900px;
     height: 263px;
     margin-top: -20px;
-    position: relative;
+    /* position: relative; */
     padding-right: 150px;
-    /* right: 2000px; */
   }
 
   .book-now {
@@ -966,6 +961,7 @@ hr {
     top: 5em;
   }
 
+  /*Grid to seperate the form boxes*/
   .form-grid {
     display: grid;
     grid-template-columns: 10em;
@@ -1067,7 +1063,7 @@ hr {
     width: 5em;
     height: 0.4em;
   }
-  /*-----' END Covid 19 Notice'-----*/
+  /*----- END 'Covid 19 Notice'-----*/
 
   /* 'ABOUT US' title */
   .a {
@@ -1077,7 +1073,8 @@ hr {
     margin-top: 0.5em;
   }
 
-  .b /* ABOUT US paragraph */ {
+  /* ABOUT US paragraph */
+  .b {
     font-size: 60px;
     width: 20em;
     height: 150%;
@@ -1145,16 +1142,19 @@ hr {
     left: 3.6em;
   }
 
+  /*To target elements specifically on Firfox*/
   @-moz-document url-prefix() {
     /* 'BRUNCH' title */
     .h {
       margin-left: 0em;
     }
 
+    /* Paragraph underneath 'BRUNCH'  */
     .i {
       margin-top: 1.3em;
     }
   }
+  /*END Firefox prefix*/
 
   /* Paragraph underneath 'BRUNCH'  */
   .i {
@@ -1226,7 +1226,7 @@ hr {
     position: relative;
     top: 375em;
     height: 10em;
-    width: 82em;
+    width: 81.7em;
   }
 
   /* 'Contact Us */
@@ -1293,7 +1293,7 @@ hr {
 
   .email {
     position: relative;
-    top: 2.6em; /* 133em */
+    top: 2.6em;
     left: 21em;
     font-size: 55px;
     width: 15.9em;
@@ -1308,7 +1308,7 @@ hr {
     font-size: 63px;
   }
 
-  /* (c) 2018 Bar Gansa */
+  /*(c) 2018 Bar Gansa*/
   .register-mark {
     font-family: "Oswald:wght@200", sans-serif;
     position: relative;
@@ -1378,7 +1378,7 @@ hr {
   }
   /* END CONTAINER TO EXTEND BORDER OF TEXT IN MENU */
 
-  .html-image {
+  .top-image {
     height: 32em;
     width: 62em;
   }
@@ -1400,6 +1400,7 @@ hr {
     margin-top: -5%;
   }
 
+  /*-----COVID CONTAINER-----*/
   /* Covid 19 Instructions */
   .container-3 {
     width: 33.08em;
@@ -1411,12 +1412,12 @@ hr {
     margin-left: -4.5em;
   }
 
-  /* Covid 19 Instructions 1-10 */
+  /* Covid 19 Instructions numbered 1-10 */
   .container-3-p {
     margin-left: -9em;
     width: 50em;
   }
-  /*END OF Covid 19 Instructions*/
+  /*-----END COVID CONTAINER-----*/
 
   .pic-1 {
     width: 31em;
@@ -1568,6 +1569,7 @@ hr {
     background-position: left center;
   }
 
+  /*The 'Email Address' text inside the input tag*/
   ::placeholder {
     font-size: 16.5px;
     font-weight: 600;
@@ -1587,6 +1589,7 @@ hr {
     padding-right: 0.45em;
   }
 
+  /*Set width and height for facebook & snapchat icons*/
   .facebook-snapchat {
     height: 2.5em;
     width: 2.5em;

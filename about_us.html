@@ -9,20 +9,17 @@
     <link rel="stylesheet" href="./about_us.css" />
   </head>
 
-  <body>
+  <body class="body">
     <header>
-      <div class="ham-background">
-        <img
-          class="show-mobile ham hide-desktop"
-          id="menu"
-          src="Images/ham.svg"
-          alt="dropdown button"
-        />
+      <div class="ham-background"></div>
+
+      <div class="ham" id="ham">
+        <!-- Line for hamburger icon. The other 2 lines will be created using ::before and ::after -->
+        <div class="hide-desktop show-mobile ham1" id="ham1"></div>
       </div>
 
-      <a><span class="hide-mobile hide-desktop exit-btn" id="exit">x</span></a>
-      <nav class="hide-mobile">
-        <ul class="show-mobile">
+      <nav>
+        <ul class="ul-mobile">
           <li>
             <a class="li-text home" href="./index.html">HOME</a>
           </li>
@@ -73,6 +70,8 @@
         </figcaption>
       </figure>
     </header>
+
+    <div class="overlay hide-mobile"></div>
 
     <main>
       <p class="paragraph-1">
@@ -158,34 +157,7 @@
       </div>
     </footer>
 
-    <!--JAVASCRIPT CODE -->
-    <script>
-      const menu = document.getElementById("menu");
-      const nav = document.querySelector("nav");
-      const exit = document.getElementById("exit");
-      const about_us = document.getElementById("about-us");
-
-      menu.addEventListener("click", function (e) {
-        nav.classList.toggle("hide-mobile"); /* Removes 'hide-mobile' from  */
-
-        exit.classList.add(
-          "show-mobile"
-        ); /* Adds the 'X' for the exit class when the menu is clicked  */
-
-        menu.style.display =
-          "none"; /* Removes the 'ham' image when clicked on */
-      });
-
-      exit.addEventListener("click", function (e) {
-        nav.classList.add(
-          "hide-mobile"
-        ); /* Hides the menu when 'X' is clicked on */
-        exit.classList.remove(
-          "show-mobile"
-        ); /* Removes the 'X' when clicked on. If this isn't added then the 'X' will be displayed on the web page */
-        menu.style.display =
-          "initial"; /* Returns the 'ham' image for the main menu. */
-      });
-    </script>
+    <!--Javascript code-->
+    <script src="myscript.js"></script>
   </body>
 </html>
