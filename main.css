@@ -312,6 +312,13 @@ hr {
   grid-template-columns: 50% 50%;
 }
 
+.pic-1 {
+  /* width: 37em; */
+  /* height: 38em; */
+  width: 640px;
+  height: 600px;
+}
+
 /* ABOUT US */
 .a {
   grid-area: 1 / 2 / 2 / 3;
@@ -322,6 +329,12 @@ hr {
   color: #e21c21;
   text-align: center;
   font-family: "PT Sans";
+  position: relative;
+  left: 140px;
+  top: 35px;
+  /* border: 1px solid red; */
+  width: 400px;
+  height: 80px;
 }
 
 /*-About Us paragraph-*/
@@ -333,8 +346,8 @@ hr {
   height: 70%;
   width: 57%;
   position: relative;
-  top: 6em;
-  left: 140px;
+  top: 8em;
+  left: 145px;
 }
 
 /* Read More */
@@ -347,8 +360,8 @@ hr {
   font-size: 18px;
   font-family: Arial, Helvetica, sans-serif;
   position: relative;
-  top: 27em;
-  left: 15.5em;
+  top: 28em;
+  left: 16em;
 }
 
 /* Grid 2 */
@@ -359,8 +372,13 @@ hr {
 }
 
 /*Image 2*/
-.d {
+.pic-2 {
   grid-area: 2 / 2 / 3 / 3;
+  width: 600px;
+  height: 600px;
+  position: relative;
+  right: 0em;
+  top: 1px;
 }
 
 /* 'Bar Gansa' title */
@@ -374,7 +392,7 @@ hr {
   letter-spacing: 9px;
   color: #c83727;
   position: relative;
-  left: 80px;
+  left: 50px;
   margin-bottom: 0;
 }
 
@@ -389,7 +407,7 @@ hr {
   height: 73%;
   width: 73%;
   position: relative;
-  left: 6em;
+  left: 4em;
   top: 5.5em;
 }
 
@@ -401,11 +419,13 @@ hr {
 }
 
 /* Image: Pic 3 */
-.g {
+.pic-3 {
   grid-area: 3 / 1 / 4 / 2;
   position: relative;
-  bottom: 37px;
-  left: 59px;
+  bottom: 34px;
+  left: 90px;
+  width: 550px;
+  height: 600px;
 }
 
 /* 'Brunch' title */
@@ -431,8 +451,8 @@ hr {
   height: 80%;
   width: 70%;
   position: relative;
-  left: 70px;
-  top: 50px;
+  left: 65px;
+  top: 60px;
 }
 
 /* Book now */
@@ -446,7 +466,7 @@ hr {
   height: 20px;
   width: 80px;
   position: relative;
-  left: 11em;
+  left: 11.5em;
   top: 25em;
   padding: 10px 30px;
   transition: background-color 0.5s;
@@ -467,11 +487,11 @@ hr {
 }
 
 /* Image: Pic 4 */
-.k {
+.pic-4 {
   grid-area: 4 / 2 / 5 / 3;
   position: relative;
-  bottom: 2.3em;
-  width: 35.6em;
+  bottom: 1.92em;
+  width: 550px;
 }
 
 /* 'Flamenco Sundays' title */
@@ -486,10 +506,10 @@ hr {
   text-align: center;
   position: relative;
   left: 3.5em;
-  bottom: 40px;
+  bottom: 10px;
 }
 
-/* 'Flamenco Sundays' paragraph */
+/* By the Escuela de Balle from 8pm every Sunday. */
 .m {
   grid-area: 4 / 1 / 5 / 2;
   font-size: 18px;
@@ -498,7 +518,7 @@ hr {
   width: 65%;
   position: relative;
   left: 8em;
-  top: 7em;
+  top: 9em;
 }
 
 /*Grid 4 paragraph 2*/
@@ -510,7 +530,7 @@ hr {
   height: 125px;
   width: 60%;
   position: relative;
-  top: 11em;
+  top: 13em;
   left: 100px;
 }
 
@@ -527,7 +547,7 @@ hr {
   padding: 10px 30px;
   position: relative;
   left: 15em;
-  top: 23em;
+  top: 26em;
   transition: background-color 0.5s;
 }
 
@@ -713,12 +733,330 @@ hr {
     margin-top: 1.3em;
   }
 
+  .pic-4 {
+    height: 700px;
+  }
+
   /* 'Flemenco Sundays' paragraph */
   .m {
     margin-top: 2.5em;
   }
 }
 /*-----END OF MOZILLA FIREFOX STYLING-----*/
+
+/*----------IPAD RESOLUTION(768 x 1024)---------------*/
+@media only screen and (max-width: 768px) and (min-width: 376px) {
+  .hide-ipad {
+    display: none;
+  }
+
+  ul {
+    /* grid-template-columns: 165px 165px 165px 168px 168px 205px; */
+    grid-template-columns: 171px 173px 173px 176px 176px 176px;
+    margin-right: 0.1em;
+  }
+
+  /* CONTAINER TO EXTEND BORDER OF TEXT IN MENU */
+  .home {
+    margin-left: -1.5em;
+  }
+
+  .reservation {
+    padding: 1.3em 1.8em 1.33em 1.8em;
+  }
+
+  .menu {
+    padding: 1.3em 3.7em 1.33em 3.7em;
+    margin-left: -3.2em;
+  }
+
+  .wines {
+    padding: 1.3em 3.7em 1.33em 3.7em;
+    margin-left: -3.2em;
+  }
+
+  .about-us-top-menu {
+    padding: 1.3em 2.7em 1.33em 2.8em;
+    margin-left: -3.2em;
+  }
+
+  .contact-li {
+    padding: 1.3em 2.9em 1.33em 2.9em;
+    margin-left: -3.2em;
+  }
+  /* END CONTAINER TO EXTEND BORDER OF TEXT IN MENU */
+
+  /*Top image*/
+  .top-image {
+    height: 32em;
+    width: 66.2em;
+  }
+
+  /* Alters the white border within the main image */
+  .photo-text {
+    width: 54em;
+    margin-left: -11em;
+  }
+
+  /* Disables the option of the white border and the text within it to increase in scale. */
+  .photo-text:hover {
+    transform: scale(1);
+  }
+
+  form {
+    width: 112%;
+    margin-left: -17%;
+    margin-top: -5%;
+  }
+
+  /*-----COVID CONTAINER-----*/
+  /* Covid 19 Instructions */
+  .container-3 {
+    width: 35.29em;
+  }
+
+  /* Contains the 'covid-notice' and 'safety' classes */
+  .container-3-heading {
+    width: 12em;
+    margin-left: -4.5em;
+  }
+
+  /* Covid 19 Instructions numbered 1-10 */
+  .container-3-p {
+    margin-left: -9em;
+    width: 50em;
+  }
+
+  /*Has the elements 'Covid-19 Notice' and 'Safety is out priority'*/
+  .container-3-heading {
+    left: 16em;
+  }
+  /*-----END COVID CONTAINER-----*/
+
+  .pic-1 {
+    width: 34.9em;
+    height: 38em;
+  }
+
+  /* 'About Us' title */
+  .about-us {
+    margin-left: 2.7em;
+    height: 2em;
+    width: 7em;
+  }
+
+  /* Serving tapas with passion to the people of Camden... */
+  .about-us-p {
+    width: 20em;
+    margin-top: -0.5em;
+    margin-left: 6.7em;
+  }
+
+  /* Read More */
+  .about-us-link {
+    margin-left: 6.5em;
+    margin-top: -1.7em;
+  }
+
+  /* Pic 2 */
+  .pic-2 {
+    width: 31.26em;
+    height: 38em;
+    margin-left: 10.9em;
+    margin-top: -0.1em;
+  }
+
+  /*'Bar Gansa' title*/
+  .e {
+    left: 125px;
+  }
+
+  /* Paragraph underneath 'Bar Gansa' title */
+  .f {
+    width: 26em;
+    left: 2.5em;
+  }
+
+  /* Pic 3 */
+  .pic-3 {
+    width: 34.85em;
+    height: 38em;
+    margin-left: -5.62em;
+    margin-top: -0.05em;
+  }
+
+  /* 'Brunch' title */
+  .h {
+    margin-left: 2.5em;
+    margin-top: 0.8em;
+  }
+
+  /* 'Brunch' paragraph: Join us for an authentic Spanish... */
+  .i {
+    width: 22em;
+    margin-left: 8.4em;
+  }
+
+  /* Book Now */
+  .j {
+    margin-left: 7.5em;
+  }
+
+  /* Image: Pic 4 */
+  .pic-4 {
+    width: 31.26em;
+    height: 38em;
+    margin-left: 10.9em;
+    margin-top: 0em;
+  }
+
+  /* 'Flemnco Sundays' title */
+  .l {
+    width: 7em;
+    margin-left: -1.4em;
+    margin-top: 0.8em;
+  }
+
+  /* 'Flemnco Sundays' paragraph: By the Escuela de Balle from 8pm every Sunday. */
+  .m {
+    width: 22em;
+    margin-left: -3.7em;
+  }
+
+  /* 
+  Flamenco Sundays package including: ... */
+  .n {
+    width: 22em;
+    margin-left: -4.8em;
+  }
+
+  /*Book Now*/
+  .o {
+    margin-left: -2em; /* Why does 'margin-right' not work. Be it if the values are negative or positive */
+    margin-top: 1em;
+  }
+
+  .hr-2 {
+    width: 66.1em;
+    margin-left: 0em;
+  }
+
+  /*-----'Contact Us' Container-----*/
+  /* Contact Us */
+  .contact {
+    margin-left: 9em;
+  }
+
+  /* Address */
+  .address {
+    margin-left: 12.5em;
+  }
+
+  .opening-hours {
+    width: 15em;
+    margin-left: -4.5em;
+  }
+
+  .contact-details {
+    width: 10em;
+    margin-left: -3.5em;
+    margin-top: -0.1em;
+  }
+  /*---END 'Contact Us' CONTAINER */
+
+  /* Google Maps */
+  .map {
+    width: 59em;
+    margin-left: -0.5em;
+    left: 4.2em;
+  }
+
+  /*-----Footer-----*/
+  footer {
+    /* background-color: cyan; */
+    width: 62.1em;
+    height: 20em;
+    margin-top: -8em;
+  }
+
+  .email {
+    width: 18em;
+    border-bottom-width: 1.5px;
+    position: relative;
+    top: 5.3em;
+    left: -3.92em;
+    background-size: 1.35em 1.35em;
+    padding: 0.5em 0em 0.7em 3.6em;
+    background-position: left center;
+  }
+
+  /*The 'Email Address' text inside the input tag*/
+  ::placeholder {
+    font-size: 16.5px;
+    font-weight: 600;
+  }
+
+  .subscribe-now {
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    top: 4.9em;
+    left: 25.3em;
+    padding: 0.5em 1.1em 0.5em 1.1em;
+  }
+
+  /* This element is used to create a small gap between the facebook and snapchat icons. */
+  .facebook {
+    padding-right: 0.45em;
+  }
+
+  /*Set width and height for facebook & snapchat icons*/
+  .facebook-snapchat {
+    height: 2.7em;
+    width: 2.7em;
+  }
+
+  .social-media-container {
+    width: 7em;
+    position: relative;
+    top: -0.6em;
+    left: 43.3em;
+  }
+
+  /* 2018 by Bar Gansa */
+  .register-mark {
+    font-size: 16px;
+    width: 10em;
+    position: relative;
+    top: 0.05em;
+    left: 41.5em;
+    /* margin-top: -2em; */ /* When using 'margin-top' or 'margin-bottom' the social media icons as well as the register mark are moving
+                            together. But when using 'margin-left', only the register mark moves. WHY??!!! */
+  }
+
+  @-moz-document url-prefix() {
+    /* 'Brunch' title */
+    .h {
+      margin-top: 1.5em;
+    }
+
+    /*Picture 3. To the left of 'Brunch'*/
+    .pic-3 {
+      margin-top: 2.2em;
+      margin-left: -5.57em;
+    }
+
+    /* Image: Pic 4 */
+    .pic-4 {
+      margin-top: 2.3em;
+    }
+
+    /* 'Flemnco Sundays' title */
+    .l {
+      margin-top: 1.3em;
+    }
+  }
+}
 
 /*----------IPHONE X RESOLUTION----------*/
 @media only screen and (max-width: 375px) {
@@ -762,7 +1100,7 @@ hr {
     height: 100%; /* Determins height of the background container */
     width: 80%; /* Determines width of the background container */
     padding-top: 21.8em; /* Groups the anchor tags together and adds padding to the top of the element. */
-    margin-right: -2.5em;
+    margin-right: -2.6em;
     margin-top: -5em;
     z-index: 10;
     transform: translateX(100%);
@@ -809,7 +1147,7 @@ hr {
     width: 170px;
     height: 170px;
     position: fixed;
-    left: 68em;
+    left: 70.5em;
     top: 1em;
     z-index: 11;
     cursor: pointer;
@@ -835,7 +1173,7 @@ hr {
     cursor: pointer;
     position: fixed;
     top: 6em;
-    left: 70.6em;
+    left: 73em;
     transition: 0.1s, transform 0.3s;
     z-index: 11;
   }
@@ -894,7 +1232,7 @@ hr {
     background-color: #fff;
     /* background-color: orange; */
     height: 13em; /*9em*/
-    width: 81.8em;
+    width: 84.6em;
     z-index: 8;
     transition: 0.3s;
   }
@@ -906,7 +1244,7 @@ hr {
 
   /* Main image */
   .top-image {
-    width: 1308px;
+    width: 1355px;
     height: 1300px;
     position: relative;
     top: 48px;
@@ -919,7 +1257,7 @@ hr {
     width: 76em;
     height: 74em;
     position: relative;
-    left: 33px;
+    left: 60px;
     bottom: 75.3em;
   }
 
@@ -957,7 +1295,7 @@ hr {
     width: 60em;
     height: 73em;
     position: relative;
-    left: 11.5em;
+    left: 12.5em;
     top: 5em;
   }
 
@@ -983,7 +1321,7 @@ hr {
   .dropbox {
     transform: scale(4);
     position: relative;
-    left: 26em;
+    left: 25.6em;
     top: 15em;
     border: 1px solid rgb(179, 173, 173);
     border-bottom: 0.5px;
@@ -1018,7 +1356,7 @@ hr {
     transform: scale(3.45);
     width: 5.1em;
     position: relative;
-    left: 18.7em;
+    left: 18.4em;
     top: 30em;
     border-top-right-radius: 0;
     border: 1px solid rgb(179, 173, 173);
@@ -1028,7 +1366,7 @@ hr {
   /*-----'Covid 19 Notice'-----*/
   .container-3 {
     height: 55em;
-    width: 43.4em;
+    width: 45.2em;
   }
 
   .container-3-scale {
@@ -1069,7 +1407,7 @@ hr {
   .a {
     font-size: 80px;
     width: 10em;
-    margin-left: 1em;
+    margin-left: -0.5em;
     margin-top: 0.5em;
   }
 
@@ -1078,14 +1416,14 @@ hr {
     font-size: 60px;
     width: 20em;
     height: 150%;
-    margin-left: -4.6em;
+    margin-left: -4.2em;
     margin-top: -2.5em;
   }
 
   /* 'Read More' link */
   .c {
     font-size: 60px;
-    margin-left: -11.5em;
+    margin-left: -11.7em;
     margin-top: -4.5em;
     width: 250%;
     text-align: center;
@@ -1093,10 +1431,10 @@ hr {
   }
 
   /* Image: Pic 2 */
-  .d {
+  .pic-2 {
     position: relative;
     top: 68em;
-    left: 11em;
+    left: 11.1em;
     transform: scale(2.3);
   }
 
@@ -1115,15 +1453,17 @@ hr {
     width: 20em;
     position: relative;
     top: 38em;
-    margin-left: -5.1em;
+    margin-left: -3em;
   }
 
   /* Image: Pic 3 */
   .g {
-    width: 83.2em;
+    width: 84.9em;
     position: relative;
     top: 318em;
-    margin-left: -5em;
+    /* margin-left: -5em; */
+    left: 0em;
+    height: 100em;
   }
 
   /* Image: Pic 1 */
@@ -1131,38 +1471,25 @@ hr {
     transform: scale(2.08);
     position: relative;
     top: 337em;
-    left: 20em;
+    left: 22em;
+    width: 40.8em;
   }
 
   /* 'BRUNCH' title */
   .h {
     font-size: 80px;
     position: relative;
-    top: 42.5em;
-    left: 3.6em;
+    top: 43em;
+    left: 3.9em;
   }
-
-  /*To target elements specifically on Firfox*/
-  @-moz-document url-prefix() {
-    /* 'BRUNCH' title */
-    .h {
-      margin-left: 0em;
-    }
-
-    /* Paragraph underneath 'BRUNCH'  */
-    .i {
-      margin-top: 1.3em;
-    }
-  }
-  /*END Firefox prefix*/
 
   /* Paragraph underneath 'BRUNCH'  */
   .i {
     font-size: 60px;
     width: 20em;
     position: relative;
-    top: 59em;
-    margin-left: -3.4em;
+    top: 60em;
+    margin-left: -2.9em;
   }
 
   /* 'Book Now' link */
@@ -1172,7 +1499,7 @@ hr {
     font-size: 70px;
     width: 5em;
     top: 68em; /* Why has this line worked without 'position: relative?' */
-    margin-left: -9em;
+    margin-left: -9.3em;
   }
 
   /* 'FLEMENCO SUNDAYS' title */
@@ -1226,7 +1553,7 @@ hr {
     position: relative;
     top: 375em;
     height: 10em;
-    width: 81.7em;
+    width: 85em;
   }
 
   /* 'Contact Us */
@@ -1269,7 +1596,7 @@ hr {
     position: relative;
     top: 370em;
     margin-left: -3.5em;
-    width: 81em;
+    width: 84em;
     height: 40em;
   }
 
@@ -1335,298 +1662,27 @@ hr {
     width: 150px;
     height: 150px;
   }
-}
 
-/*----------IPAD RESOLUTION(768 x 1024)---------------*/
-@media only screen and (max-width: 768px) and (min-width: 376px) {
-  .hide-ipad {
-    display: none;
-  }
-
-  ul {
-    grid-template-columns: 165px 165px 165px 168px 168px 168px;
-    margin-right: -0.1em;
-  }
-
-  /* CONTAINER TO EXTEND BORDER OF TEXT IN MENU */
-  .home {
-    margin-left: -1.5em;
-  }
-
-  .reservation {
-    padding: 1.3em 1.8em 1.33em 1.8em;
-  }
-
-  .menu {
-    padding: 1.3em 3.7em 1.33em 3.7em;
-    margin-left: -3.2em;
-  }
-
-  .wines {
-    padding: 1.3em 3.7em 1.33em 3.7em;
-    margin-left: -3.2em;
-  }
-
-  .about-us-top-menu {
-    padding: 1.3em 2.7em 1.33em 2.8em;
-    margin-left: -3.2em;
-  }
-
-  .contact-li {
-    padding: 1.3em 2.9em 1.33em 2.9em;
-    margin-left: -3.2em;
-  }
-  /* END CONTAINER TO EXTEND BORDER OF TEXT IN MENU */
-
-  .top-image {
-    height: 32em;
-    width: 62em;
-  }
-
-  /* Alters the white border within the main image */
-  .photo-text {
-    width: 50em;
-    margin-left: -11em;
-  }
-
-  /* Disables the option of the white border and the text within it to increase in scale. */
-  .photo-text:hover {
-    transform: scale(1);
-  }
-
-  form {
-    width: 112%;
-    margin-left: -21.5%;
-    margin-top: -5%;
-  }
-
-  /*-----COVID CONTAINER-----*/
-  /* Covid 19 Instructions */
-  .container-3 {
-    width: 33.08em;
-  }
-
-  /* Contains the 'covid-notice' and 'safety' classes */
-  .container-3-heading {
-    width: 12em;
-    margin-left: -4.5em;
-  }
-
-  /* Covid 19 Instructions numbered 1-10 */
-  .container-3-p {
-    margin-left: -9em;
-    width: 50em;
-  }
-  /*-----END COVID CONTAINER-----*/
-
-  .pic-1 {
-    width: 31em;
-    height: 38em;
-  }
-
-  /* 'About Us' title */
-  .about-us {
-    margin-left: 3.7em;
-    height: 2em;
-    width: 7em;
-  }
-
-  /* Serving tapas with passion to the people of Camden... */
-  .about-us-p {
-    width: 20em;
-    margin-top: -0.5em;
-    margin-left: 1.7em;
-  }
-
-  /* Read More */
-  .about-us-link {
-    margin-left: 1.5em;
-    margin-top: -1.7em;
-  }
-
-  /* Pic 2 */
-  .d {
-    width: 31.1em;
-    height: 38em;
-    margin-left: 6.9em;
-    margin-top: -0.1em;
-  }
-
-  /* Paragraph underneath 'Bar Gansa' title */
-  .f {
-    width: 26em;
-    margin-left: -5.5em;
-  }
-
-  /* Pic 3 */
-  .g {
-    width: 31.1em;
-    height: 38em;
-    margin-left: -3.7em;
-  }
-
-  /* 'Brunch' title */
-  .h {
-    margin-left: 1.3em;
-    margin-top: 0.8em;
-  }
-
-  /* 'Brunch' paragraph: Join us for an authentic Spanish... */
-  .i {
-    width: 22em;
-    margin-left: 5.2em;
-  }
-
-  /* Book Now */
-  .j {
-    margin-left: 5em;
-  }
-
-  /* Image: Pic 4 */
-  .k {
-    width: 31.1em;
-    height: 38em;
-    margin-left: 6.9em;
-    margin-top: 0em;
-  }
-
-  /* 'Flemnco Sundays' title */
-  .l {
-    width: 7em;
-    margin-left: -2em;
-    margin-top: 0.8em;
-  }
-
-  /* 'Flemnco Sundays' paragraph: By the Escuela de Balle from 8pm every Sunday. */
-  .m {
-    width: 22em;
-    margin-left: -3.7em;
-  }
-
-  /* 
-  Flamenco Sundays package including: ... */
-  .n {
-    width: 22em;
-    margin-left: -4.8em;
-  }
-
-  .o {
-    margin-left: -5em; /* Why does 'margin-right' not work. Be it if the values are negative or positive */
-    margin-top: 1em;
-  }
-
-  .hr-2 {
-    width: 61.8em;
-    margin-left: 0em;
-  }
-
-  /*-----'Contact Us' Container-----*/
-  /* Contact Us */
-  .contact {
-    margin-left: 6em;
-  }
-
-  /* Address */
-  .address {
-    margin-left: 9em;
-  }
-
-  .opening-hours {
-    width: 15em;
-    margin-left: -6.5em;
-  }
-
-  .contact-details {
-    width: 10em;
-    margin-left: -6em;
-    margin-top: -0.1em;
-  }
-  /*---END 'Contact Us' CONTAINER */
-
-  /* Google Maps */
-  .map {
-    width: 55em;
-    /* height: 110em; */
-    margin-left: -0.3em;
-  }
-
-  /*-----Footer-----*/
-  footer {
-    /* background-color: cyan; */
-    width: 62.1em;
-    height: 20em;
-    margin-top: -8em;
-  }
-
-  .email {
-    width: 17.05em;
-    border-bottom-width: 1.5px;
-    position: relative;
-    top: 5.8em;
-    left: -3.92em;
-    background-size: 1.35em 1.35em;
-    padding: 0.5em 0em 0.7em 3.6em;
-    background-position: left center;
-  }
-
-  /*The 'Email Address' text inside the input tag*/
-  ::placeholder {
-    font-size: 16.5px;
-    font-weight: 600;
-  }
-
-  .subscribe-now {
-    font-size: 16.5px;
-    font-weight: bold;
-    position: relative;
-    top: 5.9em;
-    left: 26em;
-    padding: 0.65em 1.22em 0.55em 1.15em;
-  }
-
-  /* This element is used to create a small gap between the facebook and snapchat icons. */
-  .facebook {
-    padding-right: 0.45em;
-  }
-
-  /*Set width and height for facebook & snapchat icons*/
-  .facebook-snapchat {
-    height: 2.5em;
-    width: 2.5em;
-  }
-
-  .social-media-container {
-    width: 6em;
-    position: relative;
-    top: 0.35em;
-    left: 40.6em;
-  }
-
-  /* 2018 by Bar Gansa */
-  .register-mark {
-    font-size: 14.95px;
-    width: 10em;
-    position: relative;
-    top: 0.98em;
-    left: 41.65em;
-    /* margin-top: -2em; */ /* When using 'margin-top' or 'margin-bottom' the social media icons as well as the register mark are moving
-                            together. But when using 'margin-left', only the register mark moves. WHY??!!! */
-  }
-
+  /*To target elements specifically on Firfox*/
   @-moz-document url-prefix() {
-    /* 'Brunch' title */
+    /* 'BRUNCH' title */
     .h {
-      margin-top: 1.5em;
+      margin-left: 0em;
     }
 
-    /* Image: Pic 4 */
-    .k {
-      margin-top: 2.3em;
-    }
-
-    /* 'Flemnco Sundays' title */
-    .l {
+    /* Paragraph underneath 'BRUNCH'  */
+    .i {
       margin-top: 1.3em;
     }
+
+    .hr-2 {
+      width: 84.8em;
+    }
+
+    /*Google Map*/
+    .map {
+      width: 84em;
+    }
   }
+  /*END Firefox prefix*/
 }
