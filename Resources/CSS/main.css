@@ -50,23 +50,46 @@ li {
   text-align: center;
   height: 40px;
   padding: 19px 50px 0 50px;
-  transition: background-color 0.5s;
+  transition: background-color 0.5s; /*Transition for the li:hover class*/
 }
 
 li:hover {
   background-color: #c83727;
 }
 
+/* Changes the colour of the text in the top menu to white when mouse is hovered over it */
+nav ul li a:hover {
+  color: white;
+}
+
 /* CONTAINER TO EXTEND BORDER OF TEXT IN MENU */
 .home {
-  padding: 21px 85px 22px 82px;
+  padding: 21px 85px 22px 83px;
   position: relative;
-  right: 50px;
+  right: 52px;
+  background-color: #c83727;
+  color: #fff;
+  transition: 0.5s;
+}
+
+/*Class gets removed when user has scrolled from 0px - 510px. So the colours will be specified in the '.home' class */
+.home.transition-1 {
+  background-color: #fff;
+  color: black;
+  /* background-color: #c83727;
+  color: #fff; */
 }
 
 .reservation {
   padding: 21px 52px 22px 55px;
   margin-left: -50px;
+  transition: 0.5s;
+}
+
+/*adds 'transition-1' to '.reservation' class after scrolling past 406px*/
+.reservation.transition-1 {
+  background-color: #c83727;
+  color: #fff;
 }
 
 .menu {
@@ -84,21 +107,22 @@ li:hover {
 }
 
 .about-us-top-menu {
-  margin-left: -3.2em;
   padding: 21px 67px 22px 67px;
+  margin-left: -3.2em;
 }
 
 .contact-li {
-  padding: 21px 70px 22px 70px;
+  padding: 21px 70px 23px 70px;
   margin-left: -3.2em;
   border-right: none;
+  transition: 0.5s;
+}
+
+.contact-li.transition-1 {
+  background-color: #c83727;
+  color: #fff;
 }
 /* END CONTAINER TO EXTEND BORDER OF TEXT IN MENU */
-
-/* Changes the colour of the text in the top menu to white when mouse is hovered over it */
-nav ul li a:hover {
-  color: white;
-}
 
 /*---SECTION FOR HTML STOCK PHOTO---*/
 /* Main image of the page */
@@ -195,7 +219,6 @@ form {
   color: white;
   font-family: "Jaldi";
   padding-left: 15px;
-  z-index: 5;
   position: relative;
   top: 15px;
 }
@@ -636,7 +659,7 @@ hr {
   position: relative;
   bottom: 130px;
   left: 68.5px;
-  background-image: url(Images/Email-icon.png); /*Email icon*/
+  background-image: url(/Resources/Images/Email-icon.png); /*Email icon*/
   background-repeat: no-repeat;
   background-position: center left;
   background-size: 20px 20px;
@@ -753,36 +776,37 @@ hr {
   ul {
     /* grid-template-columns: 165px 165px 165px 168px 168px 205px; */
     grid-template-columns: 171px 173px 173px 176px 176px 176px;
-    margin-right: 0.1em;
+    /* margin-right: 0.1em; */
   }
 
   /* CONTAINER TO EXTEND BORDER OF TEXT IN MENU */
   .home {
-    margin-left: -1.5em;
+    padding: 1.3em 4.5em 1.4em 4.5em;
+    margin-left: -1.2em;
   }
 
   .reservation {
-    padding: 1.3em 1.8em 1.33em 1.8em;
+    padding: 1.3em 2.3em 1.4em 2.2em;
   }
 
   .menu {
-    padding: 1.3em 3.7em 1.33em 3.7em;
+    padding: 1.3em 3.9em 1.4em 4em;
     margin-left: -3.2em;
   }
 
   .wines {
-    padding: 1.3em 3.7em 1.33em 3.7em;
+    padding: 1.3em 3.9em 1.4em 4em;
     margin-left: -3.2em;
   }
 
   .about-us-top-menu {
-    padding: 1.3em 2.7em 1.33em 2.8em;
+    padding: 1.3em 3.25em 1.4em 2.8em;
     margin-left: -3.2em;
   }
 
   .contact-li {
-    padding: 1.3em 2.9em 1.33em 2.9em;
-    margin-left: -3.2em;
+    padding: 1.3em 3.2em 1.4em 3.1em;
+    margin-left: -3.1em;
   }
   /* END CONTAINER TO EXTEND BORDER OF TEXT IN MENU */
 

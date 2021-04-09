@@ -107,7 +107,7 @@ li:hover {
 
 /* CONTAINER TO EXTEND BORDER OF TEXT IN MENU */
 li a {
-  padding: 20px 85px 23px 82px;
+  padding: 21px 85px 24px 82px;
   position: relative;
   right: 51px;
   bottom: 1px;
@@ -138,6 +138,11 @@ li a {
 
 .contact {
   padding: 20px 71px 23px 70px;
+}
+
+.li-wines {
+  color: #fff;
+  background-color: #c83727;
 }
 /*END CONTAINER TO EXTEND BORDER OF TEXT IN MENU */
 
@@ -950,7 +955,7 @@ footer {
   .home,
   .li-menu,
   .li-wines {
-    padding: 1.25em 3.8em 1.4em 3.65em;
+    padding: 1.25em 3.8em 1.5em 3.65em;
   }
 
   .reservation {

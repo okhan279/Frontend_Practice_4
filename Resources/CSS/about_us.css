@@ -65,17 +65,19 @@ li:hover {
 }
 
 .wines {
-  padding: 20px 82px 23px 80px;
+  padding: 20px 82px 24px 80px;
   position: relative;
-  right: 49px;
+  right: 50px;
   bottom: 1px;
 }
 
 .about-us {
-  padding: 22px 70px 23px 65px;
+  padding: 22px 70px 23.5px 65px;
   position: relative;
   bottom: 1px;
-  right: 49px;
+  right: 50px;
+  color: #fff;
+  background-color: #c83727;
 }
 
 .us {
@@ -155,7 +157,7 @@ footer {
   position: relative;
   top: -128px; /*111px*/ /* Why is 'bottom: ;' not working for this element? WHY?!! */
   left: 10px; /*30px*/
-  background-image: url(Images/Email-icon.png);
+  background-image: url(/Resources/Images/Email-icon.png);
   background-repeat: no-repeat;
   background-position: center left;
   background-size: 20px 20px;
@@ -223,6 +225,178 @@ footer {
 /* Allow for smooth scrolling for all the elements that have an relative link */
 * {
   scroll-behavior: smooth;
+}
+
+/*----------IPAD RESOLUTION(768 x 1024)---------------*/
+@media only screen and (max-width: 768px) and (min-width: 376px) {
+  body {
+    width: 124.5%;
+  }
+
+  figcaption {
+    width: 36em;
+    margin-left: -7em;
+  }
+
+  p {
+    width: 43em;
+    margin-left: -7em;
+  }
+
+  ul {
+    grid-template-columns: 170px 167px 168px 171px 170px 170px;
+    padding-top: 0.4em;
+    margin: -1.4em -0.1em -5em 0em; /*The 'margin-bottom' is to pull the container under the top menu higher up */
+    position: fixed;
+  }
+
+  li a {
+    font-size: 16.2px;
+  }
+
+  /*Cancels out the transition for the background to turn reddish when hovered over. Need to learn how to cancel a transition*/
+  li a:hover {
+    color: black;
+  }
+
+  /*Cancels out the transition for the background to turn reddish when hovered over. Need to learn how to cancel a transition*/
+  li:hover {
+    background-color: white;
+  }
+
+  /*Styles the positioning of the elements in the menu at the very top*/
+  .top-menu,
+  .wines,
+  .about-us,
+  .contact {
+    position: relative;
+    top: -0.05em;
+    right: 3.1em;
+  }
+
+  /*CONTAINER TO SET <a> BORDER */
+  .home {
+    padding: 1.3em 3.7em 1.4em 3.3em;
+    position: relative;
+    top: -0.05em;
+    right: 2.6em;
+  }
+
+  .reservation {
+    padding: 1.3em 1.9em 1.4em 1.8em;
+  }
+
+  .top-menu {
+    padding: 1.25em 3.7em 1.38em 3.65em;
+  }
+
+  .wines {
+    padding: 1.25em 3.75em 1.38em 3.6em;
+  }
+
+  .about-us {
+    padding: 1.25em 2.8em 1.39em 2.7em;
+  }
+
+  .contact {
+    padding: 1.3em 2.9em 1.35em 2.8em;
+  }
+  /* END CONTAINER TO SET <a> BORDER */
+
+  .image-1 {
+    margin-left: -8em;
+  }
+
+  /* With a wide range of experience behind him, Chef Nacho Rivera brings his expert techniques and Spanish flair to the newly refurbished
+    Tapas hotspot. */
+
+  .about_us_pic {
+    width: 31em;
+    margin-left: -10em;
+  }
+
+  .about-us-pic-2 {
+    width: 30em;
+    margin-left: -13em;
+  }
+
+  /* GRID FOR 'about-us-pic' */
+  .fig-grid {
+    display: grid;
+    grid-template-columns: 35em 35em;
+  }
+
+  /*---------------FOOTER---------------*/
+  /*NOTE: When using 'margin-top' or 'margin-bottom' for the classes .subscribe-now, .register-mark or .social-media-container, the page height would 
+  increase if they were moved down. But when using 'position: relative' and moving the elements downwards, the page height does not increase. WHY?!!!*/
+  footer {
+    width: 63.35em;
+    height: 18em;
+    margin-top: -11em;
+    margin-left: -4em;
+    /* background-color: cyan; */
+  }
+
+  .email {
+    display: block;
+    border-bottom-width: 1.5px;
+    width: 13.95em;
+    position: relative;
+    left: 4.6em;
+    top: 1.8em;
+    font-size: 20px;
+    padding-bottom: 0.55em;
+    background-size: 1.1em 1.1em;
+  }
+
+  /*Query to edit only in Firefox*/
+  @supports (-moz-appearance: none) {
+    .email {
+      margin-top: 0em;
+    }
+  }
+
+  /*'Email Address' inside <input> tag*/
+  ::placeholder {
+    font-size: 17px;
+    font-weight: 600;
+  }
+
+  .subscribe-now {
+    padding: 0.75em 1.1em 0.5em 1.2em;
+    position: relative;
+    top: 4.45em;
+    left: 26em;
+    font-weight: bold;
+    font-size: 17px;
+  }
+
+  /* Used to style the snapchat and facebook icons */
+  .social-media-container {
+    width: 6.5em;
+    position: relative;
+    bottom: 3.4em;
+    left: 41.52em;
+  }
+
+  /*Styles both the facebook and snapchat icons*/
+  .facebook-snapchat {
+    width: 2.5em;
+    height: 2.5em;
+  }
+
+  .facebook {
+    padding-right: 0.5em;
+  }
+
+  /* © 2018 by Bar Gansa */
+  .register-mark {
+    font-size: 15px;
+    position: relative;
+    bottom: 3em;
+    left: 49.5em;
+  }
+  /*-----END FOOTER-----*/
 }
 
 /*--------IPHONE X RESOLUTION--------*/
@@ -513,176 +687,4 @@ footer {
     width: 110px;
     height: 110px;
   }
-}
-
-/*----------IPAD RESOLUTION(768 x 1024)---------------*/
-@media only screen and (max-width: 768px) and (min-width: 376px) {
-  body {
-    width: 124.5%;
-  }
-
-  figcaption {
-    width: 36em;
-    margin-left: -7em;
-  }
-
-  p {
-    width: 43em;
-    margin-left: -7em;
-  }
-
-  ul {
-    grid-template-columns: 170px 167px 168px 171px 170px 170px;
-    padding-top: 0.4em;
-    margin: -1.4em -0.1em -5em 0em; /*The 'margin-bottom' is to pull the container under the top menu higher up */
-    position: fixed;
-  }
-
-  li a {
-    font-size: 16.2px;
-  }
-
-  /*Cancels out the transition for the background to turn reddish when hovered over. Need to learn how to cancel a transition*/
-  li a:hover {
-    color: black;
-  }
-
-  /*Cancels out the transition for the background to turn reddish when hovered over. Need to learn how to cancel a transition*/
-  li:hover {
-    background-color: white;
-  }
-
-  /*Styles the positioning of the elements in the menu at the very top*/
-  .top-menu,
-  .wines,
-  .about-us,
-  .contact {
-    position: relative;
-    top: -0.05em;
-    right: 3.1em;
-  }
-
-  /*CONTAINER TO SET <a> BORDER */
-  .home {
-    padding: 1.3em 3.7em 1.4em 3.3em;
-    position: relative;
-    top: -0.05em;
-    right: 2.6em;
-  }
-
-  .reservation {
-    padding: 1.3em 1.9em 1.4em 1.8em;
-  }
-
-  .top-menu {
-    padding: 1.25em 3.7em 1.38em 3.65em;
-  }
-
-  .wines {
-    padding: 1.25em 3.75em 1.38em 3.6em;
-  }
-
-  .about-us {
-    padding: 1.25em 2.75em 1.38em 2.7em;
-  }
-
-  .contact {
-    padding: 1.3em 2.9em 1.35em 2.8em;
-  }
-  /* END CONTAINER TO SET <a> BORDER */
-
-  .image-1 {
-    margin-left: -8em;
-  }
-
-  /* With a wide range of experience behind him, Chef Nacho Rivera brings his expert techniques and Spanish flair to the newly refurbished
-    Tapas hotspot. */
-
-  .about_us_pic {
-    width: 31em;
-    margin-left: -10em;
-  }
-
-  .about-us-pic-2 {
-    width: 30em;
-    margin-left: -13em;
-  }
-
-  /* GRID FOR 'about-us-pic' */
-  .fig-grid {
-    display: grid;
-    grid-template-columns: 35em 35em;
-  }
-
-  /*---------------FOOTER---------------*/
-  /*NOTE: When using 'margin-top' or 'margin-bottom' for the classes .subscribe-now, .register-mark or .social-media-container, the page height would 
-  increase if they were moved down. But when using 'position: relative' and moving the elements downwards, the page height does not increase. WHY?!!!*/
-  footer {
-    width: 63.35em;
-    height: 18em;
-    margin-top: -11em;
-    margin-left: -4em;
-    /* background-color: cyan; */
-  }
-
-  .email {
-    display: block;
-    border-bottom-width: 1.5px;
-    width: 13.95em;
-    position: relative;
-    left: 4.6em;
-    top: 1.8em;
-    font-size: 20px;
-    padding-bottom: 0.55em;
-    background-size: 1.1em 1.1em;
-  }
-
-  /*Query to edit only in Firefox*/
-  @supports (-moz-appearance: none) {
-    .email {
-      margin-top: 0em;
-    }
-  }
-
-  /*'Email Address' inside <input> tag*/
-  ::placeholder {
-    font-size: 17px;
-    font-weight: 600;
-  }
-
-  .subscribe-now {
-    padding: 0.75em 1.1em 0.5em 1.2em;
-    position: relative;
-    top: 4.45em;
-    left: 26em;
-    font-weight: bold;
-    font-size: 17px;
-  }
-
-  /* Used to style the snapchat and facebook icons */
-  .social-media-container {
-    width: 6.5em;
-    position: relative;
-    bottom: 3.4em;
-    left: 41.52em;
-  }
-
-  /*Styles both the facebook and snapchat icons*/
-  .facebook-snapchat {
-    width: 2.5em;
-    height: 2.5em;
-  }
-
-  .facebook {
-    padding-right: 0.5em;
-  }
-
-  /* © 2018 by Bar Gansa */
-  .register-mark {
-    font-size: 15px;
-    position: relative;
-    bottom: 3em;
-    left: 49.5em;
-  }
-  /*-----END FOOTER-----*/
 }

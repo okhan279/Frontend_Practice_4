@@ -6,7 +6,25 @@ My reason for choosing to mimic this website is that it was a good challenge for
 
 The website this code is based on is www.bargansa.co.uk/
 
----
+There are 4 webpages:
+
+1. index.html --> main.css
+2. menu.html --> menu.css
+3. wines.html --> wines.css
+4. about_us.html --> about_us.css
+
+There are 3 JavaScript code blocks.
+
+1. myscript.js --> For all 4 webpages.
+2. myscript2.js --> Only for the index.html webpage.
+3. myscript3.js --> For menu.html, wines.html and about_us.html webpages.
+
+Resolutions valid for this page:
+Laptop
+Ipad
+Iphone X
+
+## FINISH BORDER OF ABOUT US IN ABOUT US MENU!!!!!!!!!
 
 Some points to note about this source code:
 
