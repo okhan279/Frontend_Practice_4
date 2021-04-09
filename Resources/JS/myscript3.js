@@ -5,29 +5,19 @@
 const ham = document.getElementById("ham");
 const hamBackground = document.querySelector(".ham-background");
 
-//Global variable to store the last scrolled value.
-let scrolledPos = window.scrollY;
-
-//This block is for the menu at the top in mobile resolution. It toggels the 'ham-background' the classes associated with the hamburger icon
-window.onscroll = function () {
-  //Can also use: window.addEventListener("scroll", function () {code here}
-
-  //Current scrolled value
-  let scrolled = window.scrollY; //window.scrollY reads the current scroll position in px.
-  console.log(`Scrolled: \n` + scrolled);
-
-  //If user scrolls up
-  if (scrolled > scrolledPos) {
-    hamBackground.classList.add("scroll-transition"); //Scroll the white strip upwards
-    ham.classList.add("scroll-transition"); //Scrolls the hamburger icon and its border upwards
-
-    //If user scrolls down:
-  } else {
-    hamBackground.classList.remove("scroll-transition"); //Scroll the white strip downwards
-    ham.classList.remove("scroll-transition"); //Scroll the hamberger icon and its border downwards.
-  }
-
-  //Updates the scrolledPos variable with the current value.
-  scrolledPos = scrolled;
-  console.log(`scrolledPos: ` + scrolledPos);
-};
+$(document).ready(function () {
+  let lastScrollTop = 0;
+  $(window).scroll(function (event) {
+    let st = $(this).scrollTop();
+    //If user scrolls up
+    if (st > lastScrollTop) {
+      $(hamBackground).addClass("scroll-transition"); //Scroll the white strip upwards
+      $(ham).addClass("scroll-transition"); //Scrolls the hamburger icon and its border upwards
+      //If user scrolls down
+    } else {
+      $(hamBackground).removeClass("scroll-transition");
+      $(ham).removeClass("scroll-transition");
+    }
+    lastScrollTop = st;
+  });
+});
